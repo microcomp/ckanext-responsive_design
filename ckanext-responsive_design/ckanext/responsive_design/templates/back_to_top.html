@@ -1,0 +1,41 @@
+
+<script type="text/javascript">
+var appended = false, bookmark = document.createElement("div");
+bookmark.id = "arrowUp";
+bookmark.innerHTML = "<a href=\"#\" title=\"Top of the page.\" class='back-to-top'><img src='/backtotop.png' alt='back to top' width='50' heigth='50'/><\/a>";
+
+
+onscroll = function() {
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollTop > 300) {
+    if (!appended) {
+      document.body.appendChild(bookmark);
+      appended = true;
+    }
+  } else {
+    if (appended) {
+      document.body.removeChild(bookmark);
+      appended = false;
+    }
+  }
+};
+</script>
+<style type="text/css">
+#arrowUp {
+  position: fixed;
+  height: auto;
+  width: auto;
+  right: 10px;
+  bottom: 10px;
+  font-size: 48px;
+
+}
+#arrowUp a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: serif;
+}
+</style>
+
+

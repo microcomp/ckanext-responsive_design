@@ -1,0 +1,5 @@
+
+        [ckan.plugins]
+        # Add plugins here, e.g.
+        responsive_design =ckanext.responsive_design.plugin:ResponsiveDesign
+    
