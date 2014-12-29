@@ -23,25 +23,28 @@
 css : <link rel="stylesheet" type="text/css" href="{{ g.main_css }}" />
 -->
 <style>
-form.dataset-form li{
-	width:33.3%;
+#content > div.row.wrapper > div > section > div > form > ol > li{
+	width:33.33%;
 }
 </style>
     <meta charset="utf-8" />
       <meta name="generator" content="ckan 2.3a" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome - CKAN</title>
-
-
-    
+ {%if  c.action == 'read' %}
+ {%else%}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+ {%endif%}
     <link rel="shortcut icon" href="/images/icons/ckan.ico" />
 {% include 'back_to_top.html' %}    
   
-
+ <a href="/" class="full_size"> <img src='/logo.png' alt='logo'/> </a>
+ <a href="/" class="small"> <img src='/logo2.png' alt='logo'/></a>
 
 {% endblock %}
 
 {% block header_logo %}
          {{super()}}
+
 {% endblock %}
 

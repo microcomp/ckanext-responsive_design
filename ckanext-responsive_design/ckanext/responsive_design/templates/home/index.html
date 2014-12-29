@@ -1,0 +1,11 @@
+{%ckan_extends%}
+{% block content %}
+  <div class="homepage layout-{{ homepage_style }}">
+    <div class="container">
+      {{ self.flash() }}
+    </div>
+    {% block primary_content %}
+      {% include "home/layout1.html" %}
+    {% endblock %}
+  </div>
+{% endblock %}
