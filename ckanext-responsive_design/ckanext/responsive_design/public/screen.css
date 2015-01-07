@@ -4,13 +4,24 @@
 
 		background-color: hsla(25, 14%, 24%, 0.71);	
 	}
+    .account-masthead{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .navbar-static-top{
+        margin-right: 0px;
+    }
+    .container {
+        padding-left: 0px; 
+        padding-right: 0px;
+    }
 }
 @media (min-width: 768px) {
 	body > header.navbar.navbar-static-top.masthead > div.container{
 		background-color: #453b34;
 		color: white;
 		width: 100%;
-		height: 40px;
+		height: 41px;
 	}
 	body > header.navbar.navbar-static-top.masthead{
 		height: 285px;
@@ -37,9 +48,12 @@
 	body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
 		width: 456px;
 		height: 50px;
-		padding-left: 6em;
+		
 		padding-top: 2ex;
 		padding-bottom: 3em;
+        
+        margin-left: auto;
+        margin-right: auto;
 
 	}
 	body > div.homepage.layout-1 > div.hero > div > div.row.row2 > div.span6.col1 > div{
@@ -47,6 +61,8 @@
         /*position: relative;
         left: 7%;*/
         margin-left: auto;
+        margin-right: auto;
+
 	}
 	body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i{
 		color: #b81821;
@@ -64,7 +80,7 @@
 		background-color: #453b34;
 		color: white;
 		
-		height: 40px;
+		height: 41px;
 	}
 	body > header.navbar.navbar-static-top.masthead{
 		height: 230px;
@@ -78,6 +94,7 @@
 		margin-bottom: 2em;
 
 	}
+
 	.full_size{
 		display: none;
 	}
@@ -92,15 +109,16 @@
 		left: 15%;
 	}
 	body > header.navbar.navbar-static-top.masthead > div.container > div > nav{
-		margin-top: -0.9em;
+		margin-top: -0.8em;
 	}
 	body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
 		width: 306px;
 		height: 50px;
-		padding-left: 6em;
+		
 		padding-top: 2ex;
 		padding-bottom: 3em;
-
+        margin-left: auto;
+        margin-right: auto;
 	}
 	body > div.homepage.layout-1 > div.hero > div > div.row.row2 > div.span6.col1 > div{
 		margin-bottom: 0em;
@@ -128,7 +146,16 @@
 		top: -48px;
 		background-color: #bd0a26;
 	}
-	
+    .account-masthead{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+	.navbar-static-top{
+        margin-right: 0px;
+    }
+    body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li{
+        width: 14em;
+    }
 }
 .debug{
 	z-index: 100000;
@@ -648,6 +675,9 @@ body{
 #content > div.row.wrapper.no-nav > section > a{
 	float: right;
 }
+#content > div.row.wrapper.no-nav > section > a:hover{
+    float: right;
+}
 #content > div.row.wrapper > div > section > div.module-content > form > a.show-filters{
 	display: none;
 }
@@ -686,3 +716,4 @@ body > header.navbar.navbar-static-top.masthead > div.container{
 #content > div.row.wrapper > div > article > div > form > a.show-filters.btn{
     display: none;
 }
+
