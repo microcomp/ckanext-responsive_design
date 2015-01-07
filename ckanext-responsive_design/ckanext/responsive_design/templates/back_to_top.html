@@ -2,7 +2,7 @@
 <script type="text/javascript">
 var appended = false, bookmark = document.createElement("div");
 bookmark.id = "arrowUp";
-bookmark.innerHTML = "<a href=\"#\" title=\"Top of the page.\" class='back-to-top'><img src='/backtotop.png' alt='back to top' width='50' heigth='50' onmouseover=\"this.src='/up_hover.png'\" onmouseout=\"this.src='/backtotop.png'\" /><\/a>";
+bookmark.innerHTML = "<a href=\"#\" title=\"Top of the page.\" class='back-to-top' data-scroll data-options=\"{ &quot;easing&quot;: &quot;easeOutCubic&quot; }\"><img src='/backtotop.png' alt='back to top' width='50' heigth='50' onmouseover=\"this.src='/up_hover.png'\" onmouseout=\"this.src='/backtotop.png'\" /><\/a>";
 
 
 onscroll = function() {
@@ -37,5 +37,15 @@ onscroll = function() {
   font-family: serif;
 }
 </style>
+<script src="/js/smooth-scroll.js"></script>
 
-
+<script>
+      smoothScroll.init({
+        speed: 2000,
+        easing: 'easeInOutCubic',
+        offset: 0,
+        updateURL: true,
+        callbackBefore: function ( toggle, anchor ) {},
+        callbackAfter: function ( toggle, anchor ) {}
+      });
+</script>
