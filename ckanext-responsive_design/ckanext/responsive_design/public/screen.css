@@ -683,3 +683,6 @@ body > header.navbar.navbar-static-top.masthead > div.container{
 	padding-top: 10px;
 	background: #ffffff;
 }
+#content > div.row.wrapper > div > article > div > form > a.show-filters.btn{
+    display: none;
+}
