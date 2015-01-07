@@ -316,7 +316,8 @@ body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul
 reset elementu btn a btn:hover;
 */
 
-#content > div.row.wrapper > div > * > div.module-content > * > a.btn, 
+#content > div.row.wrapper > div > * > div.module-content > * > a.btn,
+#content > div.row.wrapper.no-nav > article > div > div.page_primary_action > a, 
 #content > div.row.wrapper.no-nav > section > a,
 #content > div.row.wrapper > aside > section > form > div > div.form-actions > button,
 #content > div.row.wrapper > div > div > form > div.form-actions > button,
@@ -472,7 +473,8 @@ reset elementu btn a btn:hover;
     word-spacing : normal;
     z-index : auto;}
 
-#content > div.row.wrapper > div > * > div.module-content > * > a.btn:hover, 
+#content > div.row.wrapper > div > * > div.module-content > * > a.btn:hover,
+#content > div.row.wrapper.no-nav > article > div > div.page_primary_action > a:hover, 
 #content > div.row.wrapper.no-nav > section > a:hover,
 #content > div.row.wrapper > aside > section> form > div > div.form-actions > button:hover,
 #content > div.row.wrapper > div > div > form > div.form-actions > button:hover,
@@ -629,7 +631,8 @@ reset elementu btn a btn:hover;
     z-index : auto;
 }
 
-#content > div.row.wrapper > div > * > div.module-content > * > a.btn, 
+#content > div.row.wrapper > div > * > div.module-content > * > a.btn,
+#content > div.row.wrapper.no-nav > article > div > div.page_primary_action > a, 
 #content > div.row.wrapper.no-nav > section > a,
 #content > div.row.wrapper > aside > section > form > div > div.form-actions > button,
 #content > div.row.wrapper > div > div > form > div.form-actions > button,
@@ -647,7 +650,8 @@ reset elementu btn a btn:hover;
 	color: white;
 	background-color: #bd0a26;
 }
-#content > div.row.wrapper > div > * > div.module-content > * > a.btn:hover, 
+#content > div.row.wrapper > div > * > div.module-content > * > a.btn:hover,
+#content > div.row.wrapper.no-nav > article > div > div.page_primary_action > a:hover, 
 #content > div.row.wrapper.no-nav > section > a:hover,
 #content > div.row.wrapper > aside > section > form > div > div.form-actions > button:hover,
 #content > div.row.wrapper > div > div > form > div.form-actions > button:hover,
@@ -705,7 +709,7 @@ body > div.homepage.layout-1{
 body > header.navbar.navbar-static-top.masthead > div.container{
 		z-index: 999;
 }
-#content > div.row.wrapper > div > section > div.module-content > ul > li > div > h3 > a{
+#content > div.row.wrapper > div > * > div.module-content > ul > li > div > h3 > a{
 	color: #bd0a26;
 	font-size: 16px;
 }
