@@ -43,7 +43,10 @@
 
 	}
 	body > div.homepage.layout-1 > div.hero > div > div.row.row2 > div.span6.col1 > div{
-		width: 66%;
+		width: 80%;
+        /*position: relative;
+        left: 7%;*/
+        margin-left: auto;
 	}
 	body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i{
 		color: #b81821;
@@ -596,7 +599,8 @@ reset elementu btn a btn:hover;
     widows : 0;
     width : auto;
     word-spacing : normal;
-    z-index : auto;}
+    z-index : auto;
+}
 
 #content > div.row.wrapper > div > * > div.module-content > * > a.btn, 
 #content > div.row.wrapper.no-nav > section > a,
@@ -614,7 +618,8 @@ reset elementu btn a btn:hover;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	color: white;
-	background-color: #bd0a26;}}
+	background-color: #bd0a26;
+}
 #content > div.row.wrapper > div > * > div.module-content > * > a.btn:hover, 
 #content > div.row.wrapper.no-nav > section > a:hover,
 #content > div.row.wrapper > aside > section > form > div > div.form-actions > button:hover,
@@ -631,7 +636,8 @@ reset elementu btn a btn:hover;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	color: white;
-	background-color: #990000;}}
+	background-color: #990000;
+}
 body > div.homepage.layout-1 > div.hero > div > div.row.row2 > div.span6.col1 > div > section > h2{
 	background-color: transparent;
 	color: #3E3E3E;
