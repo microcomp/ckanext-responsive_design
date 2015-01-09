@@ -725,3 +725,6 @@ body > header.navbar.navbar-static-top.masthead > div.container{
     display: none;
 }
 
+#select2-drop{
+    padding: 0px;
+}
