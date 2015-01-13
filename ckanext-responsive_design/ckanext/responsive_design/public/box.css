@@ -1,5 +1,6 @@
 
-#content > div.row.wrapper > div > article > div.module-content > ul > li, #content > div.row.wrapper.no-nav > article > div > div.wide > ul > li {
+#content > div.row.wrapper > div > article > div.module-content > ul > li, #content > div.row.wrapper.no-nav > article > div > div.wide > ul > li,
+#content > div.row.wrapper > div > article > div > ul > li {
 	height: 280px;
 	background-color:  #f7f7f7;
 	border: 2px solid #d4d4d4;

@@ -325,7 +325,9 @@ reset elementu btn a btn:hover;
 #content > div.row.wrapper > div > div > form > div.form-actions > button,
 #content > div.row.wrapper > div > section > div > form > div.form-actions > button,
 #content > div.row.wrapper > div > article > div > form > div.form-actions > button,
-#add_new_button
+#add_new_button,
+#dataset-resources > ul > li > div > a,
+#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn
 {
     animation : none;
     animation-delay : 0;
@@ -483,7 +485,9 @@ reset elementu btn a btn:hover;
 #content > div.row.wrapper > div > div > form > div.form-actions > button:hover,
 #content > div.row.wrapper > div > section > div > form > div.form-actions > button:hover,
 #content > div.row.wrapper > div > article > div > form > div.form-actions > button:hover,
-#add_new_button:hover
+#add_new_button:hover,
+#dataset-resources > ul > li > div > a:hover,
+#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn:hover
 {
     animation : none;
     animation-delay : 0;
@@ -642,7 +646,9 @@ reset elementu btn a btn:hover;
 #content > div.row.wrapper > div > div > form > div.form-actions > button,
 #content > div.row.wrapper > div > section > div > form > div.form-actions > button,
 #content > div.row.wrapper > div > article > div > form > div.form-actions > button,
-#add_new_button
+#add_new_button,
+#dataset-resources > ul > li > div > a,
+#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn
 {
     padding: 0.3em;
     padding-left: 0.6em;
@@ -662,7 +668,9 @@ reset elementu btn a btn:hover;
 #content > div.row.wrapper > div > div > form > div.form-actions > button:hover,
 #content > div.row.wrapper > div > section > div > form > div.form-actions > button:hover,
 #content > div.row.wrapper > div > article > div > form > div.form-actions > button:hover,
-#add_new_button:hover
+#add_new_button:hover,
+#dataset-resources > ul > li > div > a:hover,
+#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn:hover
 {
     padding: 0.3em;
     padding-left: 0.6em;
@@ -745,4 +753,13 @@ body > header.navbar.navbar-static-top.masthead > div.container{
 }
 body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li:nth-child(1) > a > i{
     font-size: 1.2em;
+}
+
+#content > div.row.wrapper{
+    border: 2px solid #d4d4d4;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+#content > div.row.wrapper > div{
+    background-color: #f7f7f7;
 }
