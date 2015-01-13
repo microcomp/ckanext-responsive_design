@@ -40,7 +40,11 @@ css : <link rel="stylesheet" type="text/css" href="{{ g.main_css }}" />
   
  <a href="/" class="full_size"> <img src='/logo.png' alt='logo'/> </a>
  <a href="/" class="small"> <img src='/logo2.png' alt='logo'/></a>
-
+ {% if c.controller == 'home' %}
+ {%else%}
+ <a href="/" class="logo_min"><img src="/logo3.png" alt='logo' /></a>
+ <a href="/" class="logo_min2"><img src="/cuet_logo.png" alt='logo' /></a>
+{%endif%}
 {% endblock %}
 
 {% block header_logo %}

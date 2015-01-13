@@ -45,6 +45,7 @@
     .small{
         display: none;
     }
+
     body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
         width: 456px;
         height: 50px;
@@ -98,6 +99,7 @@
     .full_size{
         display: none;
     }
+    
     .small{
         
         padding-bottom: 0;
@@ -727,4 +729,20 @@ body > header.navbar.navbar-static-top.masthead > div.container{
 
 #select2-drop{
     padding: 0px;
+}
+.home_button{
+    position: absolute;
+    
+    margin-left: auto;
+    margin-right: -2em;
+    padding-right: 2em;
+    font-size: 1.9em;
+}
+.home_button:hover{
+    color: white;
+    
+    margin-right: 0.5em;
+}
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li:nth-child(1) > a > i{
+    font-size: 1.2em;
 }

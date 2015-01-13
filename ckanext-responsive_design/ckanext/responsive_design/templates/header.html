@@ -3,4 +3,8 @@
 {% block header_wrapper %}
 {{ super() }}
 <link rel="stylesheet" type="text/css" href="/screen.css" />
+{% if c.controller == 'home' %}
+{%else%}
+<link rel="stylesheet" type="text/css" href="/header_mod.css" />
+{%endif%}
 {% endblock %}
