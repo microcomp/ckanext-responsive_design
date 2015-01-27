@@ -9489,3 +9489,6 @@ iframe {
 .ie7 .media-overlay .media-heading {
   background-color: #000;
 }
+.truncator-link.truncator-more{
+  display: none;
+}
