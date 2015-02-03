@@ -279,20 +279,20 @@ footer{
     border-top: 5px solid #bd0a26;
 }
 h1{
-    font-size: 36px;
+    font-size: 2.2em;
     color: #000000;
 }
 
 h2{
-    font-size: 24px;
+    font-size: 1.5em;
     color: #3E3E3E;
 }
 h3{
-    font-size: 15px;
+    font-size: 0.9em;
     color: #3E3E3E;
 }
 p{
-    font-size: 15px;
+    font-size: 0.9em;
     color: #3E3E3E;
 }
 div{
@@ -725,7 +725,7 @@ body > header.navbar.navbar-static-top.masthead > div.container{
 }
 #content > div.row.wrapper > div > * > div.module-content > ul > li > div > h3 > a{
     color: #bd0a26;
-    font-size: 16px;
+    font-size: 1em;
 }
 [role=main], .main, #content > div.row.wrapper > div > article > div > ul{
     padding-top: 10px;
