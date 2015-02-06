@@ -769,4 +769,13 @@ body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul
 }
 
 
-
+#content > div.row.wrapper > div > article > div > table > tbody > tr > td > div > a.btn-group{
+    font-size: 1em;
+}
+.btn-group {
+font-size: 1em;
+margin: 0px;
+}
+#content > div.row.wrapper > div > article > div > table > tbody > tr > td > div > a{
+    margin: -2px;
+}
