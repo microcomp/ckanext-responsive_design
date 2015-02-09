@@ -327,7 +327,8 @@ reset elementu btn a btn:hover;
 #content > div.row.wrapper > div > article > div > form > div.form-actions > button,
 #add_new_button,
 #dataset-resources > ul > li > div > a,
-#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn
+#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn,
+#content > div.row.wrapper > aside > section > form > div > div.form-actions > a
 {
     animation : none;
     animation-delay : 0;
@@ -487,7 +488,8 @@ reset elementu btn a btn:hover;
 #content > div.row.wrapper > div > article > div > form > div.form-actions > button:hover,
 #add_new_button:hover,
 #dataset-resources > ul > li > div > a:hover,
-#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn:hover
+#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn:hover,
+#content > div.row.wrapper > aside > section > form > div > div.form-actions > a:hover
 {
     animation : none;
     animation-delay : 0;
@@ -648,7 +650,8 @@ reset elementu btn a btn:hover;
 #content > div.row.wrapper > div > article > div > form > div.form-actions > button,
 #add_new_button,
 #dataset-resources > ul > li > div > a,
-#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn
+#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn,
+#content > div.row.wrapper > aside > section > form > div > div.form-actions > a
 {
     padding: 0.3em;
     padding-left: 0.6em;
@@ -670,7 +673,8 @@ reset elementu btn a btn:hover;
 #content > div.row.wrapper > div > article > div > form > div.form-actions > button:hover,
 #add_new_button:hover,
 #dataset-resources > ul > li > div > a:hover,
-#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn:hover
+#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn:hover,
+#content > div.row.wrapper > aside > section > form > div > div.form-actions > a:hover
 {
     padding: 0.3em;
     padding-left: 0.6em;
