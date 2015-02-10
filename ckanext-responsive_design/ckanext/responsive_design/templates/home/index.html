@@ -1,11 +1,50 @@
 {%ckan_extends%}
 {% block content %}
-  <div class="homepage layout-{{ homepage_style }}">
-    <div class="container">
+
+<style>
+#index{
+	border: 2px solid #bbbbbb;
+	border-radius: 10px 10px;
+	/*padding: 1em;*/
+	padding-bottom: 1em;
+	
+	margin-right: auto;
+	margin-top: 1em;
+	margin-bottom: 10em;
+	height: 100%;
+
+	box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+	-webkit-box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+
+}
+</style>
+
+  <div style="margin-right: auto; margin-left: auto;">
+    <div class="container" style="margin-right: auto; margin-left: auto;">
       {{ self.flash() }}
+
+      <div class="row" style="position: relative;width=100%;">
+
+		<div class="primary span9" id="index" >
+			<div class="box" >
+				<header class="module-heading"> <h2>{{_('Recently changed datasets')}}	</h2></header>
+			    {% block primary_content %}
+			      {#{ h.recently_changed_packages_activity_stream() }#}
+			      {#set rec = #}
+
+			      <h1>
+			      		TODO > helper function + API
+			      </h1>
+			        
+			    {% endblock %}
+			</div>
+		</div></div>
+	  </div>
+
     </div>
-    {% block primary_content %}
-      {% include "home/layout1.html" %}
-    {% endblock %}
+
   </div>
 {% endblock %}
