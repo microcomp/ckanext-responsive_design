@@ -33,7 +33,8 @@ def recent_datasets():
             notes = i.notes[:300]+'...'
         formats = model.Session.query(model.Resource).filter()
         id = i.id
-        response = json.load(urllib2.urlopen('http://192.168.21.27:5000/api/3/action/resource_search?query=url:'+i.id))['result']['results']
+        logging.warning(__builtin__.site_url)
+        response = json.load(urllib2.urlopen(__builtin__.site_url+'api/3/action/resource_search?query=url:'+i.id))['result']['results']
 
         res = []
         for j in response:
