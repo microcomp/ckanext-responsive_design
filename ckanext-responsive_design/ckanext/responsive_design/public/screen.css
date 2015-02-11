@@ -46,7 +46,7 @@
         display: none;
     }
 
-    body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
         width: 456px;
         height: 50px;
         
@@ -65,10 +65,10 @@
         margin-right: auto;
 
     }
-    body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i{
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i{
         color: #b81821;
     }
-    body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i:hover{
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i:hover{
         color: #d82831;
     }
     body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
@@ -113,7 +113,7 @@
     body > header.navbar.navbar-static-top.masthead > div.container > div > nav{
         margin-top: -0.8em;
     }
-    body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
         width: 306px;
         height: 50px;
         
@@ -134,13 +134,13 @@
     body > div.homepage.layout-1{
         margin-bottom: -9em;
     }
-    body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i{
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i{
         color: #444444;
     }
-    body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i:hover{
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > button > i:hover{
         color: #aaaaaa;
     }
-    body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
         background-color: #bd0a26;
     }
     body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
@@ -157,6 +157,13 @@
     }
     body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li{
         width: 14em;
+    }
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
+        background-color: #bd0a26;
+        padding-top: 0px;
+        height: 90px;
+        margin-top: -35px;
+        margin-bottom: 0px;
     }
 }
 .debug{
@@ -190,7 +197,7 @@ body > div.homepage.layout-1 > div.hero > div > div.row.row1 > div.span6.col1{
 body > div.homepage.layout-1 > div.hero > div > div.row.row2 > div.span6.col1{
     width: 100%;
 }
-body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > h3{
+body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > h3{
     display: none;
 }
 body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > div{
@@ -232,7 +239,7 @@ body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-
 }
 
 
-body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > input{
+body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > input{
     border: 1px solid #b81821;
 }
 body > div.homepage.layout-1 > div.hero > div > div.row.row2{

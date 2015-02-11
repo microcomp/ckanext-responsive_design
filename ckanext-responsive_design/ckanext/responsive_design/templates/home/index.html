@@ -8,9 +8,9 @@
 	/*padding: 1em;*/
 	padding-bottom: 1em;
 	
-	margin-right: auto;
+	
 	margin-top: 1em;
-	margin-bottom: 10em;
+	/*margin-bottom: 10em;*/
 	height: 100%;
 
 	box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
@@ -20,28 +20,78 @@
 	-moz-border-radius: 4px;
 
 }
+#index > div{
+	padding: 0.5em;
+}
+body > div.hero{
+	padding: 0px;
+	margin-bottom: 0px;
+	height: auto;
+}
+[role=main] {
+ min-height: 0px;
+}
+body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > div{
+	display: none;
+}
+body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > h3{
+	display: none;
+}
+body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
+	/*width: 456px;*/
+    height: 50px;
+        
+    padding-top: 2ex;
+    padding-bottom: 0em;
+    border-bottom: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+body > div:nth-child(9){
+	display: none;
+}
+.element{
+	padding: 0.4em;
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+	font-size: 1.1em;
+}
+.element > h3{
+	font-size: 1.1em;
+}
 </style>
-
-  <div style="margin-right: auto; margin-left: auto;">
-    <div class="container" style="margin-right: auto; margin-left: auto;">
+{% snippet "home/layout{0}.html".format(homepage_style) %}
+  <div>
+    <div class="container" >
       {{ self.flash() }}
 
-      <div class="row" style="position: relative;width=100%;">
+      <!--div class="row" style="position: relative;width=100%;"-->
 
-		<div class="primary span9" id="index" >
-			<div class="box" >
+		<div  id="index" >
+			<!--div class="box" -->
 				<header class="module-heading"> <h2>{{_('Recently changed datasets')}}	</h2></header>
 			    {% block primary_content %}
 			      {#{ h.recently_changed_packages_activity_stream() }#}
 			      {#set rec = #}
-
-			      <h1>
-			      		TODO > helper function + API
-			      </h1>
+			      <div class="most_recent">
+			      		{%set most_recent = h.recent_datasets() %}
+			      		{% for i in most_recent %}
+			      			<div class='element'>
+				      			<h3> <a href='/dataset/{{i.url}}'>{{i.title}}</a> </h3>
+				      			 {%if i.text==''%} <p class="empty">{{_('This dataset has no description')}}{%else%}<p>{{i.text}}{%endif%}</p>
+				      			 {%if i.resources|length > 0%}
+					      			 {%for j in i.resources %}
+					      			 	<a href='/dataset/{{i.url}}' class="label" data-format="{{j.lower()}}">{{j}}</a>
+					      			 {%endfor%}
+				      			 {%endif%}
+			      			</div>
+			      			<hr >
+			      		{%endfor%}
+			      </div>
 			        
 			    {% endblock %}
-			</div>
-		</div></div>
+			<!--/div>
+		</div--></div>
 	  </div>
 
     </div>
