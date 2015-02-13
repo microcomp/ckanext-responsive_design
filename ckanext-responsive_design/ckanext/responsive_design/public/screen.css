@@ -17,6 +17,37 @@
     }
 }
 @media (min-width: 768px) {
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button
+    {
+        padding: 1.1em;
+        padding-left: 0.9em;
+        padding-right: 0.9em;
+        margin: 0.5em;
+        margin-bottom: 1.1em;
+        border: 1px solid #bd0a26;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        color: white;
+        background-color: #bd0a26;
+    }
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button:hover
+    {
+      
+        background-color: #990000;
+    }
+
+
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > input{
+        border: 1px solid #b81821;
+        width: 350px;
+        height: 0px;
+        padding-bottom: 2ex;
+        padding-top: 2ex;
+        font-size: 1.5em;
+        margin-left: auto;
+        margin-right: auto;
+}
     body > header.navbar.navbar-static-top.masthead > div.container{
         background-color: #453b34;
         color: white;
@@ -47,7 +78,7 @@
     }
 
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
-        width: 456px;
+        width: 496px;
         height: 50px;
         
         padding-top: 2ex;
@@ -77,6 +108,41 @@
 
 @media (max-width: 767px) {
 
+
+
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button
+    {
+        padding: 1.1em;
+        padding-left: 0.9em;
+        padding-right: 0.9em;
+        margin: 0.5em;
+        margin-bottom: 1.1em;
+        border: 1px solid #bd0a26;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #eeeeee;
+        color:#b81821 ;
+    }
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button:hover
+    {
+      
+        background-color: #990000;
+        color: white;
+
+    }
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > input{
+        border: 1px solid #b81821;
+        width: 200px;
+        height: 0px;
+        
+        padding-bottom: 2ex;
+        padding-top: 2ex;
+        font-size: 1.5em;
+        
+        margin-left: auto;
+        margin-right: auto;
+}
     body > header.navbar.navbar-static-top.masthead > div.container{
         background-color: #453b34;
         color: white;
@@ -114,7 +180,7 @@
         margin-top: -0.8em;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
-        width: 306px;
+        width: 356px;
         height: 50px;
         
         padding-top: 2ex;
@@ -239,9 +305,7 @@ body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-
 }
 
 
-body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > div > input{
-    border: 1px solid #b81821;
-}
+
 body > div.homepage.layout-1 > div.hero > div > div.row.row2{
     width: 100%;
 
@@ -671,6 +735,10 @@ reset elementu btn a btn:hover;
     color: white;
     background-color: #bd0a26;
 }
+
+
+
+
 #content > div.row.wrapper > div > * > div.module-content > * > a.btn:hover,
 #content > div.row.wrapper.no-nav > article > div > div.page_primary_action > a:hover, 
 #content > div.row.wrapper.no-nav > section > a:hover,
