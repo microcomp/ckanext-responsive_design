@@ -34,6 +34,13 @@ def recent_datasets():
         formats = model.Session.query(model.Resource).filter()
         id = i.id
         logging.warning(__builtin__.site_url)
+        try:
+            response = json.load(urllib2.urlopen(__builtin__.site_url+'api/3/action/resource_search?query=url:'+i.id))['result']['results']
+        except URLError:
+            response = json.load(urllib2.urlopen('http://'+__builtin__.site_url+'api/3/action/resource_search?query=url:'+i.id))['result']['results']
+        else:
+            response = json.load(urllib2.urlopen('http://'+__builtin__.site_url+'/api/3/action/resource_search?query=url:'+i.id))['result']['results']
+        
         response = json.load(urllib2.urlopen(__builtin__.site_url+'api/3/action/resource_search?query=url:'+i.id))['result']['results']
 
         res = []
