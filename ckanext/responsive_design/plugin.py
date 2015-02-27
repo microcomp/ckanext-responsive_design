@@ -27,8 +27,14 @@ class ResponsiveDesign(plugins.SingletonPlugin):
 
 
     def get_helpers(self):
-        return {'recent_datasets': homepage.recent_datasets}
+        return {'recent_datasets': homepage.recent_datasets,
+                'xwiki': homepage.xwiki}
 
     def configure(self, config):
         self.site_url = config.get('ckan.site_url', None)
         __builtin__.site_url = self.site_url
+        self.xwiki_url = config.get('ckan.xwiki.url', None)
+        __builtin__.xwiki_url = self.xwiki_url
+        logging.warning('/////////////////////////////////////////')
+        logging.warning(__builtin__.xwiki_url)
+        #c.xwiki_url = __builtin__.xwiki_url

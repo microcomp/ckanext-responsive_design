@@ -20,6 +20,10 @@ import __builtin__
 
 
 import json
+def xwiki():
+    if __builtin__.xwiki_url == None or __builtin__.xwiki_url == "":
+        __builtin__.xwiki_url = 'http://xwiki.org'
+    return __builtin__.xwiki_url
 def recent_datasets():
     most_recent = model.Session.query(model.Package) \
                     .filter(model.Package.state == 'active' and model \
@@ -34,19 +38,16 @@ def recent_datasets():
         formats = model.Session.query(model.Resource).filter()
         id = i.id
         logging.warning(__builtin__.site_url)
-        '''try:
-            response = json.load(urllib2.urlopen(__builtin__.site_url+'api/3/action/resource_search?query=url:'+i.id))['result']['results']
-        except URLError:
-            response = json.load(urllib2.urlopen('http://'+__builtin__.site_url+'api/3/action/resource_search?query=url:'+i.id))['result']['results']
-        else:'''
-        response = json.load(urllib2.urlopen('http://'+__builtin__.site_url+'/api/3/action/resource_search?query=url:'+i.id))['result']['results']
-        
+
         response = json.load(urllib2.urlopen(__builtin__.site_url+'api/3/action/resource_search?query=url:'+i.id))['result']['results']
+        #response = json.load('http://'+urllib2.urlopen(__builtin__.site_url+'/api/3/action/resource_search?query=url:'+i.id))['result']['results']
+        #data.gov server potrebuje aj http aj /
 
         res = []
         for j in response:
         	res.append(j["format"])
 
         result.append({'title':i.title, 'text': notes, 'url':i.name, 'resources': res })
+
     return result
 
