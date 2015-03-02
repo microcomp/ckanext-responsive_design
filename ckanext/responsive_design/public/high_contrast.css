@@ -24,17 +24,17 @@
         padding-right: 0.9em;
         margin: 0.5em;
         margin-bottom: 1.1em;
-        border: 1px solid #660000;
+        border: 1px solid #bd0a26;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
         color: white;
-        background-color: #660000;
+        background-color: #bd0a26;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button:hover
     {
       
-        background-color: #660000;
+        background-color: #bd0a26;
     }
 
 
@@ -116,7 +116,7 @@
         padding-right: 0.9em;
         margin: 0.5em;
         margin-bottom: 1.1em;
-        border: 1px solid #660000;
+        border: 1px solid #bd0a26;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
@@ -126,7 +126,7 @@
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button:hover
     {
       
-        background-color: #660000;
+        background-color: #bd0a26;
         color: white;
 
     }
@@ -206,12 +206,12 @@
         color: #aaaaaa;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
-        background-color: #660000;
+        background-color: #bd0a26;
     }
     body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
         position: absolute;
         top: -48px;
-        background-color: #660000;
+        background-color: #bd0a26;
     }
     .account-masthead{
         margin-left: 0px;
@@ -224,7 +224,7 @@
         width: 14em;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
-        background-color: #660000;
+        background-color: #bd0a26;
         padding-top: 0px;
         height: 90px;
         margin-top: -35px;
@@ -346,7 +346,7 @@ body{
 }
 
 footer{
-    border-top: 5px solid #660000;
+    border-top: 5px solid #bd0a26;
 }
 h1{
     font-size: 2.2em;
@@ -730,12 +730,12 @@ reset elementu btn a btn:hover;
     padding-left: 0.6em;
     padding-right: 0.6em;
     margin: 0.5em;
-    border: 1px solid #660000;
+    border: 1px solid #bd0a26;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: white;
-    background-color: #660000;
+    background-color: #bd0a26;
     cursor:pointer;
 
 }
@@ -760,12 +760,12 @@ reset elementu btn a btn:hover;
     padding-left: 0.6em;
     padding-right: 0.6em;
     margin: 0.5em;
-    border: 1px solid #660000;
+    border: 1px solid #bd0a26;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: white;
-    background-color: #660000;
+    background-color: #bd0a26;
     cursor:pointer;
 }
 body > div.homepage.layout-1 > div.hero > div > div.row.row2 > div.span6.col1 > div > section > h2{
@@ -789,10 +789,10 @@ body{
     border: none;
     box-shadow: none; }
 a{
-    color: #660000;
+    color: #bd0a26;
 }
 a:hover{
-    color: #660000;
+    color: #bd0a26;
     text-decoration: underline;
 }
 
@@ -809,7 +809,7 @@ body > header.navbar.navbar-static-top.masthead > div.container{
         z-index: 999;
 }
 #content > div.row.wrapper > div > * > div.module-content > ul > li > div > h3 > a{
-    color: #660000;
+    color: #bd0a26;
     font-size: 1em;
 }
 [role=main], .main, #content > div.row.wrapper > div > article > div > ul{
