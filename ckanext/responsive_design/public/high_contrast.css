@@ -24,17 +24,17 @@
         padding-right: 0.9em;
         margin: 0.5em;
         margin-bottom: 1.1em;
-        border: 1px solid #bd0a26;
+        border: 1px solid #660000;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
         color: white;
-        background-color: #bd0a26;
+        background-color: #660000;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button:hover
     {
       
-        background-color: #990000;
+        background-color: #660000;
     }
 
 
@@ -48,7 +48,7 @@
         margin-right: auto;
 }
     body > header.navbar.navbar-static-top.masthead > div.container{
-        background-color: #453b34;
+        background-color: #000;
         color: white;
         width: 100%;
         height: 41px;
@@ -102,7 +102,7 @@
         color: #d82831;
     }
     body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
-        background-color: #f9f9f9;
+        background-color: #fff;
     }}
 
 @media (max-width: 767px) {
@@ -116,17 +116,17 @@
         padding-right: 0.9em;
         margin: 0.5em;
         margin-bottom: 1.1em;
-        border: 1px solid #bd0a26;
+        border: 1px solid #660000;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
-        background-color: #eeeeee;
+        background-color: #fff;
         color:#b81821 ;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button:hover
     {
       
-        background-color: #990000;
+        background-color: #660000;
         color: white;
 
     }
@@ -143,7 +143,7 @@
         margin-right: auto;
 }
     body > header.navbar.navbar-static-top.masthead > div.container{
-        background-color: #453b34;
+        background-color: #000;
         color: white;
         
         height: 41px;
@@ -206,12 +206,12 @@
         color: #aaaaaa;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
-        background-color: #bd0a26;
+        background-color: #660000;
     }
     body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
         position: absolute;
         top: -48px;
-        background-color: #bd0a26;
+        background-color: #660000;
     }
     .account-masthead{
         margin-left: 0px;
@@ -224,7 +224,7 @@
         width: 14em;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
-        background-color: #bd0a26;
+        background-color: #660000;
         padding-top: 0px;
         height: 90px;
         margin-top: -35px;
@@ -283,7 +283,7 @@ body > div.homepage.layout-1 > div.hero > div > div.module.module-search.module-
 .homepage .module-search .module-content{
     margin: 0px;
     
-    background-color: #f9f9f9;
+    background-color: #fff;
     width: 100%;
 }
 body > div.homepage.layout-1 > div.hero > div > div.row.row2{
@@ -333,7 +333,7 @@ body{
 .site-footer{
     background: none;
     background-image: none;
-    background-color: #453b34;
+    background-color: #000;
     color: #ffffff;
 }
 
@@ -346,7 +346,7 @@ body{
 }
 
 footer{
-    border-top: 5px solid #bd0a26;
+    border-top: 5px solid #660000;
 }
 h1{
     font-size: 2.2em;
@@ -374,7 +374,7 @@ div{
     box-shadow: none;
 }
 body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > a:hover{
-    background-color: #453b34;
+    background-color: #000;
     text-decoration: underline;
     z-index: 1000000;
 }
@@ -730,12 +730,12 @@ reset elementu btn a btn:hover;
     padding-left: 0.6em;
     padding-right: 0.6em;
     margin: 0.5em;
-    border: 1px solid #bd0a26;
+    border: 1px solid #660000;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: white;
-    background-color: #bd0a26;
+    background-color: #660000;
     cursor:pointer;
 
 }
@@ -760,12 +760,12 @@ reset elementu btn a btn:hover;
     padding-left: 0.6em;
     padding-right: 0.6em;
     margin: 0.5em;
-    border: 1px solid #bd0a26;
+    border: 1px solid #660000;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: white;
-    background-color: #990000;
+    background-color: #660000;
     cursor:pointer;
 }
 body > div.homepage.layout-1 > div.hero > div > div.row.row2 > div.span6.col1 > div > section > h2{
@@ -789,10 +789,10 @@ body{
     border: none;
     box-shadow: none; }
 a{
-    color: #bd0a26;
+    color: #660000;
 }
 a:hover{
-    color: #bd0a26;
+    color: #660000;
     text-decoration: underline;
 }
 
@@ -809,7 +809,7 @@ body > header.navbar.navbar-static-top.masthead > div.container{
         z-index: 999;
 }
 #content > div.row.wrapper > div > * > div.module-content > ul > li > div > h3 > a{
-    color: #bd0a26;
+    color: #660000;
     font-size: 1em;
 }
 [role=main], .main, #content > div.row.wrapper > div > article > div > ul{
@@ -843,14 +843,14 @@ body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul
 #content > div.row.wrapper{
     border: 2px solid #d4d4d4;
     border-radius: 5px;
-    background-color: #f7f7f7;
+    background-color: #fff;
 }
 #content > div.row.wrapper > div, 
 #content > div.row.wrapper > div > article > div > ul > li,
 #content > div.row.wrapper > div > article > div > ul > li > div,
 #content > div.row.wrapper > div > article > div > ul > li > div > h3,
 #content > div.row.wrapper > div > article > div > ul{
-    background-color: #f7f7f7;
+    background-color: #fff;
 }
 
 
@@ -883,7 +883,7 @@ body > div.hero > div > div.module.module-search.module-narrow.module-shallow.bo
     border: 1px solid #cccccc;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    background-color: #f9f9f9;
+    background-color: #fff;
 
 }
 #index > div{
@@ -919,8 +919,5 @@ body > div.hero > div > div.module.module-search.module-narrow.module-shallow.bo
     font-size: 1.1em;
 }
 .most_recent{
-    background-color: #f9f9f9;
-}
-body > footer > div > div > div.span4.attribution > p > strong{
-    color: white;
+    background-color: #fff;
 }

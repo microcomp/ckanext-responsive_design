@@ -1,11 +1,25 @@
 {% ckan_extends %}
 
 {% block header_wrapper %}
-<link rel="stylesheet" type="text/css" href="/screen.css" />
+<link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" />
 {% if c.controller == 'home' %}
 {%else%}
 <link rel="stylesheet" type="text/css" href="/header_mod.css" />
 {%endif%}
 {{ super() }}
 
+{% endblock %}
+{% block header_account_logged %}
+<script type="text/javascript">
+function change_style(){
+	var style = document.getElementById("contrast");
+	if(style.href.indexOf("/high_contrast.css") > -1){ style.href = "/screen.css" }else { style.href = "/high_contrast.css" }
+}
+</script>
+  <li>
+   <a onclick="change_style()" href="#">
+      <i class="fa fa-edit"></i>contrast
+    </a>
+  </li>
+  {{ super() }}
 {% endblock %}
