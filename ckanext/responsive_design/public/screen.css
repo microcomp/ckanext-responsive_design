@@ -967,11 +967,11 @@ body > header.account-masthead > div > nav > ul > h3, body > header.account-mast
     margin: 0px;
     margin-right: auto;
     margin-left: auto;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -ms-border-radius: 5px 5px 0px 0px;
+    -o-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
 }
 body > header.account-masthead > div{
     margin-left: 0px;
@@ -1024,4 +1024,10 @@ body > header.account-masthead {
 }
 .account-masthead .account .notifications a span{
     background-color: #fff;
+}
+#content > div.row.wrapper > div > section > div > ol > li{
+    width: 33%;
+}
+#content > div.row.wrapper > div > section > div > form > label > input{
+    margin-top: -0.6em;
 }
