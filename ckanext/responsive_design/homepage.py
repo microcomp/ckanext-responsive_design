@@ -15,11 +15,24 @@ from ckan.common import _, c
 import ckan.plugins.toolkit as toolkit
 import urllib2
 import logging
-import ckan.logic
+import ckan.logic as logic
 import __builtin__
 
 
 import json
+
+def uv_url():
+    if __builtin__.uv_url == None or __builtin__.uv_url == "":
+        __builtin__.uv_url = 'http://www.unifiedviews.eu/'
+    return __builtin__.uv_url
+def uv_usage():
+    context = {'user' : c.user}
+    try:
+        logic.check_access('uv_usage', context)
+        return True
+    except toolkit.NotAuthorized, e:
+        return False
+    
 def xwiki():
     if __builtin__.xwiki_url == None or __builtin__.xwiki_url == "":
         __builtin__.xwiki_url = 'http://xwiki.org'
