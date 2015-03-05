@@ -230,6 +230,9 @@
         margin-top: -35px;
         margin-bottom: 0px;
     }
+        body > header.account-masthead, .logo_min{
+        display: none;
+    }
 }
 .debug{
     z-index: 100000;
