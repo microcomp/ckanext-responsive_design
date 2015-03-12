@@ -41,6 +41,7 @@ body > div:nth-child(9){
 			      {#set rec = #}
 			      <div class="most_recent">
 			      		{%set most_recent = h.recent_datasets() %}
+			      		{%if most_recent|length >0 %}
 			      		{% for i in most_recent %}
 			      			<div class='element'>
 				      			<h3> <a href='/dataset/{{i.url}}'>{{i.title}}</a> </h3>
@@ -53,6 +54,12 @@ body > div:nth-child(9){
 			      			</div>
 			      			<hr >
 			      		{%endfor%}
+			      		{%else%}
+			      			<div class='element'>
+				      			<h3> </h3>
+				      			 <p>{{_('No recent datasets')}}</p>
+			      			</div>
+			      		{%endif%}
 			      </div>
 			        
 			    {% endblock %}
