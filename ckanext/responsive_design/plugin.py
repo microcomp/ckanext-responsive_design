@@ -28,14 +28,13 @@ class ResponsiveDesign(plugins.SingletonPlugin):
 
     def get_helpers(self):
         return {'recent_datasets': homepage.recent_datasets,
-                'xwiki': homepage.xwiki,
-                'uv_usage' : homepage.uv_usage,
-                'uv_url' : homepage.uv_url}
+                'xwiki': homepage.xwiki}
 
     def configure(self, config):
         self.site_url = config.get('ckan.site_url', None)
         __builtin__.site_url = self.site_url
         self.xwiki_url = config.get('ckan.xwiki.url', None)
         __builtin__.xwiki_url = self.xwiki_url
-        self.uv_url = config.get('odn.uv.url', None)
-        __builtin__.uv_url = self.uv_url
+        logging.warning('/////////////////////////////////////////')
+        logging.warning(__builtin__.xwiki_url)
+        #c.xwiki_url = __builtin__.xwiki_url
