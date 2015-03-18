@@ -1,6 +1,7 @@
 jQuery(function($) {
   window.multiView = null;
   window.explorerDiv = $('.data-explorer-here');
+  
 
   // create the demo dataset
   //var dataset = createDemoDataset();
@@ -59,6 +60,7 @@ jQuery(function($) {
 function createDemoDataset() {
  
   var dataset = new recline.Model.Dataset(data_from_json);
+  console.log(dataset)
   return dataset;
 }
 
@@ -119,13 +121,16 @@ var createMultiView = function(dataset, state) {
       })
     }
   ];
-
+  console.log('views: ')
+  console.log(views)
   var multiView = new recline.View.MultiView({
     model: dataset,
     el: $el,
     state: state,
     views: views
   });
+  console.log('multiView: ')
+  console.log(multiView)
   return multiView;
 }
 
