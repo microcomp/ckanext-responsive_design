@@ -133,10 +133,10 @@ body > header.account-masthead{
 {% block header_account_notlogged %}
 {%if c.controller == 'home' %}
 <style type="text/css">
-
-body > header.account-masthead{
-	top:2em;
+body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
+	color: #bd0a26;;
 }
+
 </style>
 {%endif%}
 <h3> {{_("Account info")}} </h3>
