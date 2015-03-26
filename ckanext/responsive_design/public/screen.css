@@ -1,3 +1,8 @@
+@media (max-width: 1084px){
+    body > header.account-masthead > div{
+        display: none;
+    }
+}
 @media (max-width: 1024px){
 
     body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > a{
@@ -1030,4 +1035,9 @@ body > header.account-masthead {
 }
 #content > div.row.wrapper > div > section > div > form > label > input{
     margin-top: -0.6em;
+}
+body > header.navbar.navbar-static-top.masthead > div.container > div{
+    position: absolute;
+    top: -10px;
+    margin-left: 15%;
 }
