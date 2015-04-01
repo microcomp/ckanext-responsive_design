@@ -1,3 +1,4 @@
+
 @media (max-width: 1024px){
 
     body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > a{
@@ -34,7 +35,7 @@
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button:hover
     {
       
-        background-color: #bd0a26;
+        background-color: #990000;
     }
 
 
@@ -107,7 +108,9 @@
 
 @media (max-width: 767px) {
 
-
+    body > header.navbar.navbar-static-top.masthead > div.container > div > nav{
+        padding-top: 2em;
+    }
 
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button
     {
@@ -120,13 +123,13 @@
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: #eeeeee;
         color:#b81821 ;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button:hover
     {
       
-        background-color: #bd0a26;
+        background-color: #990000;
         color: white;
 
     }
@@ -171,7 +174,7 @@
         margin: 0;
 
         position: absolute;
-        z-index: 29;
+        z-index: 999;
         top: 80px;
         left: 15%;
     }
@@ -765,7 +768,7 @@ reset elementu btn a btn:hover;
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: white;
-    background-color: #bd0a26;
+    background-color: #990000;
     cursor:pointer;
 }
 body > div.homepage.layout-1 > div.hero > div > div.row.row2 > div.span6.col1 > div > section > h2{
@@ -843,14 +846,14 @@ body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul
 #content > div.row.wrapper{
     border: 2px solid #d4d4d4;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #f7f7f7;
 }
 #content > div.row.wrapper > div, 
 #content > div.row.wrapper > div > article > div > ul > li,
 #content > div.row.wrapper > div > article > div > ul > li > div,
 #content > div.row.wrapper > div > article > div > ul > li > div > h3,
 #content > div.row.wrapper > div > article > div > ul{
-    background-color: #fff;
+    background-color: #f7f7f7;
 }
 
 
@@ -973,7 +976,6 @@ body > header.account-masthead > div > nav > ul > h3, body > header.account-mast
     -o-border-radius: 5px 5px 0px 0px;
     border-radius: 5px 5px 0px 0px;
 }
-}
 body > header.account-masthead > div{
     margin-left: 0px;
     margin-right: 0px;
@@ -990,7 +992,6 @@ body > header.account-masthead > div > nav, body > header.account-masthead > div
     background-color: #fff;
     padding-bottom: 0.45em;
 }
-
 body > header.account-masthead > div > div > ul > li:nth-child(3) > a > i,
 body > header.account-masthead > div > div > ul > li:nth-child(4) > a > span,
 body > header.account-masthead > div > div > ul > li:nth-child(4) > a,
@@ -1032,6 +1033,23 @@ body > header.account-masthead {
 }
 #content > div.row.wrapper > div > section > div > form > label > input{
     margin-top: -0.6em;
-
-
+}
+body > header.navbar.navbar-static-top.masthead > div.container > div{
+    position: absolute;
+    top: -10px;
+    margin-left: 15%;
+}
+#content > div.row.wrapper > div > article > div > ul > li.related-item.media-item.is-expander.masonry-brick > img{
+    max-height: 190px;
+    padding-left: 15%;
+    padding-right: auto;
+}
+@media (max-width: 784px){
+    .small{
+        display: none;
+    }
+}
+body > header.navbar.navbar-static-top.masthead > div.container > button{
+    position: absolute;
+    top: -5px;
 }
