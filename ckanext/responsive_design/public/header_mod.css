@@ -50,13 +50,7 @@
 }
 @media (max-width: 767px) {
     .logo_min{
-        padding-bottom: 0;
-        margin: 0;
-
-        position: absolute;
-        z-index: 29;
-        top: 75px;
-        left: 15%;
+        display: none;
     }
     .logo_min2{
         display: none;
