@@ -1,8 +1,4 @@
-@media (max-width: 1084px){
-    body > header.account-masthead > div{
-        display: none;
-    }
-}
+
 @media (max-width: 1024px){
 
     body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > a{
@@ -112,7 +108,9 @@
 
 @media (max-width: 767px) {
 
-
+    body > header.navbar.navbar-static-top.masthead > div.container > div > nav{
+        padding-top: 2em;
+    }
 
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button
     {
@@ -176,7 +174,7 @@
         margin: 0;
 
         position: absolute;
-        z-index: 29;
+        z-index: 999;
         top: 80px;
         left: 15%;
     }
@@ -1045,4 +1043,13 @@ body > header.navbar.navbar-static-top.masthead > div.container > div{
     max-height: 190px;
     padding-left: 15%;
     padding-right: auto;
+}
+@media (max-width: 784px){
+    .small{
+        display: none;
+    }
+}
+body > header.navbar.navbar-static-top.masthead > div.container > button{
+    position: absolute;
+    top: -5px;
 }
