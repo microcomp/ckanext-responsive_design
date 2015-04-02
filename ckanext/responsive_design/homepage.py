@@ -21,6 +21,12 @@ from ckan.model.package import Package
 
 
 import json
+
+def uv_url():
+    if __builtin__.uv_url == None or __builtin__.uv_url == "":
+        __builtin__.uv_url = 'http://www.unifiedviews.eu/'
+    return __builtin__.uv_url
+
 def xwiki():
     if __builtin__.xwiki_url == None or __builtin__.xwiki_url == "":
         __builtin__.xwiki_url = 'http://xwiki.org'

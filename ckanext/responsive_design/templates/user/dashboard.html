@@ -9,7 +9,7 @@
 {{ h.build_nav_icon('user_dashboard', _('News feed')) }}
 {{ h.build_nav_icon('user_dashboard_datasets', _('My Datasets')) }}
 {{ h.build_nav_icon('user_dashboard_organizations', _('My Organizations')) }}
-{% if h.uv_usage() %}
+{% if h.check_access('uv_usage', {'user':c.user})%}
 	<li> <a href="{{h.uv_url()}}" target="_blank" alt="uv url">{{_('Unified Views')}} </a></li> 
 {% endif %}
 </ul>
