@@ -21,12 +21,6 @@ from ckan.model.package import Package
 
 
 import json
-
-def uv_url():
-    if __builtin__.uv_url == None or __builtin__.uv_url == "":
-        __builtin__.uv_url = 'http://www.unifiedviews.eu/'
-    return __builtin__.uv_url
-
 def xwiki():
     if __builtin__.xwiki_url == None or __builtin__.xwiki_url == "":
         __builtin__.xwiki_url = 'http://xwiki.org'
@@ -49,9 +43,16 @@ def recent_datasets():
         id = i.id
         logging.warning(__builtin__.site_url)
 
-        response = json.load(urllib2.urlopen(__builtin__.site_url+'api/3/action/resource_search?query=url:'+i.id))['result']['results']
-        #response = json.load('http://'+urllib2.urlopen(__builtin__.site_url+'/api/3/action/resource_search?query=url:'+i.id))['result']['results']
-        #data.gov server potrebuje aj http aj /
+
+        data_dict = {"query":'url:'+i.id}
+        context = {'model': model, 'session': model.Session,
+                   'user': c.user or c.author,
+                   'auth_user_obj': c.userobj,
+                   'for_view': True}
+        response = toolkit.get_action('resource_search')(context, data_dict)['results']
+
+        logging.warning(response)
+        
 
         res = []
         for j in response:
