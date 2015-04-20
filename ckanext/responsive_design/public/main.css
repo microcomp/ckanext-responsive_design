@@ -6046,10 +6046,10 @@ a.tag:hover {
 .nav-item > a,
 .nav-aside li a {
   color: #333333;
-  font-size: 0.9em;
+  font-size: 1.1em;
   line-height: 20px;
   margin: -7px -25px;
-  padding: 7px 25px;
+  padding: 4px 25px;
 }
 .nav-item.active,
 .nav-aside li.active {
