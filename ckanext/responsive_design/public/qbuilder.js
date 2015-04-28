@@ -124,7 +124,10 @@ function genQuery(){
 
 });
 
- 
+ /*
+if object in subject >>
+    next subject... etc...
+ */
 
 
  
