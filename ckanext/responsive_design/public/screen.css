@@ -1054,3 +1054,11 @@ body > header.navbar.navbar-static-top.masthead > div.container > button{
     position: absolute;
     top: -5px;
 }
+#content > div.row.wrapper > div > section > div.module-content > ul > li > div > h3{
+    margin-bottom: 3px;
+}
+#content > div.row.wrapper > div > section > div.module-content > ul > li{
+        margin-bottom: 3px;
+        padding-bottom: 3px;
+        padding-left: 20px;
+}
