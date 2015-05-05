@@ -37,8 +37,11 @@ def recent_datasets():
         logging.warning(i.private)
     	#text = model.Session.query(model.PackageRevision).filter(model.PackageRevision.name == i.name).first().notes
         notes = i.notes
-    	if len(i.notes) > 300:
-            notes = i.notes[:300]+'...'
+        if  i.notes != None:
+            if len(i.notes) > 300:
+                notes = i.notes[:300]+'...'
+        else:
+            notes = ""
         formats = model.Session.query(model.Resource).filter()
         id = i.id
         logging.warning(__builtin__.site_url)
