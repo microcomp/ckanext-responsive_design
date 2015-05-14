@@ -1,0 +1,165 @@
+# Slovak translations for ckanext-responsive_design.
+# Copyright (C) 2015 ORGANIZATION
+# This file is distributed under the same license as the
+# ckanext-responsive_design project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-responsive_design 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-05-14 12:45+0100\n"
+"PO-Revision-Date: 2015-05-14 12:46+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: sk <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: ckanext/responsive_design/templates/header.html:28
+#: ckanext/responsive_design/templates/header.html:107
+msgid "Account info"
+msgstr ""
+
+#: ckanext/responsive_design/templates/group/index.html:3
+#: ckanext/responsive_design/templates/group/index.html:16
+msgid "Groups"
+msgstr ""
+
+#: ckanext/responsive_design/templates/group/index.html:18
+msgid "Search groups..."
+msgstr ""
+
+#: ckanext/responsive_design/templates/group/index.html:18
+#: ckanext/responsive_design/templates/package/search.html:27
+#: ckanext/responsive_design/templates/snippets/search_form2.html:4
+msgid "Name Ascending"
+msgstr ""
+
+#: ckanext/responsive_design/templates/group/index.html:18
+#: ckanext/responsive_design/templates/package/search.html:28
+#: ckanext/responsive_design/templates/snippets/search_form2.html:4
+msgid "Name Descending"
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/index.html:41
+msgid "Recently changed datasets"
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/index.html:51
+msgid "This dataset has no description"
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/index.html:63
+msgid "No recent datasets"
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/layout1.html:7
+msgid "E.g. environment"
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/layout1.html:11
+msgid "Search data"
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/layout1.html:25
+#: ckanext/responsive_design/templates/snippets/search_form2.html:34
+msgid "Search"
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/layout1.html:29
+msgid "Popular tags"
+msgstr ""
+
+#: ckanext/responsive_design/templates/organization/index.html:5
+msgid "Organizations"
+msgstr ""
+
+#: ckanext/responsive_design/templates/organization/index.html:7
+msgid "Search organizations..."
+msgstr ""
+
+#: ckanext/responsive_design/templates/organization/index.html:16
+msgid "There are currently no organizations for this site"
+msgstr ""
+
+#: ckanext/responsive_design/templates/organization/index.html:18
+msgid "How about creating one?"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/search.html:4
+#: ckanext/responsive_design/templates/package/search.html:7
+msgid "Datasets"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/search.html:26
+msgid "Relevance"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/search.html:29
+msgid "Last Modified"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/search.html:30
+msgid "Popular"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form2.html:3
+msgid "Search datasets..."
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form2.html:47
+msgid "Order by"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form2.html:56
+msgid "Go"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form2.html:81
+msgid "Remove"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form2.html:86
+msgid "Filter Results"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form2.html:93
+msgid ""
+"\n"
+"    <p class=\"extra\">Please try another search.</p>\n"
+"  "
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form2.html:99
+msgid ""
+"\n"
+"    <p><strong>There was an error while searching.</strong> Please try "
+"again.</p>\n"
+"  "
+msgstr ""
+
+#: ckanext/responsive_design/templates/user/dashboard.html:7
+#: ckanext/responsive_design/templates/user/dashboard.html:9
+msgid "Edit settings"
+msgstr ""
+
+#: ckanext/responsive_design/templates/user/dashboard.html:14
+msgid "News feed"
+msgstr ""
+
+#: ckanext/responsive_design/templates/user/dashboard.html:15
+msgid "My Datasets"
+msgstr ""
+
+#: ckanext/responsive_design/templates/user/dashboard.html:16
+msgid "My Organizations"
+msgstr ""
+
+#: ckanext/responsive_design/templates/user/dashboard.html:18
+msgid "Unified Views"
+msgstr ""
+

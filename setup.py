@@ -24,7 +24,8 @@ setup(
     ],
     entry_points='''
         [ckan.plugins]
-        # Add plugins here, e.g.
         responsive_design =ckanext.responsive_design.plugin:ResponsiveDesign
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
     ''',
 )
