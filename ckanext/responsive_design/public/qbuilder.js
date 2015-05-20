@@ -1,3 +1,8 @@
+
+
+var all_subj = [];
+//TODO megoldani, h globalis legyen
+
   $.getScript("/jquery-ui.min.js", function(){
    console.log("jquery loaded...");
 }).complete(function(){
@@ -24,7 +29,7 @@
             if(contains(availableTags, json.results.bindings[i].x.value) == false)
                 availableTags.push(json.results.bindings[i].x.value)
     }
-    
+    all_subj = availableTags.slice();
     try{
     $( "#predicates" ).autocomplete({
       source: availableTags
@@ -93,9 +98,7 @@ function genQuery(){
         var subject = $("#subject").val();
 
         var object = $("#object").val();
-        if($("#3rd").css( "visibility", "hidden" ).is( ":hidden" )){
-          object = "";
-        }
+         if($("#3rd").is(":visible") == false){object = "";}
         var limit = $("#limit").val();
         if(limit == "" || limit == null)
           limit = 20;
