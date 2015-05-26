@@ -34,7 +34,12 @@ body > header.account-masthead{
 
 {% block header_site_navigation_tabs %}
 
-            
+              {{ h.build_nav_main(
+                ('search', _('Datasets')),
+                ('organizations_index', _('Organizations')),
+                ('about', _('About'))
+              ) }}
+
  	{%if  c.controller == 'ckanext.apps_and_ideas.apps:AppsController' %}
 		<link rel="stylesheet" type="text/css" href="/box.css" />
 		
