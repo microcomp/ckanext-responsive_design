@@ -22,7 +22,7 @@ msgstr ""
 #: ckanext/responsive_design/templates/header.html:28
 #: ckanext/responsive_design/templates/header.html:107
 msgid "Account info"
-msgstr "Informácie o úète"
+msgstr "InformÃ¡cie o ÃºÄte"
 
 #: ckanext/responsive_design/templates/group/index.html:3
 #: ckanext/responsive_design/templates/group/index.html:16
@@ -31,64 +31,64 @@ msgstr "Skupiny"
 
 #: ckanext/responsive_design/templates/group/index.html:18
 msgid "Search groups..."
-msgstr "H¾ada skupiny..."
+msgstr "HÄ¾adaÅ¥ skupiny..."
 
 #: ckanext/responsive_design/templates/group/index.html:18
 #: ckanext/responsive_design/templates/package/search.html:27
 #: ckanext/responsive_design/templates/snippets/search_form2.html:4
 msgid "Name Ascending"
-msgstr "Mená vzostupne"
+msgstr "MenÃ¡ vzostupne"
 
 #: ckanext/responsive_design/templates/group/index.html:18
 #: ckanext/responsive_design/templates/package/search.html:28
 #: ckanext/responsive_design/templates/snippets/search_form2.html:4
 msgid "Name Descending"
-msgstr "Mená zostupne"
+msgstr "MenÃ¡ zostupne"
 
 #: ckanext/responsive_design/templates/home/index.html:41
 msgid "Recently changed datasets"
-msgstr "nedávno zmenené datasety"
+msgstr "Naposledy upravenÃ© datasety"
 
 #: ckanext/responsive_design/templates/home/index.html:51
 msgid "This dataset has no description"
-msgstr "Tento dataset nemá popis"
+msgstr "Tento dataset nemÃ¡ popis"
 
 #: ckanext/responsive_design/templates/home/index.html:63
 msgid "No recent datasets"
-msgstr "iadne nedávne datasety"
+msgstr "Å½iadne nedÃ¡vne datasety"
 
 #: ckanext/responsive_design/templates/home/layout1.html:7
 msgid "E.g. environment"
-msgstr "napr. ivotné prostredie"
+msgstr "napr. Å¾ivotnÃ© prostredie"
 
 #: ckanext/responsive_design/templates/home/layout1.html:11
 msgid "Search data"
-msgstr "vyh¾adáva dáta"
+msgstr "vyhÄ¾adÃ¡vaÅ¥ dÃ¡ta"
 
 #: ckanext/responsive_design/templates/home/layout1.html:25
 #: ckanext/responsive_design/templates/snippets/search_form2.html:34
 msgid "Search"
-msgstr "Vyh¾adávanie"
+msgstr "VyhÄ¾adÃ¡vanie"
 
 #: ckanext/responsive_design/templates/home/layout1.html:29
 msgid "Popular tags"
-msgstr "Ob¾úbené tagy"
+msgstr "ObÄ¾ÃºbenÃ© tagy"
 
 #: ckanext/responsive_design/templates/organization/index.html:5
 msgid "Organizations"
-msgstr "Organizácie"
+msgstr "OrganizÃ¡cie"
 
 #: ckanext/responsive_design/templates/organization/index.html:7
 msgid "Search organizations..."
-msgstr "Vyh¾adáva organizácie..."
+msgstr "VyhÄ¾adÃ¡vaÅ¥ organizÃ¡cie..."
 
 #: ckanext/responsive_design/templates/organization/index.html:16
 msgid "There are currently no organizations for this site"
-msgstr "Momentálne nie sú iadne organizácie pre túto stránku"
+msgstr "MomentÃ¡lne nie sÃº Å¾iadne organizÃ¡cie pre tÃºto strÃ¡nku"
 
 #: ckanext/responsive_design/templates/organization/index.html:18
 msgid "How about creating one?"
-msgstr "Ako vytvori jeden"
+msgstr "Ako vytvoriÅ¥ jeden"
 
 #: ckanext/responsive_design/templates/package/search.html:4
 #: ckanext/responsive_design/templates/package/search.html:7
@@ -97,35 +97,35 @@ msgstr "Datasety"
 
 #: ckanext/responsive_design/templates/package/search.html:26
 msgid "Relevance"
-msgstr "Platnos"
+msgstr "PlatnosÅ¥"
 
 #: ckanext/responsive_design/templates/package/search.html:29
 msgid "Last Modified"
-msgstr "Posledná modifikácia"
+msgstr "PoslednÃ¡ modifikÃ¡cia"
 
 #: ckanext/responsive_design/templates/package/search.html:30
 msgid "Popular"
-msgstr "Ob¾úbené"
+msgstr "ObÄ¾ÃºbenÃ©"
 
 #: ckanext/responsive_design/templates/snippets/search_form2.html:3
 msgid "Search datasets..."
-msgstr "Vyh¾adáva datasety..."
+msgstr "VyhÄ¾adÃ¡vaÅ¥ datasety..."
 
 #: ckanext/responsive_design/templates/snippets/search_form2.html:47
 msgid "Order by"
-msgstr "Objedna "
+msgstr "ZoradiÅ¥ podÄ¾a"
 
 #: ckanext/responsive_design/templates/snippets/search_form2.html:56
 msgid "Go"
-msgstr "Ís"
+msgstr "ÃsÅ¥"
 
 #: ckanext/responsive_design/templates/snippets/search_form2.html:81
 msgid "Remove"
-msgstr "Odstráni"
+msgstr "OdstrÃ¡niÅ¥"
 
 #: ckanext/responsive_design/templates/snippets/search_form2.html:86
 msgid "Filter Results"
-msgstr "Filtrova vısledky"
+msgstr "FiltrovaÅ¥ vÃ½sledky"
 
 #: ckanext/responsive_design/templates/snippets/search_form2.html:93
 msgid ""
@@ -140,12 +140,16 @@ msgid ""
 "    <p><strong>There was an error while searching.</strong> Please try "
 "again.</p>\n"
 "  "
-msgstr "<p><strong> nastala chyba vo vyh¾adávaní.</strong> Prosím skúste znova.</p>\n"
+msgstr ""
+"\n"
+"   <p><strong> Nastala chyba vo vyhÄ¾adÃ¡vanÃ­.</strong> ProsÃ­m skÃºste "
+"znova.</p>\n"
+"  "
 
 #: ckanext/responsive_design/templates/user/dashboard.html:7
 #: ckanext/responsive_design/templates/user/dashboard.html:9
 msgid "Edit settings"
-msgstr "Upravi nastavenia"
+msgstr "UpraviÅ¥ nastavenia"
 
 #: ckanext/responsive_design/templates/user/dashboard.html:14
 msgid "News feed"
@@ -157,7 +161,7 @@ msgstr "Moje datasety"
 
 #: ckanext/responsive_design/templates/user/dashboard.html:16
 msgid "My Organizations"
-msgstr "Moje organizácie"
+msgstr "Moje organizÃ¡cie"
 
 #: ckanext/responsive_design/templates/user/dashboard.html:18
 msgid "Unified Views"
