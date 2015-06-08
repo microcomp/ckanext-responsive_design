@@ -39,6 +39,7 @@ body > header.account-masthead{
                 ('organizations_index', _('Organizations')),
                 ('about', _('About'))
               ) }}
+              <li><a href="{{h.geomodul_url()}}">{{_('Maps')}}</a></li>
 
  	{%if  c.controller == 'ckanext.apps_and_ideas.apps:AppsController' %}
 		<link rel="stylesheet" type="text/css" href="/box.css" />

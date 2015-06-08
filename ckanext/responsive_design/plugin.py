@@ -29,7 +29,8 @@ class ResponsiveDesign(plugins.SingletonPlugin):
     def get_helpers(self):
         return {'recent_datasets': homepage.recent_datasets,
                 'uv_url' : homepage.uv_url,
-                'xwiki': homepage.xwiki}
+                'xwiki': homepage.xwiki,
+                'geomodul_url': homepage.geomodul_url}
 
     def configure(self, config):
         self.site_url = config.get('ckan.site_url', None)
@@ -38,3 +39,5 @@ class ResponsiveDesign(plugins.SingletonPlugin):
         __builtin__.xwiki_url = self.xwiki_url
         self.uv_url = config.get('odn.uv.url', None)
         __builtin__.uv_url = self.uv_url
+        self.geomodul_url = config.get('ckan.geomodul.url', None)
+        __builtin__.geomodul_url = self.geomodul_url
