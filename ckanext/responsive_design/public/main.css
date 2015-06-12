@@ -1401,7 +1401,7 @@ select:focus:invalid:focus {
   display: inline-block;
   margin-bottom: 10px;
   vertical-align: middle;
-  font-size: 0;
+  font-size: 0.8em;
   white-space: nowrap;
 }
 .input-append input,
