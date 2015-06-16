@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-responsive_design 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-05-14 12:45+0100\n"
+"POT-Creation-Date: 2015-06-16 15:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,27 @@ msgstr ""
 "Generated-By: Babel 0.9.6\n"
 
 #: ckanext/responsive_design/templates/header.html:28
-#: ckanext/responsive_design/templates/header.html:107
+#: ckanext/responsive_design/templates/header.html:113
 msgid "Account info"
+msgstr ""
+
+#: ckanext/responsive_design/templates/header.html:38
+#: ckanext/responsive_design/templates/package/search.html:4
+#: ckanext/responsive_design/templates/package/search.html:7
+msgid "Datasets"
+msgstr ""
+
+#: ckanext/responsive_design/templates/header.html:39
+#: ckanext/responsive_design/templates/organization/index.html:5
+msgid "Organizations"
+msgstr ""
+
+#: ckanext/responsive_design/templates/header.html:40
+msgid "About"
+msgstr ""
+
+#: ckanext/responsive_design/templates/header.html:42
+msgid "Maps"
 msgstr ""
 
 #: ckanext/responsive_design/templates/group/index.html:3
@@ -73,10 +92,6 @@ msgstr ""
 msgid "Popular tags"
 msgstr ""
 
-#: ckanext/responsive_design/templates/organization/index.html:5
-msgid "Organizations"
-msgstr ""
-
 #: ckanext/responsive_design/templates/organization/index.html:7
 msgid "Search organizations..."
 msgstr ""
@@ -87,11 +102,6 @@ msgstr ""
 
 #: ckanext/responsive_design/templates/organization/index.html:18
 msgid "How about creating one?"
-msgstr ""
-
-#: ckanext/responsive_design/templates/package/search.html:4
-#: ckanext/responsive_design/templates/package/search.html:7
-msgid "Datasets"
 msgstr ""
 
 #: ckanext/responsive_design/templates/package/search.html:26
