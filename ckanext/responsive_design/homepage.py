@@ -35,42 +35,26 @@ def xwiki():
         __builtin__.xwiki_url = 'http://xwiki.org'
     return __builtin__.xwiki_url
 def recent_datasets():
-    most_recent = model.Session.query(Package) \
-                    .filter_by(private=False).filter_by(type='dataset').filter_by(state='active').order_by(Package.metadata_modified.desc()) \
-                    .limit(10).all()
-                    #Package.state == 'active' and Package.type == 'dataset' and 
-    result = []
-    #most_recent = [x for x in most_recent if x.private == False]
-    #most_recent = most_recent[:10]
-    for i in most_recent:
-        logging.warning(i.private)
-    	#text = model.Session.query(model.PackageRevision).filter(model.PackageRevision.name == i.name).first().notes
-        notes = i.notes
-        if  i.notes != None:
-            if len(i.notes) > 300:
-                notes = i.notes[:300]+'...'
-        else:
-            notes = ""
-        formats = model.Session.query(model.Resource).filter()
-        id = i.id
-        logging.warning(__builtin__.site_url)
-
-
-        data_dict = {"query":'url:'+i.id}
-        context = {'model': model, 'session': model.Session,
+    context = {'model': model, 'session': model.Session,
                    'user': c.user or c.author,
                    'auth_user_obj': c.userobj,
                    'for_view': True}
-        response = toolkit.get_action('resource_search')(context, data_dict)['results']
-
-        logging.warning(response)
-        
-
-        res = []
-        for j in response:
-        	res.append(j["format"])
-
-        result.append({'title':i.title, 'text': notes, 'url':i.name, 'resources': res })
+    
+    res = []
+    result= []
+    data_dict= {'limit':10, 'offset':0, 'page':1}
+    resp = toolkit.get_action('current_package_list_with_resources')(context, data_dict)
+    for i in resp:
+        notes = i['notes']
+        if  i['notes'] != None:
+            if len(i['notes']) > 300:
+                notes = i['notes'][:300]+'...'
+        else:
+            notes = ""
+        res= []
+        for r in i['resources']:
+            res.append(r['format'])
+        result.append({'title':i['title'], 'text': notes, 'url':i['name'], 'resources': res })
 
     return result
 
