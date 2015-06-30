@@ -30,11 +30,16 @@ class ResponsiveDesign(plugins.SingletonPlugin):
         return {'recent_datasets': homepage.recent_datasets,
                 'uv_url' : homepage.uv_url,
                 'xwiki': homepage.xwiki,
-                'geomodul_url': homepage.geomodul_url}
+                'geomodul_url': homepage.geomodul_url,
+                'onto_editor': homepage.onto_editor}
 
     def configure(self, config):
         self.site_url = config.get('ckan.site_url', None)
         __builtin__.site_url = self.site_url
+
+        self.onto_editor = config.get('ckan.onto_url', None)
+        __builtin__.onto_editor = self.onto_editor
+
         self.xwiki_url = config.get('ckan.xwiki.url', None)
         __builtin__.xwiki_url = self.xwiki_url
         self.uv_url = config.get('odn.uv.url', None)

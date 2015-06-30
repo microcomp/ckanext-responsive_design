@@ -49,6 +49,7 @@ body > div.hero > div > div.module.module-search.module-narrow.module-shallow.bo
 			      			<div class='element'>
 				      			<h3> <a href='/dataset/{{i.url}}'>{{i.title}}</a> </h3>
 				      			 {%if i.text==''%} <p class="empty">{{_('This dataset has no description')}}{%else%}<p>{{i.text}}{%endif%}</p>
+
 				      			 {%if i.resources|length > 0%}
 					      			 {%for j in i.resources %}
 					      			 	<a href='/dataset/{{i.url}}' class="label" data-format="{{j.lower()}}">{{j}}</a>

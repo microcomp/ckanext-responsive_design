@@ -26,6 +26,11 @@ def uv_url():
         __builtin__.uv_url = 'http://www.unifiedviews.eu/'
     return __builtin__.uv_url
 
+def onto_editor():
+    if __builtin__.onto_editor == None or __builtin__.onto_editor == "":
+        __builtin__.onto_editor = '#'
+    return __builtin__.onto_editor
+
 def geomodul_url():
     if __builtin__.geomodul_url == None or __builtin__.geomodul_url == "":
         __builtin__.geomodul_url = '/dashboard'

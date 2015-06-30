@@ -40,6 +40,33 @@ body > header.account-masthead{
                 ('about', _('About'))
               ) }}
               <li><a href="{{h.geomodul_url()}}">{{_('Maps')}}</a></li>
+              <style>
+              	.menuitem_dropdown, .menuitem_dropdown:hover, body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a, body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a:hover,
+              	body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a, body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a:hover{
+              		background-color: #453b34;
+              		color: #fff;
+              		background-image: none;
+              	}
+              </style>
+              <li>
+              <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
+			    <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
+
+			      <i class="icon-share-alt"></i>
+			      {{_('Nástroje')}}
+			      <span class="caret"></span>
+			    </a>
+			    <ul class="dropdown-menu menuitem_dropdown">
+			      
+			      <li class="menuitem_dropdown">
+			        <a href="{{h.onto_editor()}}" class="menuitem_dropdown">
+			          <i class="icon-edit menuitem_dropdown"></i>
+			          {{_('Ontologic editor')}}
+			        </a>
+			      </li>
+				</ul>
+  			</div>
+  			</li>
 
  	{%if  c.controller == 'ckanext.apps_and_ideas.apps:AppsController' %}
 		<link rel="stylesheet" type="text/css" href="/box.css" />
