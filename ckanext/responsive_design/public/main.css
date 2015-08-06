@@ -5995,7 +5995,7 @@ a.tag:hover {
   opacity: 0;
 }
 .media-item.is-expander:hover {
-  padding-bottom: 35px;
+  /*padding-bottom: 35px;*/
 }
 .media-item.is-expander:hover .truncator-link {
   opacity: 1;
