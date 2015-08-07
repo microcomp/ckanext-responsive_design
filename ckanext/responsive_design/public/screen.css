@@ -1040,9 +1040,10 @@ body > header.navbar.navbar-static-top.masthead > div.container > div{
     top: -10px;
     margin-left: 15%;
 }
-#content > div.row.wrapper > div > article > div > ul > li.related-item.media-item.is-expander.masonry-brick > img{
+#content > div.row.wrapper > div > article > div > ul > li.related-item.media-item.is-expander.masonry-brick > img,
+#content > div.row.wrapper > div > article > div > ul > li > img{
     max-height: 190px;
-    min-height: 90px;   
+    min-height: 150px;   
 }
 @media (max-width: 784px){
     .small{
