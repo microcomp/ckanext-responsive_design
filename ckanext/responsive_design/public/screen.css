@@ -1066,7 +1066,8 @@ body > header.navbar.navbar-static-top.masthead > div.container > button{
 .menuitem_dropdown, .menuitem_dropdown:hover, 
 body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a, 
 body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a:hover,
-body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a:hover{
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a:hover,
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a{
     background-color: #453b34;
     color: #fff;
     background-image: none;
