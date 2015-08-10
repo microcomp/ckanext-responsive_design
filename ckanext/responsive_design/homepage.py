@@ -25,7 +25,11 @@ def uv_url():
     if __builtin__.uv_url == None or __builtin__.uv_url == "":
         __builtin__.uv_url = 'http://www.unifiedviews.eu/'
     return __builtin__.uv_url
-
+def user_req_url():
+    if __builtin__.user_req_url == None or __builtin__.user_req_url == "":
+        __builtin__.user_req_url = '#'
+    return __builtin__.user_req_url
+    
 def onto_editor():
     if __builtin__.onto_editor == None or __builtin__.onto_editor == "":
         __builtin__.onto_editor = '#'
