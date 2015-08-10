@@ -40,10 +40,10 @@ body > header.account-masthead{
                 
               ) }}
               <li> <a href="/apps" alt="applications">{{_('Applications')}}</a></li>          
-              <li><a href="{{h.geomodul_url()}}">{{_('Maps')}}</a></li>
+              <li><a href="{{h.geomodul_url()}}" alt="{{_('Maps')}}">{{_('Maps')}}</a></li>
                <li> <a href="{{h.xwiki()}}" alt="xwiki url">{{_('Wiki')}}</a></li>         
              
-              <li><a href="#" alt=""> <i class="icon-share-alt"></i> Požiadavky používateľov</a></li>
+              <li><a href="{{h.user_req_url()}}" alt="{{_('User requests') }}"> <i class="icon-share-alt"></i>{{_('User requests') }}</a></li>
               <li>
               <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
 			    <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
