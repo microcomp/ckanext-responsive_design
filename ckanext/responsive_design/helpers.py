@@ -28,14 +28,16 @@ def uv_url():
     return uv_url
 
 def user_req_url():
-    user_req_url = config.get('ckan.user_req.url', None)
-    if user_req_url == None or user_req_url == "":
-        user_req_url = '#'
+    key_list =sorted([x for x in set( x.split('.')[2] for x in [x for x in config.keys() if 'ckan.user_req.' in x])])
     result = []
-    if user_req_url != '#':
-        for i in user_req_url.split(','):
-            result.append({'name':i.split('|')[0].decode('utf8'), 'url':i.split('|')[1], 'role':i.split('|')[2], 'popis':i.split('|')[3].decode('utf8')})
+    for i in key_list:
+        result.append({'name':config.get('ckan.user_req.'+i+'.name').decode('utf8'), 
+                       'url':config.get('ckan.user_req.'+i+'.url'), 
+                       'role':config.get('ckan.user_req.'+i+'.role'), 
+                       'popis':config.get('ckan.user_req.'+i+'.name').decode('utf8')})
     return result
+def tools_urls():
+    pass
     
 def onto_editor():
     onto_editor = config.get('ckan.onto_url', None)
