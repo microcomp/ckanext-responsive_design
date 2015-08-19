@@ -33,36 +33,65 @@ body > header.account-masthead{
 
 
 {% block header_site_navigation_tabs %}
-			  <li> <a href="/" alt="home"><i class='icon-home'></i> </a></li>
+		            <li> <a href="/" alt="home"><i class='icon-home'></i> </a></li>
               {{ h.build_nav_main(
                 ('search', _('Datasets')),
                 ('organizations_index', _('Organizations')),
                 
               ) }}
-              <li> <a href="/apps" alt="applications">{{_('Applications')}}</a></li>          
-              <li><a href="{{h.geomodul_url()}}" alt="{{_('Maps')}}">{{_('Maps')}}</a></li>
-               <li> <a href="{{h.xwiki()}}" alt="xwiki url">{{_('Wiki')}}</a></li>         
-             
-              <li><a href="{{h.user_req_url()}}" alt="{{_('User requests') }}"> <i class="icon-share-alt"></i>{{_('User requests') }}</a></li>
+              <li> <a href="/apps" title="applications">{{_('Applications')}}</a></li>          
+              <li><a href="{{h.geomodul_url()}}" title="{{_('Maps')}}">{{_('Maps')}}</a></li>
+               <li> <a href="{{h.xwiki()}}" title="xwiki url">{{_('Wiki')}}</a></li>         
+
+              <!--li><a href="{{h.user_req_url()}}" alt=""> <i class="icon-share-alt"></i>{{_('User requests') }}</a></li-->
               <li>
               <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
-			    <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
+                <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
 
-			      <i class="icon-share-alt"></i>
-			      {{_('Nástroje')}}
-			      <span class="caret"></span>
-			    </a>
-			    <ul class="dropdown-menu menuitem_dropdown">
-			      
-			      <li class="menuitem_dropdown">
-			        <a href="{{h.onto_editor()}}" class="menuitem_dropdown">
-			          <i class="icon-edit menuitem_dropdown"></i>
-			          {{_('Ontologic editor')}}
-			        </a>
-			      </li>
-				</ul>
-  			</div>
-  			</li>
+                  <i class="icon-share-alt"></i>
+                  {#{_('User requests') }#}
+                  Požiadavky používateľov&nbsp; &nbsp; 
+                  <!--span class="caret"></span!-->
+                </a>
+                <ul class="dropdown-menu menuitem_dropdown">
+                  {%set urls = h.get_urls('ckan.user_req.') %}
+                  {%set index = 0 %}
+                  {%for i in urls%}
+                  {%set index = index+1%}
+                  <li class="menuitem_dropdown">
+                    <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
+                       {%if index > 2%} &nbsp; &nbsp; &nbsp;{%endif%}<i class="icon-edit menuitem_dropdown"></i>
+                     {{i['name']}}
+                    </a>
+                  </li>
+                  {%endfor%}
+                </ul>
+              </div>
+              </li>
+              <li>
+              <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
+                <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
+
+                  <i class="icon-share-alt"></i>
+                  {{_('Nástroje')}}
+                  <!--span class="caret"></span!-->
+                </a>
+                <ul class="dropdown-menu menuitem_dropdown">
+                  {%set urls = h.get_urls('ckan.nastoje.') %}
+                  
+                  {%for i in urls%}
+                  {%set index = index+1%}
+                  <li class="menuitem_dropdown">
+                    <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
+                       <i class="icon-edit menuitem_dropdown"></i>
+                     {{i['name']}}
+                    </a>
+                  </li>
+                  {%endfor%}
+
+                </ul>
+              </div>
+              </li>
 
  	{%if  c.controller == 'ckanext.apps_and_ideas.apps:AppsController' %}
 		<link rel="stylesheet" type="text/css" href="/box.css" />
