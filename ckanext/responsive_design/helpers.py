@@ -34,7 +34,7 @@ def get_urls(text):
         result.append({'name':config.get(text+i+'.name').decode('utf8'), 
                        'url':config.get(text+i+'.url'), 
                        'role':config.get(text+i+'.role'), 
-                       'popis':config.get(text+i+'.name').decode('utf8')})
+                       'popis':config.get(text+i+'.title').decode('utf8')})
     return result
 
 def onto_editor():
