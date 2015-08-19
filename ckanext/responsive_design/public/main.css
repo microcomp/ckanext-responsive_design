@@ -2867,11 +2867,12 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 20px;
   list-style: none;
 }
-.nav > li > a {
+.nav > li > a, .nav > li > div {
   display: block;
 }
 .nav > li > a:hover,
-.nav > li > a:focus {
+.nav > li > a:focus,
+{
   text-decoration: none;
   background-color: #eeeeee;
 }
@@ -5331,7 +5332,7 @@ a.badge:focus {
   .nav-collapse .nav > li {
     float: none;
   }
-  .nav-collapse .nav > li > a {
+  .nav-collapse .nav > li > a,  .nav-collapse .nav > li > div {
     margin-bottom: 2px;
   }
   .nav-collapse .nav > .divider-vertical {
@@ -5341,8 +5342,8 @@ a.badge:focus {
     color: #777777;
     text-shadow: none;
   }
-  .nav-collapse .nav > li > a,
-  .nav-collapse .dropdown-menu a {
+  .nav-collapse .nav > li > a, .nav-collapse .nav > li > div, .nav-collapse .nav > li > div, 
+  .nav-collapse .dropdown-menu a,   .nav-collapse .dropdown-menu div {
     padding: 9px 15px;
     font-weight: bold;
     color: #777777;
@@ -5361,9 +5362,8 @@ a.badge:focus {
     margin-bottom: 2px;
   }
   .nav-collapse .nav > li > a:hover,
-  .nav-collapse .nav > li > a:focus,
-  .nav-collapse .dropdown-menu a:hover,
-  .nav-collapse .dropdown-menu a:focus {
+  .nav-collapse .nav > li > a:focus
+   {
     background-color: #f2f2f2;
   }
   .navbar-inverse .nav-collapse .nav > li > a,
