@@ -27,18 +27,16 @@ def uv_url():
         uv_url = 'http://www.unifiedviews.eu/'
     return uv_url
 
-def user_req_url():
-    key_list =sorted([x for x in set( x.split('.')[2] for x in [x for x in config.keys() if 'ckan.user_req.' in x])])
+def get_urls(text):
+    _list =sorted([x for x in set( x.split('.')[2] for x in [x for x in config.keys() if text in x])])
     result = []
-    for i in key_list:
-        result.append({'name':config.get('ckan.user_req.'+i+'.name').decode('utf8'), 
-                       'url':config.get('ckan.user_req.'+i+'.url'), 
-                       'role':config.get('ckan.user_req.'+i+'.role'), 
-                       'popis':config.get('ckan.user_req.'+i+'.name').decode('utf8')})
+    for i in _list:
+        result.append({'name':config.get(text+i+'.name').decode('utf8'), 
+                       'url':config.get(text+i+'.url'), 
+                       'role':config.get(text+i+'.role'), 
+                       'popis':config.get(text+i+'.name').decode('utf8')})
     return result
-def tools_urls():
-    pass
-    
+
 def onto_editor():
     onto_editor = config.get('ckan.onto_url', None)
     if onto_editor == None or onto_editor == "":
