@@ -29,5 +29,5 @@ class ResponsiveDesign(plugins.SingletonPlugin):
                 'xwiki': helpers.xwiki,
                 'geomodul_url': helpers.geomodul_url,
                 'onto_editor': helpers.onto_editor,
-                'user_req_url':helpers.user_req_url}
+                'get_urls':helpers.get_urls}
 
