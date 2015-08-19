@@ -122,15 +122,24 @@ body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul
     }}
 
 @media (max-width: 767px) {
-.menuitem_dropdown, .menuitem_dropdown:hover, 
+    .menuitem_dropdown, .menuitem_dropdown:hover{
+    /*background-color: #453b34;*/
+    background-color: hsla(25, 14%, 24%, 0.71);
+    color: #fff;
+    background-image: none; 
+
+}
 body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a, 
 body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a:hover,
 body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a:hover,
 body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a{
-    background-color: hsla(25, 14%, 24%, 0.71);;
+    background-color: none;
+    background: none;
     color: #fff;
-    background-image: none;
+
 }
+
+
     body > header.navbar.navbar-static-top.masthead > div.container > div > nav{
         padding-top: 2em;
     }
@@ -247,7 +256,7 @@ body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul
         margin-right: 0px;
     }
     body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li{
-        width: 14em;
+        width: 30em;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
         background-color: #bd0a26;
