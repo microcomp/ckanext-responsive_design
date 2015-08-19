@@ -49,8 +49,8 @@ body > header.account-masthead{
                 <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
 
                   <i class="icon-share-alt"></i>
-                  {#{_('User requests') }#}
-                  Požiadavky používateľov&nbsp; &nbsp; 
+                  {{_('User requests') }}
+                 &nbsp; &nbsp; 
                   <!--span class="caret"></span!-->
                 </a>
                 <ul class="dropdown-menu menuitem_dropdown">
@@ -58,12 +58,26 @@ body > header.account-masthead{
                   {%set index = 0 %}
                   {%for i in urls%}
                   {%set index = index+1%}
+                  {%if i['role'] == 'all'%}
                   <li class="menuitem_dropdown">
                     <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
                        {%if index > 2%} &nbsp; &nbsp; &nbsp;{%endif%}<i class="icon-edit menuitem_dropdown"></i>
                      {{i['name']}}
                     </a>
                   </li>
+                  
+                  {%else%}
+                           {%if c.userobj != None%}
+                              {%if i['role'] in session['ckanext-cas-roles'] %}
+                                    <li class="menuitem_dropdown">
+                                      <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
+                                         {%if index > 2%} &nbsp; &nbsp; &nbsp;{%endif%}<i class="icon-edit menuitem_dropdown"></i>
+                                       {{i['name']}}
+                                      </a>
+                                    </li>
+                              {%endif%}
+                          {%endif%}
+                  {%endif%}
                   {%endfor%}
                 </ul>
               </div>
@@ -80,13 +94,25 @@ body > header.account-masthead{
                   {%set urls = h.get_urls('ckan.nastoje.') %}
                   
                   {%for i in urls%}
-                  {%set index = index+1%}
+                  {%if i['role'] == 'all'%}
                   <li class="menuitem_dropdown">
                     <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
                        <i class="icon-edit menuitem_dropdown"></i>
                      {{i['name']}}
                     </a>
                   </li>
+                  {%else%}
+                      {%if c.userobj != None%}
+                          {%if i['role'] in session['ckanext-cas-roles'] %}
+                                <li class="menuitem_dropdown">
+                                  <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
+                                     <i class="icon-edit menuitem_dropdown"></i>
+                                   {{i['name']}}
+                                  </a>
+                                </li>
+                          {%endif%}
+                      {%endif%}
+                  {%endif%}
                   {%endfor%}
 
                 </ul>
