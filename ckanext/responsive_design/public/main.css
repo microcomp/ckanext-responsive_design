@@ -2871,8 +2871,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
 }
 .nav > li > a:hover,
-.nav > li > a:focus,
-{
+.nav > li > a:focus {
   text-decoration: none;
   background-color: #eeeeee;
 }
@@ -5342,7 +5341,7 @@ a.badge:focus {
     color: #777777;
     text-shadow: none;
   }
-  .nav-collapse .nav > li > a, .nav-collapse .nav > li > div, .nav-collapse .nav > li > div, 
+  .nav-collapse .nav > li > a, .nav-collapse .nav > li > div, 
   .nav-collapse .dropdown-menu a,   .nav-collapse .dropdown-menu div {
     padding: 9px 15px;
     font-weight: bold;
@@ -5362,8 +5361,8 @@ a.badge:focus {
     margin-bottom: 2px;
   }
   .nav-collapse .nav > li > a:hover,
-  .nav-collapse .nav > li > a:focus
-   {
+  .nav-collapse .nav > li > a:focus,
+ {
     background-color: #f2f2f2;
   }
   .navbar-inverse .nav-collapse .nav > li > a,
@@ -8979,7 +8978,7 @@ h4 small {
 }
 .js .dropdown .dropdown-menu,
 .js .dropdown:hover .dropdown-menu {
-  display: none;
+ /* display: none;*/
 }
 .js .dropdown.open .dropdown-menu {
   display: block;
