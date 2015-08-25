@@ -33,7 +33,7 @@ body > header.account-masthead{
 
 
 {% block header_site_navigation_tabs %}
-		            <li> <a href="/" alt="home"><i class='icon-home'></i> </a></li>
+                <li> <a href="/" alt="home"><i class='icon-home'></i> </a></li>
               {{ h.build_nav_main(
                 ('search', _('Datasets')),
                 ('organizations_index', _('Organizations')),
@@ -58,26 +58,12 @@ body > header.account-masthead{
                   {%set index = 0 %}
                   {%for i in urls%}
                   {%set index = index+1%}
-                  {%if i['role'] == 'all'%}
                   <li class="menuitem_dropdown">
                     <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
                        {%if index > 2%} &nbsp; &nbsp; &nbsp;{%endif%}<i class="icon-edit menuitem_dropdown"></i>
                      {{i['name']}}
                     </a>
                   </li>
-                  
-                  {%else%}
-                           {%if c.userobj != None%}
-                              {%if i['role'] in session['ckanext-cas-roles'] %}
-                                    <li class="menuitem_dropdown">
-                                      <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
-                                         {%if index > 2%} &nbsp; &nbsp; &nbsp;{%endif%}<i class="icon-edit menuitem_dropdown"></i>
-                                       {{i['name']}}
-                                      </a>
-                                    </li>
-                              {%endif%}
-                          {%endif%}
-                  {%endif%}
                   {%endfor%}
                 </ul>
               </div>
@@ -94,31 +80,17 @@ body > header.account-masthead{
                   {%set urls = h.get_urls('ckan.nastoje.') %}
                   
                   {%for i in urls%}
-                  {%if i['role'] == 'all'%}
                   <li class="menuitem_dropdown">
                     <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
                        <i class="icon-edit menuitem_dropdown"></i>
                      {{i['name']}}
                     </a>
                   </li>
-                  {%else%}
-                      {%if c.userobj != None%}
-                          {%if i['role'] in session['ckanext-cas-roles'] %}
-                                <li class="menuitem_dropdown">
-                                  <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
-                                     <i class="icon-edit menuitem_dropdown"></i>
-                                   {{i['name']}}
-                                  </a>
-                                </li>
-                          {%endif%}
-                      {%endif%}
-                  {%endif%}
                   {%endfor%}
 
                 </ul>
               </div>
               </li>
-
  	{%if  c.controller == 'ckanext.apps_and_ideas.apps:AppsController' %}
 		<link rel="stylesheet" type="text/css" href="/box.css" />
 		
