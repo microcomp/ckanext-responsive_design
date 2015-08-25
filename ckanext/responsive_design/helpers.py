@@ -27,15 +27,43 @@ def uv_url():
         uv_url = 'http://www.unifiedviews.eu/'
     return uv_url
 
+def HR(uRoles, lRoles):
+    if lRoles[0] == 'all':
+        return True
+    for i in uRoles:
+        if i in lRoles:
+            return True
+    return False
 def get_urls(text):
+    user_roles = session.get('ckanext-cas-roles', [])
+    startTime = int(round(time.time() * 1000))
     _list =sorted([x for x in set( x.split('.')[2] for x in [x for x in config.keys() if text in x])])
     result = []
     for i in _list:
         result.append({'name':config.get(text+i+'.name').decode('utf8'), 
                        'url':config.get(text+i+'.url'), 
-                       'role':config.get(text+i+'.role'), 
+                       'role':config.get(text+i+'.privileg').split(','), 
                        'popis':config.get(text+i+'.title').decode('utf8')})
-    return result
+
+    endTime = int(round(time.time() * 1000))
+
+    logging.warning("menuitems "+text)
+    logging.warning(result)
+    t = str(endTime - startTime)+'ms'
+    logging.warning("Time: ")
+    logging.warning(t)
+    result = [x for x in result if HR(user_roles, x['role'])]
+    result2 = []
+    for i in result:
+        if i['url'][0] == '*':
+            a = i['url'][1:]
+            a = a.split(',')
+            ll = {}
+            ll['controller'] = a[0].split('=')[1]
+            ll['action'] = a[1].split('=')[1]
+            i['url'] = toolkit.url_for(controller=ll['controller'], action=ll['action'])
+        result2.append(i)
+    return result2
 
 def onto_editor():
     onto_editor = config.get('ckan.onto_url', None)
