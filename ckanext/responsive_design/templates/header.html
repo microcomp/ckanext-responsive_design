@@ -2,9 +2,6 @@
 
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-
-
 <link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" />
 {% if c.controller == 'home' %}
 {%else%}
@@ -19,18 +16,12 @@ body > header.account-masthead{
 </style>
 {%endif%}
 {{ super() }}
-
 {% endblock %}
-
-
 
 {% block header_account_logged %}
 <h3> {{_("Account info")}} </h3>
-
   {{ super() }}
 {% endblock %}
-
-
 
 {% block header_site_navigation_tabs %}
                 <li> <a href="/" alt="home"><i class='icon-home'></i> </a></li>
@@ -41,9 +32,7 @@ body > header.account-masthead{
               ) }}
               <li> <a href="/apps" title="applications">{{_('Applications')}}</a></li>          
               <li><a href="{{h.geomodul_url()}}" title="{{_('Maps')}}">{{_('Maps')}}</a></li>
-               <li> <a href="{{h.xwiki()}}" title="xwiki url">{{_('Wiki')}}</a></li>         
-
-              <!--li><a href="{{h.user_req_url()}}" alt=""> <i class="icon-share-alt"></i>{{_('User requests') }}</a></li-->
+              <li> <a href="{{h.xwiki()}}" title="xwiki url">{{_('Wiki')}}</a></li>         
               <li>
               <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
                 <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
@@ -73,11 +62,10 @@ body > header.account-masthead{
                 <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
 
                   <i class="icon-share-alt"></i>
-                  {{_('Nástroje')}}
-                  <!--span class="caret"></span!-->
+                  {{_('Tools')}}
                 </a>
                 <ul class="dropdown-menu menuitem_dropdown">
-                  {%set urls = h.get_urls('ckan.nastoje.') %}
+                  {%set urls = h.get_urls('ckan.tools.') %}
                   
                   {%for i in urls%}
                   <li class="menuitem_dropdown">
@@ -139,16 +127,8 @@ body > header.account-masthead{
 {%elif c.controller == 'package'%}
 	{%if c.action == 'read' %}
 		<link rel="stylesheet" type="text/css" href="/box.css" />
-		 
-
-
 	{%endif%}
-
-
- 
 {%endif%}
-
-
 
 {% endblock %}
 {% block header_account_notlogged %}
@@ -157,10 +137,8 @@ body > header.account-masthead{
 body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
 	color: #bd0a26;;
 }
-
 </style>
 {%endif%}
 <h3> {{_("Account info")}} </h3>
 {{super()}}
 {%endblock%}
-
