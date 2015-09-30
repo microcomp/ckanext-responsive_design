@@ -975,7 +975,8 @@ right: 10%;
 
 }
 body > header.account-masthead > div{
-    width: 180px;
+    /*width: 180px;*/
+    width: auto;
     height: 50px;
     padding: 0px;
     margin: 0px;
@@ -1009,13 +1010,16 @@ body > header.account-masthead > div > nav > ul > h3, body > header.account-mast
     border-radius: 5px 5px 0px 0px;
 }
 body > header.account-masthead > div{
+    max-width: 500px;
+    max-width: 100px;
     margin-left: 0px;
     margin-right: 0px;
 }
 body > header.account-masthead{
     overflow: visible;
 }
-body > header.account-masthead > div > nav, body > header.account-masthead > div > div{
+body > header.account-masthead > div > nav, 
+body > header.account-masthead > div > div{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -1023,12 +1027,13 @@ body > header.account-masthead > div > nav, body > header.account-masthead > div
     border-radius: 5px;
     background-color: #fff;
     padding-bottom: 0.45em;
+    /*max-width: 500px;*/
+    width: auto;
+    max-height: 69.5px;
 }
-body > header.account-masthead > div > div > ul > li:nth-child(3) > a > i,
+
 body > header.account-masthead > div > div > ul > li:nth-child(4) > a > span,
-body > header.account-masthead > div > div > ul > li:nth-child(4) > a,
 body > header.account-masthead > div > div > ul > li.notifications > a > i,
-body > header.account-masthead > div > div > ul > li.notifications > a > span,
 body > header.account-masthead > div > div > ul > li:nth-child(6) > a > i,
 body > header.account-masthead > div > div > ul > li:nth-child(7) > a > i
 {
@@ -1093,4 +1098,31 @@ body > header.navbar.navbar-static-top.masthead > div.container > button{
         margin-bottom: 6px;
         padding-bottom: 6px;
         padding-left: 20px;
+}
+
+body > header.account-masthead > div > div,
+body > header.account-masthead > div > div > ul > li > a > span,
+body > header.account-masthead > div > div > ul > li.notifications > a > i,
+body > header.account-masthead > div > div > ul > li > a > i,
+body > header.account-masthead > div > div > ul > li > a
+{
+  color: #fff;
+  background-color: #bd0a26 ;
+}
+body > header.account-masthead > div > div > ul > li.notifications > a:hover{
+    background-color: #fff;
+    color: #bd0a26 ;
+}
+body > header.account-masthead > div > div > ul > li.notifications > a > span{
+    color: #bd0a26 ;
+}
+body > header.account-masthead > div > div > ul > li:nth-child(1) > a > img{
+    display: none;
+}
+body > header.account-masthead > div > div > ul > li:nth-child(1){
+    width: 100%;
+    white-space: nowrap;
+}
+body > header.account-masthead > div > div > ul > li:nth-child(1):hover{
+    text-decoration: underline;
 }
