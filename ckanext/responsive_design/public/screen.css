@@ -19,6 +19,20 @@
     }
 }
 @media (min-width: 768px) {
+    .menuitem_dropdown, .menuitem_dropdown:hover{
+    /*background-color: #453b34;*/
+    background-color: hsla(25, 14%, 24%, 0.71);
+    color: #fff;
+    background-image: none;
+}
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a, 
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a:hover,
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a:hover,
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a{
+    background-color: none;
+    background: none;
+    color: #fff;
+}
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button
     {
         padding: 1.1em;
@@ -108,6 +122,23 @@
     }}
 
 @media (max-width: 767px) {
+    .menuitem_dropdown, .menuitem_dropdown:hover{
+    /*background-color: #453b34;*/
+    background-color: hsla(25, 14%, 24%, 0.71);
+    color: #fff;
+    background-image: none; 
+
+}
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a, 
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > a:hover,
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a:hover,
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > div > ul > li > a{
+    background-color: none;
+    background: none;
+    color: #fff;
+
+}
+
 
     body > header.navbar.navbar-static-top.masthead > div.container > div > nav{
         padding-top: 2em;
@@ -225,7 +256,7 @@
         margin-right: 0px;
     }
     body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li{
-        width: 14em;
+        width: 30em;
     }
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box{
         background-color: #bd0a26;
@@ -944,7 +975,8 @@ right: 10%;
 
 }
 body > header.account-masthead > div{
-    width: 180px;
+    /*width: 180px;*/
+    width: auto;
     height: 50px;
     padding: 0px;
     margin: 0px;
@@ -978,13 +1010,16 @@ body > header.account-masthead > div > nav > ul > h3, body > header.account-mast
     border-radius: 5px 5px 0px 0px;
 }
 body > header.account-masthead > div{
+    max-width: 500px;
+    max-width: 100px;
     margin-left: 0px;
     margin-right: 0px;
 }
 body > header.account-masthead{
     overflow: visible;
 }
-body > header.account-masthead > div > nav, body > header.account-masthead > div > div{
+body > header.account-masthead > div > nav, 
+body > header.account-masthead > div > div{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -992,12 +1027,13 @@ body > header.account-masthead > div > nav, body > header.account-masthead > div
     border-radius: 5px;
     background-color: #fff;
     padding-bottom: 0.45em;
+    /*max-width: 500px;*/
+    width: auto;
+    max-height: 69.5px;
 }
-body > header.account-masthead > div > div > ul > li:nth-child(3) > a > i,
+
 body > header.account-masthead > div > div > ul > li:nth-child(4) > a > span,
-body > header.account-masthead > div > div > ul > li:nth-child(4) > a,
 body > header.account-masthead > div > div > ul > li.notifications > a > i,
-body > header.account-masthead > div > div > ul > li.notifications > a > span,
 body > header.account-masthead > div > div > ul > li:nth-child(6) > a > i,
 body > header.account-masthead > div > div > ul > li:nth-child(7) > a > i
 {
@@ -1040,10 +1076,10 @@ body > header.navbar.navbar-static-top.masthead > div.container > div{
     top: -10px;
     margin-left: 15%;
 }
-#content > div.row.wrapper > div > article > div > ul > li.related-item.media-item.is-expander.masonry-brick > img{
+#content > div.row.wrapper > div > article > div > ul > li.related-item.media-item.is-expander.masonry-brick > img,
+#content > div.row.wrapper > div > article > div > ul > li > img{
     max-height: 190px;
-    padding-left: 15%;
-    padding-right: auto;
+    min-height: 150px;   
 }
 @media (max-width: 784px){
     .small{
@@ -1062,4 +1098,31 @@ body > header.navbar.navbar-static-top.masthead > div.container > button{
         margin-bottom: 6px;
         padding-bottom: 6px;
         padding-left: 20px;
+}
+
+body > header.account-masthead > div > div,
+body > header.account-masthead > div > div > ul > li > a > span,
+body > header.account-masthead > div > div > ul > li.notifications > a > i,
+body > header.account-masthead > div > div > ul > li > a > i,
+body > header.account-masthead > div > div > ul > li > a
+{
+  color: #fff;
+  background-color: #bd0a26 ;
+}
+body > header.account-masthead > div > div > ul > li.notifications > a:hover{
+    background-color: #fff;
+    color: #bd0a26 ;
+}
+body > header.account-masthead > div > div > ul > li.notifications > a > span{
+    color: #bd0a26 ;
+}
+body > header.account-masthead > div > div > ul > li:nth-child(1) > a > img{
+    display: none;
+}
+body > header.account-masthead > div > div > ul > li:nth-child(1){
+    width: 100%;
+    white-space: nowrap;
+}
+body > header.account-masthead > div > div > ul > li:nth-child(1):hover{
+    text-decoration: underline;
 }
