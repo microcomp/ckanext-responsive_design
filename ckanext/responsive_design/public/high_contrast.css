@@ -1127,3 +1127,6 @@ body > header.account-masthead > div > div > ul > li:nth-child(1){
 body > header.account-masthead > div > div > ul > li:nth-child(1):hover{
     text-decoration: underline;
 }
+#content > div.row.wrapper > div > article > header > ul > li > a{
+    cursor:pointer;
+}
