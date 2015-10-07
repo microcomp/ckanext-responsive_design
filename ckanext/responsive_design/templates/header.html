@@ -2,9 +2,6 @@
 
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-
-
 <link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" />
 {% if c.controller == 'home' %}
 {%else%}
@@ -12,35 +9,81 @@
 {%endif%}
 {%if c.controller != 'home' %}
 <style type="text/css">
-
 body > header.account-masthead{
 	top:2.75em;
 }
 </style>
 {%endif%}
 {{ super() }}
-
 {% endblock %}
-
-
-
 {% block header_account_logged %}
 <h3> {{_("Account info")}} </h3>
 
   {{ super() }}
 {% endblock %}
-
-
-
 {% block header_site_navigation_tabs %}
-
+{%if c.controller == 'organization' and c.action == 'index'%}
+<style>
+#content > div.row.wrapper > div > article > div > ul > li > p{
+    display: none;
+}
+</style>
+{%endif%}
+                <li> <a href="/" alt="home"><i class='icon-home'></i> </a></li>
               {{ h.build_nav_main(
                 ('search', _('Datasets')),
                 ('organizations_index', _('Organizations')),
-                ('about', _('About'))
+                
               ) }}
-              <li><a href="{{h.geomodul_url()}}">{{_('Maps')}}</a></li>
+              <li> <a href="/apps" title="applications">{{_('Applications')}}</a></li>          
+              <li><a href="{{h.geomodul_url()}}" title="{{_('Maps')}}">{{_('Maps')}}</a></li>
+              <li> <a href="{{h.xwiki()}}" title="xwiki url">{{_('Wiki')}}</a></li>         
+              <li>
+              <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
+                <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
 
+                  <i class="icon-share-alt"></i>
+                  {{_('User requests') }}
+                 &nbsp; &nbsp; 
+                  <!--span class="caret"></span!-->
+                </a>
+                <ul class="dropdown-menu menuitem_dropdown">
+                  {%set urls = h.get_urls('ckan.user_req.') %}
+                  {%set index = 0 %}
+                  {%for i in urls%}
+                  {%set index = index+1%}
+                  <li class="menuitem_dropdown">
+                    <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
+                       {%if index > 2%} &nbsp; &nbsp; &nbsp;{%endif%}<i class="icon-edit menuitem_dropdown"></i>
+                     {{i['name']}}
+                    </a>
+                  </li>
+                  {%endfor%}
+                </ul>
+              </div>
+              </li>
+              <li>
+              <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
+                <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
+
+                  <i class="icon-share-alt"></i>
+                  {{_('Tools')}}
+                </a>
+                <ul class="dropdown-menu menuitem_dropdown">
+                  {%set urls = h.get_urls('ckan.tools.') %}
+                  
+                  {%for i in urls%}
+                  <li class="menuitem_dropdown">
+                    <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
+                       <i class="icon-edit menuitem_dropdown"></i>
+                     {{i['name']}}
+                    </a>
+                  </li>
+                  {%endfor%}
+
+                </ul>
+              </div>
+              </li>
  	{%if  c.controller == 'ckanext.apps_and_ideas.apps:AppsController' %}
 		<link rel="stylesheet" type="text/css" href="/box.css" />
 		
@@ -89,16 +132,8 @@ body > header.account-masthead{
 {%elif c.controller == 'package'%}
 	{%if c.action == 'read' %}
 		<link rel="stylesheet" type="text/css" href="/box.css" />
-		 
-
-
 	{%endif%}
-
-
- 
 {%endif%}
-
-
 
 {% endblock %}
 {% block header_account_notlogged %}
