@@ -1,4 +1,7 @@
-
+body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li > a{
+    padding-left: 0.5em;
+    padding-right:  0.5em;
+}
 
 @media (max-width: 1024px){
 
@@ -1032,6 +1035,12 @@ body > header.account-masthead > div > div{
     width: auto;
     max-height: 69.5px;
 }
+/*body > header.account-masthead > div > div > ul > li:nth-child(1) > a {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}*/
 
 body > header.account-masthead > div > div > ul > li:nth-child(4) > a > span,
 body > header.account-masthead > div > div > ul > li.notifications > a > i,
@@ -1079,8 +1088,19 @@ body > header.navbar.navbar-static-top.masthead > div.container > div{
 }
 #content > div.row.wrapper > div > article > div > ul > li.related-item.media-item.is-expander.masonry-brick > img,
 #content > div.row.wrapper > div > article > div > ul > li > img{
-    max-height: 190px;
-    min-height: 150px;   
+    max-height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+#content > div.row.wrapper > div > article > div > form > button,
+#content > div.row.wrapper > div > article > div > form > button:hover{
+    padding: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+#content > div.row.wrapper > div > article > div > ul > li > p{
+    display: none;
 }
 @media (max-width: 784px){
     .small{
@@ -1127,6 +1147,53 @@ body > header.account-masthead > div > div > ul > li:nth-child(1){
 body > header.account-masthead > div > div > ul > li:nth-child(1):hover{
     text-decoration: underline;
 }
+.media-item span.count{
+    color: #000;
+}
 #content > div.row.wrapper > div > article > header > ul > li > a{
     cursor:pointer;
+}
+@media (max-width: 538px){
+    body > header.account-masthead,
+    body > header.account-masthead > div
+    {
+        right: 0em;
+        width: 0px;
+    }
+    body > header.account-masthead > div,
+    body > header.account-masthead > div > nav{
+        position: absolute;
+        right: 1.5em;
+    }
+    body > header.navbar.navbar-static-top.masthead > div > div > nav{
+        width: 210px;
+    }
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form{
+        width: 80%;
+    }
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button{
+        margin: 0px;
+        margin-bottom: 8px;
+        padding: 5px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > input{
+        width: 50%;
+    }
+}
+body > header.account-masthead > div > div > ul > li:nth-child(1) > a{
+    min-width: 130px;
+}
+#content > div.row.wrapper > div > article > div > ul > li > a.btn.btn-primary.btn-small.media-edit{
+    display: none;
+}
+#content > div.row.wrapper > aside > section:nth-child(1) > div > div > div.follow_button > a,
+#content > div.row.wrapper > aside > div > section > div.follow_button > a{
+    background: none;
+    background-color: #5bb75b;
+    border: none;
+}
+.page_primary_action{
+    text-align: right;
 }
