@@ -9,12 +9,7 @@
 <div class="module module-search module-narrow module-shallow box">
   <form class="module-content search-form" method="get" action="{% url_for controller='package', action='search' %}" >
     <h3 class="heading">{{ _("Search data") }}</h3>
-    <style type="text/css">
-.searchbox > li{
-	display: inline;
-}
 
-    </style>
     
     <!--div class="search-input control-group search-giant" style="display: inline;"!-->
       <input type="text" class="search" name="q" autocomplete="off"  style="display: inline;color:black;"/>
@@ -30,8 +25,7 @@
     {% for tag in tags %}
       <a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
     {% endfor %}
-  </div>
-</div>
+
 
 
         {% endblock %}

@@ -79,7 +79,20 @@ def recent_datasets():
             notes = ""
         res= []
         for r in i['resources']:
-            res.append(r['format'])
+            if r['format'] not in res:
+                res.append(r['format'])
         result.append({'title':i['title'], 'text': notes, 'url':i['name'], 'resources': res })
     return result
 
+def gravatar(email_hash, size=100, default=None):
+    if default is None:
+        default = config.get('ckan.gravatar_default', 'identicon')
+
+    if not default in _VALID_GRAVATAR_DEFAULTS:
+        # treat the default as a url
+        default = urllib.quote(default, safe='')
+
+    return literal('''<img src="//gravatar.com/avatar/%s?s=%d&amp;d=%s"
+        class="gravatar" width="%s" height="%s" alt="user gravatar"/>'''
+                   % (email_hash, size, default, size, size)
+                   )

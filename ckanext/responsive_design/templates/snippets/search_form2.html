@@ -4,7 +4,7 @@
 {% set sorting = sorting if sorting else [(_('Name Ascending'), 'name asc'), (_('Name Descending'), 'name desc')] %}
 {% set search_class = search_class if search_class else 'search-giant' %}
 {% set no_bottom_border = no_bottom_border if no_bottom_border else false %}
-<style type="text/css">
+<!--style type="text/css">
 .btn-search{
 
 padding: 1.1em;
@@ -21,7 +21,7 @@ background-color: #bd0a26;
 margin-bottom: 1.2em;
 }
 
-</style>
+</style!-->
 <form class="search-form{% if no_bottom_border %} no-bottom-border{% endif %}" method="get" data-module="select-switch" style="margin-top: -1em;">
 
   {% block search_input %}
