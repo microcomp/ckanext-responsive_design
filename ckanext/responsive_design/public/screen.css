@@ -282,7 +282,7 @@ body > header.navbar.navbar-static-top.masthead > div.container > div > form{
     display: none;
 }
 
-body > header.navbar.navbar-static-top.masthead > div.container > hgroup > a > img{
+body > header.navbar.navbar-static-top.masthead > div.container > a > img{
 display: none;
 }
 
@@ -422,347 +422,8 @@ body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul
 body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul > li.active > a{
     background-color: #685d56;
 }
-/*
-reset elementu btn a btn:hover;
-*/
 
-#content > div.row.wrapper > div > * > div.module-content > * > a.btn,
-#content > div.row.wrapper.no-nav > article > div > div.page_primary_action > a, 
-#content > div.row.wrapper.no-nav > section > a,
-#content > div.row.wrapper > aside > section > form > div > div.form-actions > button,
-#content > div.row.wrapper > div > div > form > div.form-actions > button,
-#content > div.row.wrapper > div > section > div > form > div.form-actions > button,
-#content > div.row.wrapper > div > article > div > form > div.form-actions > button,
-#add_new_button,
-#dataset-resources > ul > li > div > a,
-#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn,
-#content > div.row.wrapper > aside > section > form > div > div.form-actions > a,
-#content > div.row.wrapper > div > article > div > form > button
-{
-    animation : none;
-    animation-delay : 0;
-    animation-direction : normal;
-    animation-duration : 0;
-    animation-fill-mode : none;
-    animation-iteration-count : 1;
-    animation-name : none;
-    animation-play-state : running;
-    animation-timing-function : ease;
-    backface-visibility : visible;
-    background : 0;
-    background-attachment : scroll;
-    background-clip : border-box;
-    background-color : transparent;
-    background-image : none;
-    background-origin : padding-box;
-    background-position : 0 0;
-    background-position-x : 0;
-    background-position-y : 0;
-    background-repeat : repeat;
-    background-size : auto auto;
-    border : 0;
-    border-style : none;
-    border-width : medium;
-    border-color : inherit;
-    border-bottom : 0;
-    border-bottom-color : inherit;
-    border-bottom-left-radius : 0;
-    border-bottom-right-radius : 0;
-    border-bottom-style : none;
-    border-bottom-width : medium;
-    border-collapse : separate;
-    border-image : none;
-    border-left : 0;
-    border-left-color : inherit;
-    border-left-style : none;
-    border-left-width : medium;
-    border-radius : 0;
-    border-right : 0;
-    border-right-color : inherit;
-    border-right-style : none;
-    border-right-width : medium;
-    border-spacing : 0;
-    border-top : 0;
-    border-top-color : inherit;
-    border-top-left-radius : 0;
-    border-top-right-radius : 0;
-    border-top-style : none;
-    border-top-width : medium;
-    bottom : auto;
-    box-shadow : none;
-    box-sizing : content-box;
-    caption-side : top;
-    clear : none;
-    clip : auto;
-    color : inherit;
-    columns : auto;
-    column-count : auto;
-    column-fill : balance;
-    column-gap : normal;
-    column-rule : medium none currentColor;
-    column-rule-color : currentColor;
-    column-rule-style : none;
-    column-rule-width : none;
-    column-span : 1;
-    column-width : auto;
-    content : normal;
-    counter-increment : none;
-    counter-reset : none;
-    cursor : auto;
-    direction : ltr;
-    display : inline;
-    empty-cells : show;
-    float : none;
-    font : normal;
-    font-family : inherit;
-    font-size : medium;
-    font-style : normal;
-    font-variant : normal;
-    font-weight : normal;
-    height : auto;
-    hyphens : none;
-    left : auto;
-    letter-spacing : normal;
-    line-height : normal;
-    list-style : none;
-    list-style-image : none;
-    list-style-position : outside;
-    list-style-type : disc;
-    margin : 0;
-    margin-bottom : 0;
-    margin-left : 0;
-    margin-right : 0;
-    margin-top : 0;
-    max-height : none;
-    max-width : none;
-    min-height : 0;
-    min-width : 0;
-    opacity : 1;
-    orphans : 0;
-    outline : 0;
-    outline-color : invert;
-    outline-style : none;
-    outline-width : medium;
-    overflow : visible;
-    overflow-x : visible;
-    overflow-y : visible;
-    padding : 0;
-    padding-bottom : 0;
-    padding-left : 0;
-    padding-right : 0;
-    padding-top : 0;
-    page-break-after : auto;
-    page-break-before : auto;
-    page-break-inside : auto;
-    perspective : none;
-    perspective-origin : 50% 50%;
-    position : static;
-   
-    quotes : '\201C' '\201D' '\2018' '\2019';
-    right : auto;
-    tab-size : 8;
-    table-layout : auto;
-    text-align : inherit;
-    text-align-last : auto;
-    text-decoration : none;
-    text-decoration-color : inherit;
-    text-decoration-line : none;
-    text-decoration-style : solid;
-    text-indent : 0;
-    text-shadow : none;
-    text-transform : none;
-    top : auto;
-    transform : none;
-    transform-style : flat;
-    transition : none;
-    transition-delay : 0s;
-    transition-duration : 0s;
-    transition-property : none;
-    transition-timing-function : ease;
-    unicode-bidi : normal;
-    vertical-align : baseline;
-    visibility : visible;
-    white-space : normal;
-    widows : 0;
-    width : auto;
-    word-spacing : normal;
-    z-index : auto;}
-
-#content > div.row.wrapper > div > * > div.module-content > * > a.btn:hover,
-#content > div.row.wrapper.no-nav > article > div > div.page_primary_action > a:hover, 
-#content > div.row.wrapper.no-nav > section > a:hover,
-#content > div.row.wrapper > aside > section> form > div > div.form-actions > button:hover,
-#content > div.row.wrapper > div > div > form > div.form-actions > button:hover,
-#content > div.row.wrapper > div > section > div > form > div.form-actions > button:hover,
-#content > div.row.wrapper > div > article > div > form > div.form-actions > button:hover,
-#add_new_button:hover,
-#dataset-resources > ul > li > div > a:hover,
-#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn:hover,
-#content > div.row.wrapper > aside > section > form > div > div.form-actions > a:hover,
-#content > div.row.wrapper > div > article > div > form > button:hover
-{
-    animation : none;
-    animation-delay : 0;
-    animation-direction : normal;
-    animation-duration : 0;
-    animation-fill-mode : none;
-    animation-iteration-count : 1;
-    animation-name : none;
-    animation-play-state : running;
-    animation-timing-function : ease;
-    backface-visibility : visible;
-    background : 0;
-    background-attachment : scroll;
-    background-clip : border-box;
-    background-color : transparent;
-    background-image : none;
-    background-origin : padding-box;
-    background-position : 0 0;
-    background-position-x : 0;
-    background-position-y : 0;
-    background-repeat : repeat;
-    background-size : auto auto;
-    border : 0;
-    border-style : none;
-    border-width : medium;
-    border-color : inherit;
-    border-bottom : 0;
-    border-bottom-color : inherit;
-    border-bottom-left-radius : 0;
-    border-bottom-right-radius : 0;
-    border-bottom-style : none;
-    border-bottom-width : medium;
-    border-collapse : separate;
-    border-image : none;
-    border-left : 0;
-    border-left-color : inherit;
-    border-left-style : none;
-    border-left-width : medium;
-    border-radius : 0;
-    border-right : 0;
-    border-right-color : inherit;
-    border-right-style : none;
-    border-right-width : medium;
-    border-spacing : 0;
-    border-top : 0;
-    border-top-color : inherit;
-    border-top-left-radius : 0;
-    border-top-right-radius : 0;
-    border-top-style : none;
-    border-top-width : medium;
-    bottom : auto;
-    box-shadow : none;
-    box-sizing : content-box;
-    caption-side : top;
-    clear : none;
-    clip : auto;
-    color : inherit;
-    columns : auto;
-    column-count : auto;
-    column-fill : balance;
-    column-gap : normal;
-    column-rule : medium none currentColor;
-    column-rule-color : currentColor;
-    column-rule-style : none;
-    column-rule-width : none;
-    column-span : 1;
-    column-width : auto;
-    content : normal;
-    counter-increment : none;
-    counter-reset : none;
-    cursor : auto;
-    direction : ltr;
-    display : inline;
-    empty-cells : show;
-    float : none;
-    font : normal;
-    font-family : inherit;
-    font-size : medium;
-    font-style : normal;
-    font-variant : normal;
-    font-weight : normal;
-    height : auto;
-    hyphens : none;
-    left : auto;
-    letter-spacing : normal;
-    line-height : normal;
-    list-style : none;
-    list-style-image : none;
-    list-style-position : outside;
-    list-style-type : disc;
-    margin : 0;
-    margin-bottom : 0;
-    margin-left : 0;
-    margin-right : 0;
-    margin-top : 0;
-    max-height : none;
-    max-width : none;
-    min-height : 0;
-    min-width : 0;
-    opacity : 1;
-    orphans : 0;
-    outline : 0;
-    outline-color : invert;
-    outline-style : none;
-    outline-width : medium;
-    overflow : visible;
-    overflow-x : visible;
-    overflow-y : visible;
-    padding : 0;
-    padding-bottom : 0;
-    padding-left : 0;
-    padding-right : 0;
-    padding-top : 0;
-    page-break-after : auto;
-    page-break-before : auto;
-    page-break-inside : auto;
-    perspective : none;
-    perspective-origin : 50% 50%;
-    position : static;
-    
-    quotes : '\201C' '\201D' '\2018' '\2019';
-    right : auto;
-    tab-size : 8;
-    table-layout : auto;
-    text-align : inherit;
-    text-align-last : auto;
-    text-decoration : none;
-    text-decoration-color : inherit;
-    text-decoration-line : none;
-    text-decoration-style : solid;
-    text-indent : 0;
-    text-shadow : none;
-    text-transform : none;
-    top : auto;
-    transform : none;
-    transform-style : flat;
-    transition : none;
-    transition-delay : 0s;
-    transition-duration : 0s;
-    transition-property : none;
-    transition-timing-function : ease;
-    unicode-bidi : normal;
-    vertical-align : baseline;
-    visibility : visible;
-    white-space : normal;
-    widows : 0;
-    width : auto;
-    word-spacing : normal;
-    z-index : auto;
-}
-
-#content > div.row.wrapper > div > * > div.module-content > * > a.btn,
-#content > div.row.wrapper.no-nav > article > div > div.page_primary_action > a, 
-#content > div.row.wrapper.no-nav > section > a,
-#content > div.row.wrapper > aside > section > form > div > div.form-actions > button,
-#content > div.row.wrapper > div > div > form > div.form-actions > button,
-#content > div.row.wrapper > div > section > div > form > div.form-actions > button,
-#content > div.row.wrapper > div > article > div > form > div.form-actions > button,
-#add_new_button,
-#dataset-resources > ul > li > div > a,
-#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn,
-#content > div.row.wrapper > aside > section > form > div > div.form-actions > a, .mybutton,
-#content > div.row.wrapper > div > article > div > form > button
+#add_new_button, .mybutton
 {
     padding: 0.3em;
     padding-left: 0.6em;
@@ -778,31 +439,8 @@ reset elementu btn a btn:hover;
 
 }
 
-
-
-
-#content > div.row.wrapper > div > * > div.module-content > * > a.btn:hover,
-#content > div.row.wrapper.no-nav > article > div > div.page_primary_action > a:hover, 
-#content > div.row.wrapper.no-nav > section > a:hover,
-#content > div.row.wrapper > aside > section > form > div > div.form-actions > button:hover,
-#content > div.row.wrapper > div > div > form > div.form-actions > button:hover,
-#content > div.row.wrapper > div > section > div > form > div.form-actions > button:hover,
-#content > div.row.wrapper > div > article > div > form > div.form-actions > button:hover,
-#add_new_button:hover,
-#dataset-resources > ul > li > div > a:hover,
-#content > div.row.wrapper > div > article > div > section.additional-info > table > tbody > tr > td > a.btn:hover,
-#content > div.row.wrapper > aside > section > form > div > div.form-actions > a:hover, .mybutton:hover,
-#content > div.row.wrapper > div > article > div > form > button:hover
+#add_new_button:hover, .mybutton:hover
 {
-    padding: 0.3em;
-    padding-left: 0.6em;
-    padding-right: 0.6em;
-    margin: 0.5em;
-    border: 1px solid #bd0a26;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: white;
     background-color: #990000;
     cursor:pointer;
     
@@ -999,10 +637,11 @@ body > header.account-masthead > div > nav > ul > li:nth-child(2) > a:hover, bod
 .account-masthead .account ul li{
     border: none;
 }
-body > header.account-masthead > div > nav > ul > h3, body > header.account-masthead > div > div > ul > h3{
+body > header.account-masthead > div > nav > ul > li:nth-child(1), 
+body > header.account-masthead > div > div > ul > li:nth-child(1){
     background-color: #bd0a26;
     color: white;
-    padding: 0.5em;
+    /*padding: 0.5em;*/
     width: 220px;
     text-align: center;
     margin: 0px;
@@ -1177,25 +816,84 @@ body > header.account-masthead > div > div > ul > li:nth-child(1):hover{
 body > header.account-masthead > div > div > ul > li:nth-child(1) > a{
     min-width: 130px;
 }
-/*#show_tag_form{
-    height: 29.5938px;
-    font-size: 1.1em;
-    float: right;
-}
 
-
-*/
 #content > div.row.wrapper > div > article > div > ul > li > a.btn.btn-primary.btn-small.media-edit{
     display: none;
 }
-#content > div.row.wrapper > aside > section:nth-child(1) > div > div > div.follow_button > a{
+.btn{
     background: none;
-    background-color: #5bb75b;
+    background-color: #fff;
+    border: none;  
+}
+.btn-primary, .mybutton, .btn-danger{
+    background: none;
+    background-color: #bd0a26;
     border: none;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0.2em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+.btn-success{
+    background-color: #5bb75b;
+}
+.btn-primary:hover,
+.mybutton:hover,
+.btn-danger:hover,
+.btn-primary:active,
+.mybutton:active,
+.btn-danger:active{
+     background-color: #990000;
+}
+#content > div.row.wrapper > div > article > div > h1 > a{
+    font-size: 0.5em;
 }
 .page_primary_action{
     text-align: right;
 }
 #content > div.row.wrapper > div > article > div > ul > li > p{
     /*display: none;*/
+}
+
+body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > div{
+  display: none;
+}
+#index > div > div.element{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#index > div > div.element > h3{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#index > div > hr{
+  margin: 0.2em;
+}
+#index > div > div.element > p{
+  margin-bottom: 0.1em;
+}
+
+.searchbox > li{
+  display: inline;
+}
+.btn-search{  
+    padding: 0.25em;
+    color: white;
+    background-color: #bd0a26;
+    padding: 1em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    margin: 0.7em;
+    border: 1px solid #bd0a26;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #bd0a26;
+
+}
+#content > div.row.wrapper > div > article > div > form > div.form-actions > a,
+#content > div.row.wrapper > div > article > div > form > div.form-actions > a:hover{
+    padding-bottom:  0.5em;
 }
