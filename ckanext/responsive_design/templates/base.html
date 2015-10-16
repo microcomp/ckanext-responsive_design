@@ -1,9 +1,160 @@
-{% ckan_extends %}
 
-{% block styles %}
+{%- block doctype %}<!DOCTYPE html>{% endblock -%}
 
+{# Allows custom attributes to be added to the <html> tag #}
+{%- block htmltag -%}
+{% set lang = h.lang() %}
+<!--[if IE 7]> <html lang="{{ lang }}" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="{{ lang }}" class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="{{ lang }}" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ lang }}"> <!--<![endif]-->
+{%- endblock -%}
 
+  {# Allows custom attributes to be added to the <head> tag #}
+  <head{% block headtag %}{% endblock %}>
 
+    {%- block meta -%}
+      <meta charset="utf-8" />
+      {% block meta_generator %}<meta name="generator" content="ckan {{ c.__version__ }}" />{% endblock %}
+      {% block meta_viewport %}<meta name="viewport" content="width=device-width, initial-scale=1.0">{% endblock %}
+    {%- endblock -%}
+
+   
+     <title>
+      {%- block title -%}
+        {%- block subtitle %}{% endblock -%}
+        {%- if self.subtitle()|trim %} {{ g.template_title_deliminater }} {% endif -%}
+        {{ g.site_title }}
+      {%- endblock -%}
+    </title>
+
+   
+    {% block links -%}
+      <link rel="shortcut icon" href="{{ g.favicon }}" />
+    {% endblock -%}
+
+   {% block styles %}
+{%if c.controller == 'organization' and c.action == 'index'%}
+<style>
+#content > div.row.wrapper > div > article > div > ul > li > p{
+    display: none;
+}
+</style>
+{%endif%}
+
+{%if  c.controller == 'ckanext.apps_and_ideas.apps:AppsController' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+    
+<!--{{c.controller}}-->
+  {%elif c.controller == 'organization'%}
+  {%if c.action == 'index'%}
+  <link rel="stylesheet" type="text/css" href="/box.css" />
+  {%endif%} 
+ 
+  {% elif c.controller == 'related'%}
+  {%if c.action == 'list'%}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+     
+  {%elif c.action == 'dashboard'%}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+    
+  {%endif%}
+  {% elif c.controller == 'ckanext.apps_and_ideas.detail:DetailController' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+  <!-- {{c.controller}} -->
+  
+  {% elif c.controller == 'organization' %}
+    {%if c.action == 'read' %}
+      {%elif c.action == 'activity'%}
+      {%else%}
+        <link rel="stylesheet" type="text/css" href="/box.css" />
+        
+      {%endif%}
+  <!-- {{c.controller}} -->
+  {% elif c.controller == 'group' %}
+
+  {%if c.action == 'activity' %}
+  {%else%}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+    
+  {%endif%}
+  <!-- {{c.controller}} -->
+{%elif c.controller == 'user'%}
+  {%if c.action == 'dashboard_organizations' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+    
+  {%elif c.action == 'dashboard_groups' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+     
+  {%endif%}
+{%elif c.controller == 'package'%}
+  {%if c.action == 'read' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+  {%endif%}
+{%endif%}
+
+{% if c.controller != 'home' %}
+
+<link rel="stylesheet" type="text/css" href="/header_mod.css" property='stylesheet' >
+
+{%endif%}
+{%if  c.controller == 'ckanext.apps_and_ideas.apps:AppsController' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+    
+<!--{{c.controller}}-->
+  {%elif c.controller == 'organization'%}
+  {%if c.action == 'index'%}
+  <link rel="stylesheet" type="text/css" href="/box.css" />
+  {%endif%} 
+ 
+  {% elif c.controller == 'related'%}
+  {%if c.action == 'list'%}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+     
+  {%elif c.action == 'dashboard'%}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+     
+  {%endif%}
+  {% elif c.controller == 'ckanext.apps_and_ideas.detail:DetailController' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+  <!-- {{c.controller}} -->
+   
+  {% elif c.controller == 'organization' %}
+    {%if c.action == 'read' %}
+      {%elif c.action == 'activity'%}
+      {%else%}
+        <link rel="stylesheet" type="text/css" href="/box.css" />
+         
+      {%endif%}
+  <!-- {{c.controller}} -->
+  {% elif c.controller == 'group'%}
+
+    {#%if c.action != 'activity' or c.action != 'read' %#}
+    
+      <!--link rel="stylesheet" type="text/css" href="/box.css" /-->
+    
+    {#%endif%#}
+    {%if c.controller == 'home' %}
+<style type="text/css">
+body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
+  color: #bd0a26;
+}
+</style>
+{%endif%}
+  <!-- {{c.controller}} -->
+{%elif c.controller == 'user'%}
+  {%if c.action == 'dashboard_organizations' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+     
+  {%elif c.action == 'dashboard_groups' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+    
+  {%endif%}
+{%elif c.controller == 'package'%}
+  {%if c.action == 'read' %}
+    <link rel="stylesheet" type="text/css" href="/box.css" />
+  {%endif%}
+{%endif%}
 <!-- Latest compiled and minified CSS -->
 <!--link rel="stylesheet" href="/bootstrap/css/bootstrap.css"-->
 
@@ -18,33 +169,79 @@
 <link rel="stylesheet" type="text/css" href="/select2.css" />
 <link rel="stylesheet" type="text/css" href="/main.css" />
 <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="{{ h.url('home') }}v2{{ g.main_css }}"/>
+<!--link rel="stylesheet" type="text/css" href="{{ h.url('home') }}v2{{ g.main_css }}"/!-->
 <!--
 css : <link rel="stylesheet" type="text/css" href="{{ g.main_css }}" />
 -->
 <style>
 #content > div.row.wrapper > div > section > div > form > ol > li{
-	width:33.33%;
+  width:33.33%;
 }
 </style>
-    <meta charset="utf-8" />
-      <meta name="generator" content="ckan 2.3a" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - CKAN</title>
+ 
+{%if c.controller == 'organization' and c.action == 'index'%}
+<style>
+#content > div.row.wrapper > div > article > div > ul > li > p{
+    display: none;
+}
+</style>
+{%endif%}
+
+ {%if c.controller == 'home' %}
+<style type="text/css">
+body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
+  color: #bd0a26;;
+}
+</style>
+{%endif%}
+
+
  {%if  c.action == 'read' %}
  {%else%}
     <!--link rel="stylesheet" type="text/css" href="/box.css" /-->
  {%endif%}
     <link rel="shortcut icon" href="/images/icons/ckan.ico" />
 {% include 'back_to_top.html' %}    
-  
+  </head>
+
+
+{% endblock %}
+
+    {% block head_extras %}
+      {# defined in the config.ini under "ckan.template_head_end" #}
+      {{ g.template_head_end | safe }}
+    {% endblock %}
+
+    {%- block custom_styles %}
+      {%- if g.site_custom_css -%}
+      <style>
+        {{ g.site_custom_css | safe }}
+      </style>
+      {%- endif %}
+    {% endblock %}
+  </head>
+
+  <body>
+    {%if c.action != 'resource_datapreview' %}
  <a href="/" class="full_size"> <img src='/logo.png' alt='logo'/> </a>
  <a href="/" class="small"> <img src='/logo2.png' alt='logo'/></a>
+
  {% if c.controller == 'home' %}
  {%else%}
  <a href="/" class="logo_min"><img src="/logo3.png" alt='logo' /></a>
-
 {%endif%}
-{% endblock %}
+{%endif%}
 
+ 
 
+    {%- block page %}{% endblock -%}
+
+   
+    {%- block scripts %}
+    {% endblock -%}
+
+    {% block body_extras -%}
+      {{ g.template_footer_end | safe }}
+    {%- endblock %}
+  </body>
+</html>

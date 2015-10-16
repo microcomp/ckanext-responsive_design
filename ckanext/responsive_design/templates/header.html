@@ -1,35 +1,113 @@
-{% ckan_extends %}
-
+{%ckan_extends%}
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" />
+<link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" property='stylesheet'>
+
 {% if c.controller == 'home' %}
 {%else%}
-<link rel="stylesheet" type="text/css" href="/header_mod.css" />
+<link rel="stylesheet" type="text/css" href="/header_mod.css" property='stylesheet' >
+<link rel="stylesheet" type="text/css" href="/head.css" property='stylesheet' >
 {%endif%}
-{%if c.controller != 'home' %}
-<style type="text/css">
-body > header.account-masthead{
-	top:2.75em;
-}
-</style>
-{%endif%}
-{{ super() }}
-{% endblock %}
-{% block header_account_logged %}
-<h3> {{_("Account info")}} </h3>
 
-  {{ super() }}
+{% block header_account %}
+  <header class="account-masthead">
+    <div class="container">
+      {% block header_account_container_content %}
+        {% if c.userobj %}
+          <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
+            <ul class="unstyled">
+              {% block header_account_logged %}
+              <li> {{_("Account info")}} </li>
+              {% if c.userobj.sysadmin %}
+                <li>
+                  <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Sysadmin settings') }}">
+                    <i class="icon-legal"></i>
+                  </a>
+                </li>
+              {% endif %}
+              <li>
+                <a href="{{ h.url_for(controller='user', action='read', id=c.userobj.name) }}" class="image" title="{{ _('View profile') }}">
+                  {{ h.gravatar((c.userobj.email_hash if c and c.userobj else ''), size=22) }}
+                  <span class="username">{{ c.userobj.display_name }}</span>
+                </a>
+              </li>
+              {% set new_activities = h.new_activities() %}
+              <li class="notifications {% if new_activities > 0 %}notifications-important{% endif %}">
+                {% set notifications_tooltip = ngettext('Dashboard (%(num)d new item)', 'Dashboard (%(num)d new items)', new_activities) %}
+                <a href="{{ h.url_for(controller='user', action='dashboard') }}" title="{{ notifications_tooltip }}">
+                  <i class="icon-dashboard"></i>
+                  <span>{{ new_activities }}</span>
+                </a>
+              </li>
+              {% block header_account_settings_link %}
+                <li>
+                  <a href="{{ h.url_for(controller='user', action='edit', id=c.userobj.name) }}" title="{{ _('Edit settings') }}">
+                    <i class="icon-cog"></i>
+                  </a>
+                </li>
+              {% endblock %}
+              {% block header_account_log_out_link %}
+                <li>
+                  <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
+                    <i class="icon-signout"></i>
+                  </a>
+                </li>
+              {% endblock %}
+              {% endblock %}
+            </ul>
+          </div>
+        {% else %}
+          <nav class="account not-authed">
+            <ul class="unstyled">
+              {% block header_account_notlogged %}
+              <li> {{_("Account info")}} </li>
+              <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
+              {% if h.check_access('user_create') %}
+                <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
+              {% endif %}
+              {% endblock %}
+            </ul>
+          </nav>
+        {% endif %}
+      {% endblock %}
+    </div>
+  </header>
 {% endblock %}
-{% block header_site_navigation_tabs %}
-{%if c.controller == 'organization' and c.action == 'index'%}
-<style>
-#content > div.row.wrapper > div > article > div > ul > li > p{
-    display: none;
-}
-</style>
-{%endif%}
-                <li> <a href="/" alt="home"><i class='icon-home'></i> </a></li>
+<header class="navbar navbar-static-top masthead">
+  {% block header_debug %}
+    {% if g.debug and not g.debug_supress_header %}
+      <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
+    {% endif %}
+  {% endblock %}
+  <div class="container">
+    <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    {# The .header-image class hides the main text and uses image replacement for the title #}
+    <hgroup class="{{ g.header_class }} pull-le
+ft">
+      {% block header_logo %}
+        {% if g.site_logo %}
+         
+        {% else %}
+          <h1>
+            <a href="{{ h.url('home') }}">{{ g.site_title }}</a>
+          </h1>
+          {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
+        {% endif %}
+      {% endblock %}
+
+    </hgroup>
+
+    <div class="nav-collapse collapse">
+
+      {% block header_site_navigation %}
+        <nav class="section navigation">
+          <ul class="nav nav-pills">
+            {% block header_site_navigation_tabs %}
+              <li> <a href="/" title="home" ><i class='icon-home'></i> </a></li>
               {{ h.build_nav_main(
                 ('search', _('Datasets')),
                 ('organizations_index', _('Organizations')),
@@ -84,68 +162,22 @@ body > header.account-masthead{
                 </ul>
               </div>
               </li>
- 	{%if  c.controller == 'ckanext.apps_and_ideas.apps:AppsController' %}
-		<link rel="stylesheet" type="text/css" href="/box.css" />
-		
-<!--{{c.controller}}-->
-	{%elif c.controller == 'organization'%}
-	{%if c.action == 'index'%}
-	<link rel="stylesheet" type="text/css" href="/box.css" />
-	{%endif%}	
- 
-	{% elif c.controller == 'related'%}
-	{%if c.action == 'list'%}
-		<link rel="stylesheet" type="text/css" href="/box.css" />
-		 
-	{%elif c.action == 'dashboard'%}
-		<link rel="stylesheet" type="text/css" href="/box.css" />
-		 
-	{%endif%}
- 	{% elif c.controller == 'ckanext.apps_and_ideas.detail:DetailController' %}
-		<link rel="stylesheet" type="text/css" href="/box.css" />
-	<!-- {{c.controller}} -->
-	 
-	{% elif c.controller == 'organization' %}
-		{%if c.action == 'read' %}
-			{%elif c.action == 'activity'%}
-			{%else%}
-				<link rel="stylesheet" type="text/css" href="/box.css" />
-				 
-			{%endif%}
-	<!-- {{c.controller}} -->
-	{% elif c.controller == 'group'%}
+            {% endblock %}
+          </ul>
+        </nav>
+      {% endblock %}
 
-		{#%if c.action != 'activity' or c.action != 'read' %#}
-		
-			<!--link rel="stylesheet" type="text/css" href="/box.css" /-->
-		
-		{#%endif%#}
-	<!-- {{c.controller}} -->
-{%elif c.controller == 'user'%}
-	{%if c.action == 'dashboard_organizations' %}
-		<link rel="stylesheet" type="text/css" href="/box.css" />
-		 
-	{%elif c.action == 'dashboard_groups' %}
-		<link rel="stylesheet" type="text/css" href="/box.css" />
-		
-	{%endif%}
-{%elif c.controller == 'package'%}
-	{%if c.action == 'read' %}
-		<link rel="stylesheet" type="text/css" href="/box.css" />
-	{%endif%}
-{%endif%}
+      {% block header_site_search %}
+        <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
+          <div class="field">
+            <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
+            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search') }}" />
+            <button class="btn-search" type="submit"><i class="icon-search"></i></button>
+          </div>
+        </form>
+      {% endblock %}
 
+    </div>
+  </div>
+</header>
 {% endblock %}
-{% block header_account_notlogged %}
-{%if c.controller == 'home' %}
-<style type="text/css">
-body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
-	color: #bd0a26;;
-}
-
-</style>
-{%endif%}
-<h3> {{_("Account info")}} </h3>
-{{super()}}
-{%endblock%}
-

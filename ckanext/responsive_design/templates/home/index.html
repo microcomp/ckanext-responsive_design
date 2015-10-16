@@ -1,35 +1,13 @@
-{%ckan_extends%}
-{% block content %}
+{% extends "page.html" %}
+{% set homepage_style = ( g.homepage_style or '1' ) %}
 
-<style>/*
-body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > div{
-    display: none;
-}
-body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > h3{
-    display: none;
-}
-body > div:nth-child(9){
-    display: none;
-}*/
-body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > div{
-	display: none;
-}
-#index > div > div.element{
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-#index > div > div.element > h3{
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-#index > div > hr{
-	margin: 0.2em;
-}
-#index > div > div.element > p{
-	margin-bottom: 0.1em;
-}
-</style>
-{% snippet "home/layout{0}.html".format(homepage_style) %}
+{% block subtitle %}{{ _("Welcome") }}{% endblock %}
+
+{% block maintag %}{% endblock %}
+{% block toolbar %}{% endblock %}
+
+{% block content %}
+ {% snippet "home/layout{0}.html".format(homepage_style) %}
   <div>
     <div class="container" >
       {{ self.flash() }}
@@ -65,10 +43,10 @@ body > div.hero > div > div.module.module-search.module-narrow.module-shallow.bo
 			      			</div>
 			      		{%endif%}
 			      </div>
-			        
+			      
 			    {% endblock %}
 			<!--/div>
-		</div--></div>
+		</div-->
 	  </div>
 
     </div>

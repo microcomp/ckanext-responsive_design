@@ -1,0 +1,11 @@
+{% ckan_extends %}
+
+{% block header_account %}
+
+  <li>
+   <a href="javascript:document.changeStylesheet('id','screen_contrast.css')">
+      <i class="fa fa-edit"></i>
+    </a>
+  </li>
+  {{ super() }}
+{% endblock %}
