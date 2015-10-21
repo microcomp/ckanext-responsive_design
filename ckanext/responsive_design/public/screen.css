@@ -897,3 +897,12 @@ body > div.hero > div > div.module.module-search.module-narrow.module-shallow.bo
 #content > div.row.wrapper > div > article > div > form > div.form-actions > a:hover{
     padding-bottom:  0.5em;
 }
+.reply{
+    cursor: pointer;
+}
+.modal-dialog > div{
+    z-index: 9999;
+}
+:not(body) > div.modal-backdrop.fade.in{
+        display: none;
+}

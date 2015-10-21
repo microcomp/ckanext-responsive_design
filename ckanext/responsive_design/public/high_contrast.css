@@ -861,3 +861,55 @@ body > header.account-masthead > div > div > ul > li:nth-child(1) > a{
 .page_primary_action{
     text-align: right;
 }
+
+#content > div.row.wrapper > div > article > div > ul > li > p{
+    /*display: none;*/
+}
+
+body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > div{
+  display: none;
+}
+#index > div > div.element{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#index > div > div.element > h3{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#index > div > hr{
+  margin: 0.2em;
+}
+#index > div > div.element > p{
+  margin-bottom: 0.1em;
+}
+
+.searchbox > li{
+  display: inline;
+}
+.btn-search{  
+    padding: 0.25em;
+    color: white;
+    background-color: #bd0a26;
+    padding: 1em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    margin: 0.7em;
+    border: 1px solid #bd0a26;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #bd0a26;
+
+}
+#content > div.row.wrapper > div > article > div > form > div.form-actions > a,
+#content > div.row.wrapper > div > article > div > form > div.form-actions > a:hover{
+    padding-bottom:  0.5em;
+}
+.reply{
+    cursor: pointer;
+}
+:not(body) > div.modal-backdrop.fade.in{
+        display: none;
+}

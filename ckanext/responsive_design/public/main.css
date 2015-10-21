@@ -9166,9 +9166,7 @@ h4 small {
 .datapusher-status.status-complete {
   color: #009900;
 }
-body {
-  background: #005d7a url("../../../base/images/bg.png");
-}
+
 [hidden] {
   display: none;
 }
