@@ -6426,7 +6426,7 @@ textarea {
 }
 .simple-input label,
 .simple-input button {
-  display: none;
+  /*display: none;*/
 }
 .simple-input .field {
   position: relative;
