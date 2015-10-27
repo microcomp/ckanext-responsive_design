@@ -1999,12 +1999,8 @@ table th[class*="span"],
 .dropdown-submenu:focus > a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #17708b;
+  background-color: #990000;
   background-image: -moz-linear-gradient(top, #187794, #14657e);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#187794), to(#14657e));
-  background-image: -webkit-linear-gradient(top, #187794, #14657e);
-  background-image: -o-linear-gradient(top, #187794, #14657e);
-  background-image: linear-gradient(to bottom, #187794, #14657e);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff187794', endColorstr='#ff14657e', GradientType=0);
 }
