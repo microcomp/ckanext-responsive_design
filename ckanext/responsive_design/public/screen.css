@@ -847,10 +847,7 @@ body > header.account-masthead > div > div > ul > li:nth-child(1) > a{
 .btn-primary:active,
 .mybutton:active,
 .btn-danger:active,
-.btn-primary:focus,
-.mybutton:focus,
-.btn-danger:focus,
-.dropdown-toggle:focus
+
 {
      background-color: #990000;
 }

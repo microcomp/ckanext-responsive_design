@@ -845,11 +845,7 @@ body > header.account-masthead > div > div > ul > li:nth-child(1):hover{
 .btn-danger:hover,
 .btn-primary:active,
 .mybutton:active,
-.btn-danger:active,
-.btn-primary:focus,
-.mybutton:focus,
-.btn-danger:focus,
-.dropdown-toggle:focus{
+.btn-danger:active{
      background-color: #990000;
 }
 body > header.account-masthead > div > div > ul > li:nth-child(1) > a{
