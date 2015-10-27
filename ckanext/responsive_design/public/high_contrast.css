@@ -838,12 +838,18 @@ body > header.account-masthead > div > div > ul > li:nth-child(1):hover{
 .btn-success{
     background-color: #5bb75b;
 }
+.btn:focus,
+.dropdown-toggle:hover,
 .btn-primary:hover,
 .mybutton:hover,
 .btn-danger:hover,
 .btn-primary:active,
 .mybutton:active,
-.btn-danger:active{
+.btn-danger:active,
+.btn-primary:focus,
+.mybutton:focus,
+.btn-danger:focus,
+.dropdown-toggle:focus{
      background-color: #990000;
 }
 body > header.account-masthead > div > div > ul > li:nth-child(1) > a{
