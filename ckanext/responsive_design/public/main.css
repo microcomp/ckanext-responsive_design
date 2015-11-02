@@ -2000,9 +2000,9 @@ table th[class*="span"],
   text-decoration: none;
   color: #ffffff;
   background-color: #990000;
-  background-image: -moz-linear-gradient(top, #187794, #14657e);
+ /* background-image: -moz-linear-gradient(top, #187794, #14657e);*/
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff187794', endColorstr='#ff14657e', GradientType=0);
+ /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff187794', endColorstr='#ff14657e', GradientType=0);*/
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
