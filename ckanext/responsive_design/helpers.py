@@ -27,7 +27,7 @@ def get_urls(text):
     for i in _list:
         result.append({'name':config.get(text+i+'.name').decode('utf8'), 
                        'url':config.get(text+i+'.url'), 
-                       'role':config.get(text+i+'.privilege').split(','), 
+                       'role':[x.strip() for x in config.get(text+i+'.privilege').split(',')], 
                        'popis':config.get(text+i+'.title').decode('utf8')})
 
     result = [x for x in result if HR(user_roles, x['role'])]
