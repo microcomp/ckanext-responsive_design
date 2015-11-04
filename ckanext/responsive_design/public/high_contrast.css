@@ -915,3 +915,11 @@ body > div.hero > div > div.module.module-search.module-narrow.module-shallow.bo
 :not(body) > div.modal-backdrop.fade.in{
         display: none;
 }
+body > footer > div > nav{
+    float: left;
+}
+
+body > footer > div > div{
+    float: right;
+    margin-right: 2em;
+}
