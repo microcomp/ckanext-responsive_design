@@ -5,7 +5,11 @@
             {% endif %}
             {% if res.url %}
               <li>
+                {% if res.resource_type == 'datastore' %}
+                 <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}?all=true">
+                {%else%}
                 <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}">
+                {%endif%}
                   {% if res.resource_type in ('listing', 'service') %}
                     <i class="icon-eye-open"></i> {{ _('View') }}
                   {% elif  res.resource_type == 'api' %}
