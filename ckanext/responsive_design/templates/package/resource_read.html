@@ -5,7 +5,7 @@
             {% endif %}
             {% if res.url %}
               <li>
-                {% if res.resource_type == 'datastore' %}
+                {% if res.url_type == 'datastore' %}
                  <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}?all=true">
                 {%else%}
                 <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}">
