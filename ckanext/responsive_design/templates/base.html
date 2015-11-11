@@ -245,7 +245,18 @@ body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
     {% endblock -%}
 
     {% block body_extras -%}
-      {{ g.template_footer_end | safe }}
-    {%- endblock %}
+    {%if c.action == 'resource_datapreview' %}
+    {%else%}
+     <a href="/" class="full_size"> <img src='/logo.png' alt='logo'/> </a>
+         <a href="/" class="small"> <img src='/logo2.png' alt='logo'/></a>
+
+          
+         {% if c.controller == 'home' %}
+         {%else%}
+            <a href="/" class="logo_min"><img src="/logo3.png" alt='logo' /></a>
+        {%endif%}
+    {%endif%}
+      {{super()}}
+    {% endblock %}
   </body>
 </html>
