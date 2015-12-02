@@ -87,7 +87,7 @@ body > header.navbar.navbar-static-top.masthead > div.container > div > nav > ul
         padding-bottom: 0;
 
         position: absolute;
-        z-index: 999;
+        z-index: 50;
         top: 100px;
         right: 50%;
     }
