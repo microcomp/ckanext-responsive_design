@@ -919,3 +919,7 @@ body > footer > div > div{
     float: right;
     margin-right: 2em;
 }
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600&subset=latin,latin-ext);
+html, head, body, p, a, li, ul{
+    font-family: 'Open Sans', sans-serif;
+}
