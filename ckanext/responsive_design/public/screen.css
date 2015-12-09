@@ -931,3 +931,8 @@ html, head, body, p, a, li, ul{
     padding: 0 10px;
     line-height: 31px;
 }
+body > header.account-masthead > div > div > ul > li > a:hover, body > header.account-masthead > div > div > ul > li > a > i:hover, 
+body > header.account-masthead > div > div > ul > li:hover, .account-masthead .account ul li a:hover{
+    color:#bd0a26;
+    background-color: #fff;
+}
