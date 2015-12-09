@@ -814,7 +814,7 @@ body > header.account-masthead > div > div > ul > li:nth-child(1):hover{
     }
 }
 body > header.account-masthead > div > div > ul > li:nth-child(1) > a{
-    min-width: 130px;
+    min-width: 160px;
 }
 
 #content > div.row.wrapper > div > article > div > ul > li > a.btn.btn-primary.btn-small.media-edit{
@@ -919,7 +919,15 @@ body > footer > div > div{
     float: right;
     margin-right: 2em;
 }
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600&subset=latin,latin-ext);
 html, head, body, p, a, li, ul{
     font-family: 'Open Sans', sans-serif;
+}
+
+.account-masthead .account ul li a {
+    font-size: 1em; 
+    font-weight: bold;
+    padding: 0 10px;
+    line-height: 31px;
 }
