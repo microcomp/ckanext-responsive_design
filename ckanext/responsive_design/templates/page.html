@@ -1,17 +1,17 @@
 {% ckan_extends%}
-{%- block page -%}
+{% block page %}
 
   {% block skip %}
     <div class="hide"><a href="#content">{{ _('Skip to content') }}</a></div>
   {% endblock %}
 
   
-  {%- block header %}
+  {% block header %}
     {% include "header.html" %}
-  {% endblock -%}
+  {% endblock %}
 
   
-  {%- block content %}
+  {% block content %}
     {% block maintag %}<div role="main">{% endblock %}
       <div id="content" class="container">
         {% block main_content %}
@@ -87,19 +87,19 @@
         {% endblock %}
       </div>
     </div>
-  {% endblock -%}
+  {% endblock %}
 
  
-  {%- block footer %}
+  {% block footer %}
     {% include "footer.html" %}
-  {% endblock -%}
-{%- endblock -%}
+  {% endblock %}
+{% endblock %}
 
-{%- block scripts %}
+{% block scripts %}
     {% resource 'base/main' %}
     {% resource 'base/ckan' %}
     {% if g.tracking_enabled %}
       {% resource 'base/tracking.js' %}
     {% endif %}
   {{ super() }}
-{% endblock -%}
+{% endblock %}

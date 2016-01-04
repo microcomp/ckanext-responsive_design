@@ -14,7 +14,7 @@
 {%- endblock -%}
 
   {# Allows custom attributes to be added to the <head> tag #}
-  <head{% block headtag %}{% endblock %}>
+  <head{% block headtag %}{% endblock %}><meta charset="utf-8" />
 
     {%- block meta -%}
       
@@ -199,10 +199,6 @@ body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
 {%endif%}
 
 
- {%if  c.action == 'read' %}
- {%else%}
-    <!--link rel="stylesheet" type="text/css" href="/box.css" /-->
- {%endif%}
     <link rel="shortcut icon" href="/images/icons/ckan.ico" />
 {% include 'back_to_top.html' %}    
 
@@ -225,24 +221,7 @@ body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
   </head>
 
   <body>
-    {%if c.action != 'resource_datapreview' %}
- <a href="/" class="full_size"> <img src='/logo.png' alt='logo'/> </a>
- <a href="/" class="small"> <img src='/logo2.png' alt='logo'/></a>
 
-  
- {% if c.controller == 'home' %}
- {%else%}
- <a href="/" class="logo_min"><img src="/logo3.png" alt='logo' /></a>
-{%endif%}
-{%endif%}
-
- 
-
-    {%- block page %}{% endblock -%}
-
-   
-    {%- block scripts %}
-    {% endblock -%}
 
     {% block body_extras -%}
     {%if c.action == 'resource_datapreview' %}

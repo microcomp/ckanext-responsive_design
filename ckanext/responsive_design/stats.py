@@ -1,121 +1,102 @@
-import logging
-import ckan.lib.helpers as h
-import ckan.plugins as p
-from sqlalchemy import Table, select, func, and_
-import ckan.model as model
-from ckan.common import _, c
-import ckan.plugins.toolkit as toolkit
-from pylons import config, session
-cache_enabled = False
 import datetime
+
+from pylons import config
+from sqlalchemy import Table, select, func, and_
+
+import ckan.plugins as p
+import ckan.model as model
+
+cache_enabled = p.toolkit.asbool(config.get('ckanext.stats.cache_enabled', 'True'))
+
+if cache_enabled:
+    from pylons import cache
+    our_cache = cache.get_cache('stats', type='dbm')
+
+DATE_FORMAT = '%Y-%m-%d'
 
 def table(name):
     return Table(name, model.meta.metadata, autoload=True)
 
-DATE_FORMAT = '%Y-%m-%d'
-log = logging.getLogger(__name__)
-def raw_packages_by_week():
+def datetime2date(datetime_):
+    return datetime.date(datetime_.year, datetime_.month, datetime_.day)
 
-    rev_stats = RevisionStats()
 
-    c.num_packages_by_week = rev_stats.get_num_packages_by_week()
-    c.raw_packages_by_week = []
-    c.packages_by_week = []
-    for week_date, num_packages, cumulative_num_packages in c.num_packages_by_week:
-        c.packages_by_week.append('[new Date(%s), %s]' % (week_date.replace('-', ','), cumulative_num_packages))
-        c.raw_packages_by_week.append({'date': h.date_str_to_datetime(week_date), 'total_packages': cumulative_num_packages})
+class Stats(object):
+    @classmethod
+    def top_rated_packages(cls, limit=10):
+        # NB Not using sqlalchemy as sqla 0.4 doesn't work using both group_by
+        # and apply_avg
+        package = table('package')
+        rating = table('rating')
+        sql = select([package.c.id, func.avg(rating.c.rating), func.count(rating.c.rating)], from_obj=[package.join(rating)]).\
+              group_by(package.c.id).\
+              order_by(func.avg(rating.c.rating).desc(), func.count(rating.c.rating).desc()).\
+              limit(limit)
+        res_ids = model.Session.execute(sql).fetchall()
+        res_pkgs = [(model.Session.query(model.Package).get(unicode(pkg_id)), avg, num) for pkg_id, avg, num in res_ids]
+        return res_pkgs
 
-    return c.raw_packages_by_week
- 
-def uv_url():
-    uv_url = config.get('odn.uv.url', None)
-    if uv_url == None or uv_url == "":
-        uv_url = 'http://www.unifiedviews.eu/'
-    return uv_url
+    @classmethod
+    def most_edited_packages(cls, limit=10):
+        package_revision = table('package_revision')
+        s = select([package_revision.c.id, func.count(package_revision.c.revision_id)]).\
+            group_by(package_revision.c.id).\
+            order_by(func.count(package_revision.c.revision_id).desc()).\
+            limit(limit)
+        res_ids = model.Session.execute(s).fetchall()
+        res_pkgs = [(model.Session.query(model.Package).get(unicode(pkg_id)), val) for pkg_id, val in res_ids]
+        return res_pkgs
 
-def HR(uRoles, lRoles):
-    if lRoles[0] == 'all':
-        return True
-    for i in uRoles:
-        if i in lRoles:
-            return True
-    return False
-def get_urls(text):
-    user_roles = session.get('ckanext-cas-roles', [])
-    _list =sorted([x for x in set( x.split('.')[2] for x in [x for x in config.keys() if text in x])])
-    result = []
-    for i in _list:
-        result.append({'name':config.get(text+i+'.name').decode('utf8'), 
-                       'url':config.get(text+i+'.url'), 
-                       'role':[x.strip() for x in config.get(text+i+'.privilege').split(',')], 
-                       'popis':config.get(text+i+'.title').decode('utf8')})
+    @classmethod
+    def largest_groups(cls, limit=10):
+        member = table('member')
+        s = select([member.c.group_id, func.count(member.c.table_id)]).\
+            group_by(member.c.group_id).\
+            where(and_(member.c.group_id!=None, member.c.table_name=='package')).\
+            order_by(func.count(member.c.table_id).desc()).\
+            limit(limit)
 
-    result = [x for x in result if HR(user_roles, x['role'])]
-    result2 = []
-    for i in result:
-        if i['url'][0] == '*':
-            a = i['url'][1:]
-            a = a.split(',')
-            ll = {}
-            ll['controller'] = a[0].split('=')[1]
-            ll['action'] = a[1].split('=')[1]
-            i['url'] = toolkit.url_for(controller=ll['controller'], action=ll['action'])
-        result2.append(i)
-    return result2
+        res_ids = model.Session.execute(s).fetchall()
+        res_groups = [(model.Session.query(model.Group).get(unicode(group_id)), val) for group_id, val in res_ids]
+        return res_groups
 
-def onto_editor():
-    onto_editor = config.get('ckan.onto_url', None)
-    if onto_editor == None or onto_editor == "":
-        onto_editor = '#'
-    return onto_editor
-
-def geomodul_url():
-    geomodul_url = config.get('ckan.geomodul.url', None)
-    if geomodul_url == None or geomodul_url == "":
-        geomodul_url = '/dashboard'
-    return geomodul_url
-def xwiki():
-    xwiki_url = config.get('ckan.xwiki.url', None)
-    if xwiki_url == None or xwiki_url == "":
-        xwiki_url = 'http://xwiki.org'
-    return xwiki_url
-
-def recent_datasets():
-    context = {'model': model, 'session': model.Session,
-                   'user': c.user or c.author,
-                   'auth_user_obj': c.userobj,
-                   'for_view': True}
-    
-    res = []
-    result= []
-    data_dict= {'limit':5, 'offset':0, 'page':1}
-    resp = toolkit.get_action('current_package_list_with_resources')(context, data_dict)
-    for i in resp:
-        notes = i['notes']
-        if  i['notes'] != None:
-            if len(i['notes']) > 300:
-                notes = i['notes'][:300]+'...'
+    @classmethod
+    def top_tags(cls, limit=10, returned_tag_info='object'): # by package
+        assert returned_tag_info in ('name', 'id', 'object')
+        tag = table('tag')
+        package_tag = table('package_tag')
+        #TODO filter out tags with state=deleted
+        if returned_tag_info == 'name':
+            from_obj = [package_tag.join(tag)]
+            tag_column = tag.c.name
         else:
-            notes = ""
-        res= []
-        for r in i['resources']:
-            if r['format'] not in res:
-                res.append(r['format'])
-        result.append({'title':i['title'], 'text': notes, 'url':i['name'], 'resources': res })
-    return result
+            from_obj = None
+            tag_column = package_tag.c.tag_id
+        s = select([tag_column, func.count(package_tag.c.package_id)],
+                    from_obj=from_obj)
+        s = s.group_by(tag_column).\
+            order_by(func.count(package_tag.c.package_id).desc()).\
+            limit(limit)
+        res_col = model.Session.execute(s).fetchall()
+        if returned_tag_info in ('id', 'name'):
+            return res_col
+        elif returned_tag_info == 'object':
+            res_tags = [(model.Session.query(model.Tag).get(unicode(tag_id)), val) for tag_id, val in res_col]
+            return res_tags
 
-def gravatar(email_hash, size=100, default=None):
-    if default is None:
-        default = config.get('ckan.gravatar_default', 'identicon')
-
-    if not default in _VALID_GRAVATAR_DEFAULTS:
-        # treat the default as a url
-        default = urllib.quote(default, safe='')
-
-    return literal('''<img src="//gravatar.com/avatar/%s?s=%d&amp;d=%s"
-        class="gravatar" width="%s" height="%s" alt="user gravatar"/>'''
-                   % (email_hash, size, default, size, size)
-                   )
+    @classmethod
+    def top_package_owners(cls, limit=10):
+        package_role = table('package_role')
+        user_object_role = table('user_object_role')
+        s = select([user_object_role.c.user_id, func.count(user_object_role.c.role)], from_obj=[user_object_role.join(package_role)]).\
+            where(user_object_role.c.role==model.authz.Role.ADMIN).\
+            where(user_object_role.c.user_id!=None).\
+            group_by(user_object_role.c.user_id).\
+            order_by(func.count(user_object_role.c.role).desc()).\
+            limit(limit)
+        res_ids = model.Session.execute(s).fetchall()
+        res_users = [(model.Session.query(model.User).get(unicode(user_id)), val) for user_id, val in res_ids]
+        return res_users
 
 class RevisionStats(object):
     @classmethod

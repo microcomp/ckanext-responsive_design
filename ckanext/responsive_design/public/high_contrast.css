@@ -938,3 +938,19 @@ body > header.account-masthead > div > div > ul > li:hover, .account-masthead .a
     color:#bd0a26;
     background-color: #fff;
 }
+.form-horizontal .control-group.min_padding{
+  padding-bottom: 0px;
+  margin-bottom: 0px; 
+}
+
+#content > div.hero-secondary,
+#content > div.hero-primary.module.module-popup{
+    width: 45%;
+    
+}
+#content > div.hero-primary.module.module-popup{
+    float: left;
+}
+#content > div.hero-secondary{
+    float: right;
+}

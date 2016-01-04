@@ -1,4 +1,4 @@
-{% extends "page.html" %}
+{#% ckan_extends%}
 {% set homepage_style = ( g.homepage_style or '1' ) %}
 
 {% block subtitle %}{{ _("Welcome") }}{% endblock %}
@@ -7,10 +7,11 @@
 {% block toolbar %}{% endblock %}
 
 {% block content %}
- {% snippet "home/layout{0}.html".format(homepage_style) %}
-  <div>
+
+<div>
     <div class="container" >
       {{ self.flash() }}
+
 
       <!--div class="row" style="position: relative;width=100%;"-->
 
@@ -18,8 +19,6 @@
 			<!--div class="box" -->
 				<header class="module-heading"> <h2>{{_('Recently changed datasets')}}	</h2></header>
 			    {% block primary_content %}
-			      {#{ h.recently_changed_packages_activity_stream() }#}
-			      {#set rec = #}
 			      <div class="most_recent">
 			      		{%set most_recent = h.recent_datasets() %}
 			      		{%if most_recent|length >0 %}
@@ -52,4 +51,213 @@
     </div>
 
   </div>
+{% endblock %#}
+
+{% ckan_extends%}
+{% block subtitle %}{{ _("Welcome") }}{% endblock %}
+
+{% block maintag %}{% endblock %}
+
+{% block content %}
+  <div role="main" class="hero">
+    <div id="content" class="container">
+      {{ self.flash() }}
+      {{ self.primary_content() }}
+    </div>
+  </div>
+  <div class="main homepage">
+    <div class="container">
+      {{ self.secondary_content() }}
+    </div>
+  </div>
 {% endblock %}
+
+{% block primary_content %}
+  <div class="hero-primary module module-popup" style="width: 48.5%;">
+    <div class="module-content box">
+      {% block home_primary %}
+        <header>
+          {% if g.site_intro_text %}
+          {{ h.render_markdown(g.site_intro_text) }}
+          {% else %}
+            {% block home_primary_content %}
+              <h1 class="page-heading">{% block home_primary_heading %}{{ _("Welcome to CKAN") }}{% endblock %}</h1>
+              <p>
+              {% block home_primary_text %}
+                {% trans %}This is a nice introductory paragraph about CKAN or the site
+                in general. We don't have any copy to go here yet but soon we will
+                {% endtrans %}
+              {% endblock %}
+              </p>
+            {% endblock %}
+          {% endif %}
+        </header>
+      {% endblock %}
+
+      {#% block home_image %}
+        <section class="featured media-overlay">
+          <h2 class="media-heading">{% block home_image_caption %}{{ _("This is a featured section") }}{% endblock %}</h2>
+          {% block home_image_content %}
+            <a class="media-image" href="#">
+              <img src="http://placehold.it/420x220" alt="Placeholder" width="420" height="220" />
+            </a>
+          {% endblock %}
+        </section>
+      {% endblock %#}
+    </div>
+  </div>
+  <div class="hero-secondary" style="width: 48.5%;  ">
+    <div class="hero-secondary-inner" >
+      {% block home_secondary_content %}
+          <div class="module module-shallow module-narrow module-dark info box">
+            {% block home_search %}
+              <form class="dataset-search module-content clearfix" method="get" action="{% url_for controller='package', action='search' %}">
+                <h3 class="heading">{{ _("Search Your Data") }}</h3>
+                <span class="control-group search-giant">
+                  <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{_('Search')}}'..." />
+                  <button class="mybutton" type="submit" value="{{ _('Search') }}" style="margin-top: -0.1em;">{{_('Search')}}</button>
+                </span>
+              </form>
+            {% endblock %}
+            {% block home_tags %}
+              <div class="tags">
+                <h3>{{ _('Popular Tags') }}</h3>
+                {% set tags = h.get_facet_items_dict('tags', limit=3) %}
+                {% for tag in tags %}
+                  <a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+                {% endfor %}
+              </div>
+            {% endblock %}
+          </div>
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block secondary_content %}
+  <style>
+.group-listing, .hero-primary, #content > div.hero-secondary > div > div, .box{
+      background-color: #FFF;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+}
+#content > div.hero-secondary > div > div{
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+.group-listing{
+  margin-left: 0.2em;
+  width: 45%;
+}
+</style>
+
+
+<div class="row row2">
+      <div class="span6 col1">
+
+  <div class="box">
+  <section class="group-list module module-narrow module-shallow">
+    
+      <header class="module-heading">
+          <h3 class="media-heading">{{_('Recently changed datasets')}} </h3>
+        
+      </header>
+    
+  
+    <ul class="unstyled dataset-list">
+      
+      {%set most_recent = h.recent_datasets() %}
+      {%if most_recent|length >0 %}
+        {% for i in most_recent %}
+                 
+                    <li class="dataset-item module-content" style="margin-bottom: 0px; margin-top:0px; padding-top:2px; padding-bottom:2px;">
+                      <div class="dataset-content" style="margin-bottom: 0px; margin-top:0px;">
+                    <h3 class="dataset-heading" style="margin-bottom: 0px; margin-top:0px;"><a href='/dataset/{{i.url}}'>{{i.title}}</a> </h3>
+                     {%if i.text==''%} <p class="empty" style="margin: 0px;">{{_('This dataset has no description')}}{%else%}<p style="margin: 0px;">{{i.text}}{%endif%}</p>
+
+                     {%if i.resources|length > 0%}
+                       {%for j in i.resources %}
+                        <a href='/dataset/{{i.url}}' class="label" data-format="{{j.lower()}}" style="margin: 0px;">{{j}}</a>
+                       {%endfor%}
+                     {%endif%}
+                   </div>
+                  </li>
+                  <hr style="margin: 0px; width: 80%;">
+                {%endfor%}
+                {%else%}
+                   <li class="dataset-item module-content">
+                     <div class="dataset-content">
+                    <h3> </h3>
+                     <p>{{_('No recent datasets')}}</p>
+                  </div>
+                  </li>
+                {%endif%}
+
+    </ul>
+  </section>
+  </div>
+      </div>
+      <div class="span6 col2">
+        
+  <div class="box">
+    
+<!-- Snippet snippets/organization_item.html start -->
+<section class="group-list module module-narrow module-shallow">
+  <header class="module-heading">
+    
+    <h3 class="media-heading">{{ _('Total number of Datasets') }}</h3>
+    
+  </header>
+
+    <ul class="unstyled dataset-list">
+
+  <li class="dataset-item module-content">
+    
+      <div class="dataset-content">
+        
+         {% set xaxis = {'mode': 'time', 'timeformat': '%y-%b'} %}
+      {% set yaxis = {'min': 0} %}
+      <table class="table table-chunky table-bordered table-striped" data-module="plot" data-module-xaxis="{{ h.dump_json(xaxis) }}" data-module-yaxis="{{ h.dump_json(yaxis) }}">
+        <thead>
+          <tr>
+            <th>{{ _("Date") }}</th>
+            <th>{{ _("Total datasets") }}</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {%set raw_packages_by_week = h.raw_packages_by_week() %}
+          {% for row in raw_packages_by_week %} 
+
+            <tr>
+              <th data-type="date" data-value="{{ row.date.strftime("%s") }}"><time datetime="{{ row.date.isoformat() }}">{{ h.render_datetime(row.date) }}</time></th>
+              <td>{{ row.total_packages }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+   
+            <div>
+</div>
+
+      </div>
+
+    
+  </li>
+
+    </ul>
+
+</section>
+  </div>
+        
+</div>
+</div>
+{% endblock %}
+
+{# Remove the toolbar. #}
+{% block toolbar %}{% endblock %}
