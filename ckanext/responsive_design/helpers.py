@@ -88,7 +88,7 @@ def recent_datasets():
     
     res = []
     result= []
-    data_dict= {'limit':5, 'offset':0, 'page':1}
+    data_dict= {'limit':7, 'offset':0, 'page':1}
     resp = toolkit.get_action('current_package_list_with_resources')(context, data_dict)
     for i in resp:
         notes = i['notes']

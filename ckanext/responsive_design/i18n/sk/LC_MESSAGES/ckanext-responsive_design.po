@@ -102,6 +102,9 @@ msgid "Search"
 msgstr "Vyhľadávať"
 
 #: ckanext/responsive_design/templates/home/layout1.html:29
+#: ckanext/responsive_design/templates/home/index.html:124
+#: ckanext/responsive_design/templates/home/snippets/search.html:17
+#: ckanext/responsive_design/templates/home/index.html:177
 msgid "Popular tags"
 msgstr "Obľúbené tagy"
 
@@ -191,4 +194,8 @@ msgstr "Transformačný modul"
 
 #~ msgid "About"
 #~ msgstr ""
+
+#: ckanext/responsive_design/templates/home/index.html:115
+msgid "Search Your Data"
+msgstr "Vyhľadať dáta"
 
