@@ -852,16 +852,18 @@ ul.stats_snippet li{
     font-size: 20px;
     text-decoration: none;
     color: #fff;
--webkit-box-shadow: -10px 9px 20px 0px rgba(148,139,148,0.72);
--moz-box-shadow: -10px 9px 20px 0px rgba(148,139,148,0.72);
-box-shadow: -10px 9px 20px 0px rgba(148,139,148,0.72);
-Copy Text
+    -webkit-box-shadow: -10px 9px 20px 0px rgba(12,12,12,0.72);
+    -moz-box-shadow: -10px 9px 20px 0px rgba(12,12,12,0.72);
+    box-shadow: -10px 9px 20px 0px rgba(12,12,12,0.72);
 }
+
 #crumbs > p > a.purple{
     background: #5a438b;
+    z-index: 999;
 }
 #crumbs > p >a.purple:before{
     border-right: 20px solid #5a438b;
+
 }
 
 #crumbs > p > a.red{
@@ -873,6 +875,7 @@ Copy Text
 
 #crumbs > p > a.green{
     background: #93bf20;
+    z-index: 999;
 }
 #crumbs > p >a.green:before{
     border-right: 20px solid #93bf20;
@@ -1127,9 +1130,7 @@ Copy Text
 .menubox > a:hover{
     text-decoration: none;
 }
-.menubox > a > img{
-    padding-left: 1.2em;
-}
+
 @media (min-width: 1200px){
     #right_boxes{
         padding: 0.2em;
