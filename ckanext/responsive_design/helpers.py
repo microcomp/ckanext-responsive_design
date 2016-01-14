@@ -14,6 +14,16 @@ def table(name):
 
 DATE_FORMAT = '%Y-%m-%d'
 log = logging.getLogger(__name__)
+def biggest_orgs():
+    context = {'model': model, 'session': model.Session,
+                   'user': c.user or c.author,
+                   'auth_user_obj': c.userobj,
+                   'for_view': True}
+    data_dict = {'order_by':'packages', 'all_fields':True}
+    orgs = toolkit.get_action('organization_list')(context, data_dict)
+    orgs = orgs[:4]
+    return orgs
+
 def raw_packages_by_week():
 
     rev_stats = RevisionStats()
@@ -79,8 +89,15 @@ def xwiki():
     if xwiki_url == None or xwiki_url == "":
         xwiki_url = 'http://xwiki.org'
     return xwiki_url
+def userCountHelper():
+    context = {'model': model, 'session': model.Session,
+                   'user': c.user or c.author,
+                   'auth_user_obj': c.userobj,
+                   'for_view': True}
+    users = toolkit.get_action('user_list')(context, {})
+    return len(users)
 
-def recent_datasets():
+def recent_datasets(ll=5):
     context = {'model': model, 'session': model.Session,
                    'user': c.user or c.author,
                    'auth_user_obj': c.userobj,
@@ -88,7 +105,7 @@ def recent_datasets():
     
     res = []
     result= []
-    data_dict= {'limit':7, 'offset':0, 'page':1}
+    data_dict= {'limit':ll, 'offset':0, 'page':1}
     resp = toolkit.get_action('current_package_list_with_resources')(context, data_dict)
     for i in resp:
         notes = i['notes']
@@ -101,7 +118,10 @@ def recent_datasets():
         for r in i['resources']:
             if r['format'] not in res:
                 res.append(r['format'])
-        result.append({'title':i['title'], 'text': notes, 'url':i['name'], 'resources': res })
+        title = i['title']
+        if len(i['title']) > 100:
+            title= title[0:85]+"..."
+        result.append({'title':title, 'text': notes, 'url':i['name'], 'resources': res })
     return result
 
 def gravatar(email_hash, size=100, default=None):

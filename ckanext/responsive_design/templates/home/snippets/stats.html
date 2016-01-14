@@ -1,34 +1,21 @@
-{%ckan_extends%}
+
 {% set stats = h.get_site_statistics() %}
 
-<div class="box stats">
-  <div class="inner">
-    <h3>{{ _('{0} statistics').format(g.site_title) }}</h3>
-    <ul>
-      <li>
-        <a href="{{ h.url_for(controller='package', action='search') }}">
-          <b>{{ h.SI_number_span(stats.dataset_count) }}</b>
-          {{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}
+<div id="crumbs" >
+  <p>   
+        <a class="purple" href="{{ h.url_for(controller='organization', action='index') }}" title="{{_('Organizations')}}">
+          {%trans number=h.SI_number_span(stats.organization_count)  %}<b>{{number}} </b> Organization{%pluralize%}<b>{{ number }}</b> Organizations{%endtrans%}
+        </a><br />
+        <a class="red" href="{{ h.url_for(controller='related', action='dashboard') }}" title="{{_('Applications')}}">
+          {%trans number=h.SI_number_span(stats.related_count) %}<b>{{number}}</b> Application{%pluralize%}<b>{{ number }}</b> Applications{%endtrans%}
+        </a><br />
+         <a class="green" href="{{ h.url_for(controller='package', action='search') }}" title="{{_('Datasets')}}">
+          {%trans number=h.SI_number_span(stats.dataset_count) %}<b>{{number}}</b> Dataset{%pluralize%}<b >{{ number }}</b> Datasets{%endtrans%}
+        </a><br />        
+        <a class="orange" href="{{ h.url_for(controller='related', action='dashboard') }}" title="{{_('Users')}}">
+          {%trans number=h.userCountHelper() %}<b>{{number}}</b> User{%pluralize%}<b>{{ number }}</b> Users{%endtrans%}
         </a>
-      </li>
-      <li>
-        <a href="{{ h.url_for(controller='organization', action='index') }}">
-          <b>{{ h.SI_number_span(stats.organization_count) }}</b>
-          {{ _('organization') if stats.organization_count == 1 else _('organizations') }}
-        </a>
-      </li>
-      <li>
-        <a href="{{ h.url_for(controller='group', action='index') }}">
-          <b>{{ h.SI_number_span(stats.group_count) }}</b>
-          {{ _('group') if stats.group_count == 1 else _('groups') }}
-        </a>
-      </li>
-      <li>
-        <a href="{{ h.url_for(controller='related', action='dashboard') }}">
-          <b>{{ h.SI_number_span(stats.related_count) }}</b>
-          {{ _('related item') if stats.related_count == 1 else _('related items') }}
-        </a>
-      </li>
-    </ul>
-  </div>
+</p>
+
 </div>
+

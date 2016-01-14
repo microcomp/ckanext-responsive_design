@@ -12,8 +12,7 @@ msgstr ""
 "PO-Revision-Date: 2015-05-14 12:46+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: sk <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2 \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -199,3 +198,37 @@ msgstr "Transformačný modul"
 msgid "Search Your Data"
 msgstr "Vyhľadať dáta"
 
+#: ckanext/responsive_design/templates/header.html:111
+msgid "Services and requests"
+msgstr "Služby a požiadavky"
+
+#: ckanext/responsive_design/templates/home/snippets/stats.html:21
+#, python-format
+msgid "<b style=\"font-size: 2em;\">%(number)s</b><br /> Dataset"
+msgid_plural "<b style=\"font-size: 2em;\">%(number)s</b><br /> Datasets"
+msgstr[0] "<b style=\"font-size: 2em;\">%(number)s</b><br /> Dataset"
+msgstr[1] "<b style=\"font-size: 2em;\">%(number)s</b><br /> Datasety"
+msgstr[2] "<b style=\"font-size: 2em;\">%(number)s</b><br /> Datasetov"
+
+#: ckanext/responsive_design/templates/home/snippets/stats.html:28
+#, python-format
+msgid "<b style=\"font-size: 2em;\">%(number)s</b><br />Organization"
+msgid_plural "<b style=\"font-size: 2em;\">%(number)s</b><br />Organizations"
+msgstr[0] "<b style=\"font-size: 2em;\">%(number)s</b><br />Organizácia"
+msgstr[1] "<b style=\"font-size: 2em;\">%(number)s</b><br />Organizácie"
+msgstr[2] "<b style=\"font-size: 2em;\">%(number)s</b><br />Organizácie"
+#: ckanext/responsive_design/templates/home/snippets/stats.html:33
+#, python-format
+msgid "<b style=\"font-size: 2em;\">%(number)s</b><br />Application"
+msgid_plural "<b style=\"font-size: 2em;\">%(number)s</b><br />Applications"
+msgstr[0] "<b style=\"font-size: 2em;\">%(number)s</b><br />Applikacia"
+msgstr[1] "<b style=\"font-size: 2em;\">%(number)s</b><br />Aplikácie"
+msgstr[2] "<b style=\"font-size: 2em;\">%(number)s</b><br />Applikácií"
+
+#: ckanext/responsive_design/templates/home/snippets/stats.html:38
+#, python-format
+msgid "<b style=\"font-size: 2em;\">%(number)s</b><br />User"
+msgid_plural "<b style=\"font-size: 2em;\">%(number)s</b><br />Users"
+msgstr[0] "<b style=\"font-size: 2em;\">%(number)s</b><br />Používateľ"
+msgstr[1] "<b style=\"font-size: 2em;\">%(number)s</b><br />Používatelia"
+msgstr[2] "<b style=\"font-size: 2em;\">%(number)s</b><br />Používatelov"

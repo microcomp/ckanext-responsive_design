@@ -1,0 +1,16 @@
+{#
+{% snippet 'name' intero=g.site_intro_text %}
+#}
+
+          {% if intro %}
+          {{ h.render_markdown(g.site_intro_text) }}
+          {% else %}
+
+              <h1 class="page-heading">{% block home_primary_heading %}{{ _("Welcome to CKAN") }}{% endblock %}</h1>
+              <p>
+                {% trans %}This is a nice introductory paragraph about CKAN or the site
+                in general. We don't have any copy to go here yet but soon we will
+                {% endtrans %}
+
+              </p>
+          {%endif%}

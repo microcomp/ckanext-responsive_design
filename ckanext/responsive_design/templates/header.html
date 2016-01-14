@@ -1,43 +1,33 @@
 {%ckan_extends%}
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" property='stylesheet'>
 
-{% if c.controller == 'home' %}
-{%else%}
-<link rel="stylesheet" type="text/css" href="/header_mod.css" property='stylesheet' >
-<link rel="stylesheet" type="text/css" href="/head.css" property='stylesheet' >
-{%endif%}
+<link rel="stylesheet" type="text/css" id="contrast" href="" property='stylesheet'>
+<script>
+function getContrast(){
+    var actualContrast = "";
+    var cookies = document.cookie.split("; ");
+    for(var i =0; i < cookies.length; i++){
+      if(cookies[i].split('=')[0] === 'contrast'){
+        actualContrast = cookies[i].split('=')[1]
+      }
+    }
+    var result = "";
+    if(actualContrast === "high"){
+      result= "/high_contrast.css"
+    }else{
+      result= "/screen.css"
+    }
+    var style = document.getElementById("contrast");
+    style.href = result;
+}
 
-{% block header_account %}
-  <header class="account-masthead">
-    <div class="container">
-      {% block header_account_container_content %}
-        {% if c.userobj %}
-          <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
-            <ul class="unstyled">
-              {% block header_account_logged %}
-                super()
-              {% endblock %}
-            </ul>
-          </div>
-        {% else %}
-          <nav class="account not-authed">
-            <ul class="unstyled">
-              {% block header_account_notlogged %}
-              <li> {{_("Account info")}} </li>
-              <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
-              {% if h.check_access('user_create') %}
-                <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
-              {% endif %}
-              {% endblock %}
-            </ul>
-          </nav>
-        {% endif %}
-      {% endblock %}
-    </div>
-  </header>
-{% endblock %}
+    getContrast();
+
+</script>
+
+
+
 <header class="navbar navbar-static-top masthead">
   {% block header_debug %}
     {% if g.debug and not g.debug_supress_header %}
@@ -72,24 +62,24 @@ ft"!-->
         <nav class="section navigation">
           <ul class="nav nav-pills">
             {% block header_site_navigation_tabs %}
-              <li> <a href="/" title="home" ><i class='icon-home'></i> </a></li>
-              {{ h.build_nav_main(
-                ('search', _('Datasets')),
-                ('organizations_index', _('Organizations')),
-                
-              ) }}
-              <li> <a href="/apps" title="applications">{{_('Applications')}}</a></li>          
+              <li> <a href="/" title="{{_('Home')}}" ><i class='icon-home'></i> </a></li>
+              <li> <a href="/dataset" title="{{_('Datasets')}}">{{_('Datasets')}}</a></li>   
+              <li> <a href="/organization" title="{{_('Organizations')}}">{{_('Organizations')}}</a></li>   
+              
+              <li> <a href="/apps" title="{{_('Applications')}}">{{_('Applications')}}</a></li>          
               <li><a href="{{h.geomodul_url()}}" title="{{_('Maps')}}">{{_('Maps')}}</a></li>
-              <li> <a href="{{h.xwiki()}}" title="xwiki url">{{_('Wiki')}}</a></li>         
+              <li> <a href="{{h.xwiki()}}" title="{{_('Wiki')}}">{{_('Wiki')}}</a></li>         
               <li>
+                
               <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
                 <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
 
                   <i class="icon-share-alt"></i>
-                  {{_('User requests') }}
+                  {{_('Services and requests') }}
                  &nbsp; &nbsp; 
                   <!--span class="caret"></span!-->
                 </a>
+                
                 <ul class="dropdown-menu menuitem_dropdown">
                   {%set urls = h.get_urls('ckan.user_req.') %}
                   {%set index = 0 %}
@@ -103,30 +93,41 @@ ft"!-->
                   </li>
                   {%endfor%}
                 </ul>
+                
               </div>
+              
               </li>
-              <li>
-              <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
-                <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
+                {%set u_roles = session['ckanext-cas-roles'] %}
 
-                  <i class="icon-share-alt"></i>
-                  {{_('Tools')}}
-                </a>
-                <ul class="dropdown-menu menuitem_dropdown">
-                  {%set urls = h.get_urls('ckan.tools.') %}
-                  
-                  {%for i in urls%}
-                  <li class="menuitem_dropdown">
-                    <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
-                       <i class="icon-edit menuitem_dropdown"></i>
-                     {{i['name']}}
-                    </a>
-                  </li>
-                  {%endfor%}
+                {%set required = ['MOD-R-TRANS','MOD-R-PO','MOD-R-DATA','MOD-R-MODER','MOD-R-APP'] %}
+                {% set has_role_for_view = 0 %}
+                {% set x = 0 %}
+                {% for i in required if x != 1 %}
+                    {% if i in u_roles %}
+                        {%set x = x+1 %}
+                          <li>
+                          <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
+                            <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
 
-                </ul>
-              </div>
-              </li>
+                              <i class="icon-share-alt"></i>
+                              {{_('Tools')}}
+                            </a>
+                            <ul class="dropdown-menu menuitem_dropdown">
+                              {%set urls = h.get_urls('ckan.tools.') %}
+                              
+                              {%for i in urls%}
+                              <li class="menuitem_dropdown">
+                                <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
+                                   <i class="icon-edit menuitem_dropdown"></i>
+                                 {{i['name']}}
+                                </a>
+                              </li>
+                              {%endfor%}
+                            </ul>
+                          </div>
+                          </li>
+                      {%endif%}
+                {%endfor%}
             {% endblock %}
           </ul>
         </nav>
@@ -144,5 +145,65 @@ ft"!-->
 
     </div>
   </div>
+{% block header_account %}
+<div class="hero" style="">
+  <div id="content2" class="container" >
+  <div class="row row1" style="margin-top: 2em; padding-left: auto; padding-right: auto;">
+    <div class="span11 col1">
+      <a href="/" class="full_size"> <img src="/logo.png" alt="logo"> </a>
+    </div>
+
+    <div class="span3 col1 mini_boxes" >
+        <div class="account_box">
+        {% block header_account_container_content %}
+          {% if c.userobj %}
+            <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
+              <ul class="unstyled">
+                {% block header_account_logged %}
+                  super()
+                {% endblock %}
+              </ul>
+            </div>
+          {% else %}
+            <nav class="account not-authed">
+              <ul class="unstyled">
+                {% block header_account_notlogged %}
+                <li id="acc_info_not_logged"><span> {{_("Account info")}} </span></li>
+                <li id="login_link_not_logged">{% link_for _('Log in'), controller='user', action='login' %}</li>
+                {% if h.check_access('user_create') %}
+                  <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
+                {% endif %}
+                {% endblock %}
+              </ul>
+            </nav>
+          {% endif %}
+        {% endblock %}
+        </div>
+         
+  </div>
+
+  </div>
+  <!--div class="row row2" >
+
+              <form class="dataset-search module-content clearfix" method="get" action="{% url_for controller='package', action='search' %}" id="search_form_index">
+                  <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{_('Search')}}'..." id="search_input_index"/>
+                  <button class="mybutton" type="submit" value="{{ _('Search') }}" id="search_button_index" >{{_('Search')}}</button>
+        
+              </form>
+
+              <div class="tags">
+                <p><b >{{ _('Popular tags') }}:</b>
+                {% set tags = h.get_facet_items_dict('tags', limit=3) %}
+                {% for tag in tags %}
+                  <a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+                {% endfor %}
+              </p>
+              </div>
+
+  </div!-->
+</div>
+</div>
+{% endblock %}
 </header>
+
 {% endblock %}

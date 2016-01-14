@@ -259,6 +259,7 @@ a {
 }
 .span6 {
   width: 460px;
+   /* width: 48%;*/
 }
 .span5 {
   width: 380px;

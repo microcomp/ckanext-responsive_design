@@ -94,11 +94,7 @@
   {%endif%}
 {%endif%}
 
-{% if c.controller != 'home' %}
 
-<link rel="stylesheet" type="text/css" href="/header_mod.css" property='stylesheet' >
-
-{%endif%}
 {%if  c.controller == 'ckanext.applications.apps:AppsController' %}
     <link rel="stylesheet" type="text/css" href="/box.css" />
     
@@ -135,13 +131,7 @@
       <!--link rel="stylesheet" type="text/css" href="/box.css" /-->
     
     {#%endif%#}
-    {%if c.controller == 'home' %}
-<style type="text/css">
-body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
-  color: #bd0a26;
-}
-</style>
-{%endif%}
+ 
   <!-- {{c.controller}} -->
 {%elif c.controller == 'user'%}
   {%if c.action == 'dashboard_organizations' %}
@@ -224,7 +214,7 @@ body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
     {% block body_extras -%}
     {%if c.action == 'resource_datapreview' %}
     {%else%}
-     <a href="/" class="full_size"> <img src='/logo.png' alt='logo'/> </a>
+
          <a href="/" class="small"> <img src='/logo2.png' alt='logo'/></a>
 
           

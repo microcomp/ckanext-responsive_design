@@ -30,5 +30,7 @@ class ResponsiveDesign(plugins.SingletonPlugin):
                 'geomodul_url': helpers.geomodul_url,
                 'onto_editor': helpers.onto_editor,
                 'get_urls':helpers.get_urls,
-                'raw_packages_by_week': helpers.raw_packages_by_week}
+                'raw_packages_by_week': helpers.raw_packages_by_week,
+                'userCountHelper': helpers.userCountHelper,
+                'biggest_orgs':helpers.biggest_orgs}
 
