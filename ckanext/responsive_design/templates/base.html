@@ -42,7 +42,29 @@
 }
 </style>
 {%endif%}
+{%if  c.controller == 'package' and c.action == "resource_read" %}
+<style type="text/css">
+@media (min-width: 1200px){
+#content > div.row.row1 > section, #content > div.toolbar{
+  width: 900px;
+}
+#content > div.row.row1 > div.span3.col1{
+    position: relative;
+    top: 220px;
+    right: 0px;
+}
+}
+</style>
+{% else %}
+<style type="text/css">
+@media (min-width: 1200px){
+#content > div.row.row1 > div.span3.col1{
+ margin-top: -195px;
+}
+}
+</style>
 
+{%endif%}
 {%if  c.controller == 'ckanext.applications.apps:AppsController' %}
     <link rel="stylesheet" type="text/css" href="/box.css" />
     
@@ -153,7 +175,48 @@
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% if c.controller == 'package' and c.action == 'read' %}
+<script>
 
+  var rows = document.getElementsByTagName('td')
+  var x = "<h3>{{  h.convert_geojson_to_name(c.pkg_dict.get('spatial', None)) }}</h3><a onclick='hide()' alt='hide content' class='btn btn-primary' id='show_sp_button' style='float: right; margin-top:-20px;'>{{_('Hide')}}</a><br />"
+  var ii = 0
+  for(var i=0; i < rows.length; i++){
+    var text = rows[i].innerHTML
+    if(text.substring(0,34)=='{"type": "Polygon", "coordinates":'){
+
+      x += text
+      ii = i
+      console.log("found")
+    }
+  }
+  
+  function start(){
+    
+
+    for(var i=0; i < rows.length; i++){
+    var text = rows[i].innerHTML
+    if(text.substring(0,34)=='{"type": "Polygon", "coordinates":'){
+      x += text
+      ii = i
+      rows[ii].innerHTML = "<h3>{{  h.convert_geojson_to_name(c.pkg_dict.get('spatial', None)) }}</h3> <a onclick='show_spatial()' alt='show text' class='btn btn-primary' id='show_sp_button' style='float: right; margin-top:-20px;'>{{_('Show')}}</a>"
+      
+    }
+    
+  }
+    
+  }
+  function show_spatial(){
+      rows[ii].innerHTML = x
+  }
+  function hide(){
+      rows[ii].innerHTML = "<h3>{{  h.convert_geojson_to_name(c.pkg_dict.get('spatial', None)) }}</h3>  <a onclick='show_spatial()' alt='show text' class='btn btn-primary' id='show_sp_button' style='float: right; margin-top:-20px;'>{{_('Show')}}</a>"
+  }
+  window.onload = start
+  
+</script>
+
+{%endif%}
 
 
 
@@ -169,7 +232,14 @@ css : <link rel="stylesheet" type="text/css" href="{{ g.main_css }}" />
   width:33.33%;
 }
 </style>
- 
+ {%if c.controller == 'home' and c.action == 'index'%}
+<style type="text/css">
+@media (min-width: 1200px){
+#content, #content2, #content3{
+    width: 1150px;
+}
+</style>
+{%endif%}
 {%if c.controller == 'organization' and c.action == 'index'%}
 <style>
 #content > div.row.wrapper > div > article > div > ul > li > p{
@@ -212,7 +282,7 @@ body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
 
 
     {% block body_extras -%}
-    {%if c.action == 'resource_datapreview' %}
+    {#%if c.action == 'resource_datapreview' %}
     {%else%}
 
          <a href="/" class="small"> <img src='/logo2.png' alt='logo'/></a>
@@ -222,7 +292,7 @@ body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
          {%else%}
             <a href="/" class="logo_min"><img src="/logo3.png" alt='logo' /></a>
         {%endif%}
-    {%endif%}
+    {%endif%#}
       {{super()}}
     {% endblock %}
   </body>

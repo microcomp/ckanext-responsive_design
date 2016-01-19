@@ -2936,8 +2936,8 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-tabs > li > a,
 .nav-pills > li > a {
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 6px;
+  padding-left: 6px;
   margin-right: 2px;
   line-height: 14px;
 }
@@ -2970,13 +2970,13 @@ input[type="submit"].btn.btn-mini {
   cursor: default;
 }
 .nav-pills > li > a {
-  padding-top: 8px;
+  padding-top: 0px; /*8*/
   padding-bottom: 8px;
   margin-top: 2px;
   margin-bottom: 2px;
-  -webkit-border-radius: 5px;
+  /*-webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 5px;
+  border-radius: 5px;*/
 }
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover,
@@ -3395,7 +3395,7 @@ input[type="submit"].btn.btn-mini {
   left: 0;
   display: block;
   float: left;
-  margin: 0 10px 0 0;
+  /*margin: 0 10px 0 0;*/
 }
 .navbar .nav.pull-right {
   float: right;
@@ -3405,11 +3405,12 @@ input[type="submit"].btn.btn-mini {
   float: left;
 }
 .navbar .nav > li > a {
-  float: none;
-  padding: 10px 15px 10px;
+ /*float: none;
+  padding: 0px 15px 0px;
   color: #777777;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
+  font-size: 0.9em;*/
 }
 .navbar .nav .dropdown-toggle .caret {
   margin-top: 8px;
@@ -5137,12 +5138,12 @@ a.badge:focus {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .navbar-fixed-top,
+  /*.navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
     margin-left: -20px;
     margin-right: -20px;
-  }
+  }*/
   .container-fluid {
     padding: 0;
   }
@@ -7379,6 +7380,7 @@ textarea {
   max-width: 85px;
 }
 .toolbar {
+  max-width: 900px;
   *zoom: 1;
   position: relative;
   margin-bottom: 10px;
@@ -7980,13 +7982,6 @@ h4 small {
   position: relative;
   padding-bottom: 20px;
 }
-@media (min-width: 768px) {
-  [role=main],
-  .main {
-    padding-top: 10px;
-    background: #eeeeee url("../../../base/images/bg.png");
-  }
-}
 [role=main] {
   min-height: 350px;
 }
@@ -8086,11 +8081,7 @@ h4 small {
   margin-left: 20px;
   margin-bottom: 20px;
 }
-@media (min-width: 768px) {
-  .hero {
-    background: url("../../../base/images/background-tile.png");
-  }
-}
+
 .hero:after {
   background-color: rgba(0, 0, 0, 0.09);
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
@@ -8552,7 +8543,6 @@ h4 small {
   *zoom: 1;
   min-height: 55px;
   color: #ffffff;
-  background: #005d7a url("../../../base/images/bg.png");
   padding: 20px 0;
 }
 .site-footer:before,
@@ -9473,3 +9463,4 @@ iframe {
 .truncator-link.truncator-more{
   display: none;
 }
+

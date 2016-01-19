@@ -4,38 +4,14 @@
 {% block maintag %}{% endblock %}
 
 {% block content %}
-  <div role="main" class="hero">
-    <div id="content" class="container">
-      {{ self.flash() }}
-      {{ self.primary_content() }}
-    </div>
-  </div>
-  <div class="main homepage">
-    <div class="container">
-      {{ self.secondary_content() }}
-    </div>
-  </div>
-{% endblock %}
-
-{% block primary_content %}
-
-
-<div class="row row2" style="margin-top: 2em;">
-  <!--div class="hero-primary module module-popup" style="width: 48.5%;"!-->
-  <div class="span11 col1">
-
-    
-
-<script type="text/javascript">
-$('#home_menu a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
-</script>
+<div role="main" class="hero" style="background-color: #f9f9f9;">
+  <div id="content3" class="container">
+    <div class="row row2" style="margin-top: 5px;">
+      <div class="span11 col1">
 {% block home_secondary_content %}
             {% block home_search %}
               <form class="dataset-search module-content clearfix" method="get" action="{% url_for controller='package', action='search' %}" id="search_form_index">
-                  <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{_('Search')}}'..." id="search_input_index"/>
+                  <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{_('Search')}}..." id="search_input_index"/>
                   <button class="mybutton" type="submit" value="{{ _('Search') }}" id="search_button_index" >{{_('Search')}}</button>
         
               </form>
@@ -52,6 +28,39 @@ $('#home_menu a').click(function (e) {
             {% endblock %}
 
       {% endblock %}
+      </div>
+</div>
+      </div>
+</div>
+  <div role="main" class="hero">
+    <div id="content" class="container">
+      {{ self.flash() }}
+      {{ self.primary_content() }}
+    </div>
+
+  <div class="main homepage">
+    <div class="container">
+      {{ self.secondary_content() }}
+    </div>
+  </div>
+{% endblock %}
+
+{% block primary_content %}
+
+
+<div class="row row2" style="margin-top: 2em;">
+
+  <div class="span11 col1">
+
+    
+
+<script type="text/javascript">
+$('#home_menu a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
 
   <!-- Nav tabs -->
   <div id="home_tabs_formatter">
@@ -68,8 +77,8 @@ $('#home_menu a').click(function (e) {
               
                 <ul  >
                   {% set datasets = h.recent_datasets(6)%}
-                  {% for i in datasets %}
-                      <li> <a href="/dataset/{{ i['url'] }}" title='{{i["title"]}}'>{{i["title"]}}</a></li>
+                  {% for i in datasets %} 
+                      <li> <a href="{{h.url_for(controller='package', action='read', id=i['url'] )}}" title='{{i["title"]}}'>{{i["title"]}}</a></li>
                   {%endfor%}
                 </ul>
               
@@ -77,14 +86,12 @@ $('#home_menu a').click(function (e) {
     </div>
 
     <div role="tabpanel" class="tab-pane" id="statistics">
-  
-      <ul id="inner_formatter"> 
-        <li class="first">
-          {% snippet 'home/snippets/orgs_snippet.html' %}
-
-      </li><li class="sec">
-      {% snippet 'home/snippets/stats.html' %}
-      </li></ul>
+<div class="left-side">
+{% snippet 'home/snippets/orgs_snippet.html' %}
+</div>
+<div class="right-side">
+{% snippet 'home/snippets/stats.html' %}
+</div>
     </div>
   </div>
 
@@ -93,7 +100,7 @@ $('#home_menu a').click(function (e) {
 {% snippet 'home/snippets/uvod_snippet.html', intro=g.site_intro_text %}
 </div>
   </div>
-  <div class="span3 col2" >
+  <div class="span3 col2" id="left_box_padder">
     
 <!-- Snippet snippets/organization_item.html start -->
       {% snippet 'home/snippets/right_menu.html' %}
@@ -103,19 +110,10 @@ $('#home_menu a').click(function (e) {
   </div>
 
 </div>
-<style type="text/css">
-@media (min-width: 1200px){
-#content, #content2{
-    width: 1150px;
-}
-</style>
+
 {% endblock %}
 
 {% block secondary_content %}
-
-
-
-
 {% endblock %}
 
 {# Remove the toolbar. #}

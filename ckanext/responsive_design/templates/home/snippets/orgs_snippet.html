@@ -1,10 +1,14 @@
+
 <h3>Organizácie s najväčším počtom Datasetov</h3>
 {% set data = h.biggest_orgs()%}	
-	
+<ul>	
 {%for dt in data %}
-<div id="org_div" >
-	<a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> <img class="index_mini" src="{{dt['image_display_url']}}" alt="{{dt['display_name']}} logo" /></a><br />
+<li>
+<div>
+	<a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> <img src="{{dt['image_display_url']}}" alt="{{dt['display_name']}} logo" /></a><br />
 	<!--a href="/organization/{{dt['id']}}"> {{dt['title']}}</a><br /!-->
 	<a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> {%trans count=dt['packages']%}{{count}} dataset{%pluralize%}{{count}} datasets{%endtrans%}</a>
 </div>
+</li>
 {%endfor%}
+</ul>

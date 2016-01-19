@@ -2,20 +2,25 @@
 {% set stats = h.get_site_statistics() %}
 
 <div id="crumbs" >
-  <p>   
-        <a class="purple" href="{{ h.url_for(controller='organization', action='index') }}" title="{{_('Organizations')}}">
-          {%trans number=h.SI_number_span(stats.organization_count)  %}<b>{{number}} </b> Organization{%pluralize%}<b>{{ number }}</b> Organizations{%endtrans%}
-        </a><br />
-        <a class="red" href="{{ h.url_for(controller='related', action='dashboard') }}" title="{{_('Applications')}}">
-          {%trans number=h.SI_number_span(stats.related_count) %}<b>{{number}}</b> Application{%pluralize%}<b>{{ number }}</b> Applications{%endtrans%}
-        </a><br />
-         <a class="green" href="{{ h.url_for(controller='package', action='search') }}" title="{{_('Datasets')}}">
-          {%trans number=h.SI_number_span(stats.dataset_count) %}<b>{{number}}</b> Dataset{%pluralize%}<b >{{ number }}</b> Datasets{%endtrans%}
-        </a><br />        
-        <a class="orange" href="{{ h.url_for(controller='related', action='dashboard') }}" title="{{_('Users')}}">
-          {%trans number=h.userCountHelper() %}<b>{{number}}</b> User{%pluralize%}<b>{{ number }}</b> Users{%endtrans%}
+  <div>   
+     <div> <a class="purple" href="{{ h.url_for(controller='organization', action='index') }}" title="{{_('Organizations')}}">
+          {%trans number=h.SI_number_span(stats.organization_count)  %}<b>{{number}} </b> Organization{%pluralize number %}<b>{{ number }}</b><span>Organizations</span>{%endtrans%}
         </a>
-</p>
+     </div>
+     <div>   <a class="red" href="{{ h.url_for(controller='related', action='dashboard') }}" title="{{_('Applications')}}">
+          {%trans number=h.SI_number_span(stats.related_count) %}<b>{{number}}</b> Application{%pluralize number %}<b>{{ number }}</b> <span>Applications</span>{%endtrans%}
+        </a>
+    </div>
+     <div> <a class="green" href="{{ h.url_for(controller='package', action='search') }}" title="{{_('Datasets')}}">
+          {%trans number=h.SI_number_span(stats.dataset_count) %}<b>{{number}}</b> Dataset{%pluralize number %}<b >{{ number }}</b><span>Datasets</span>{%endtrans%}
+        </a>
+    </div>        
+     <div>
+        <a class="orange" href="{{ h.url_for(controller='related', action='dashboard') }}" title="{{_('Users')}}">
+          {%trans number=h.userCountHelper() %}<b>{{number}}</b> User{%pluralize number %}<b>{{ number }}</b> <span>Users</span>{%endtrans%}
+        </a>
+     </div>
+</div>
 
 </div>
 

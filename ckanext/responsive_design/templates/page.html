@@ -14,6 +14,7 @@
   {% block content %}
     {% block maintag %}<div role="main">{% endblock %}
       <div id="content" class="container">
+
         {% block main_content %}
           {% block flash %}
             <div class="flash-messages">
@@ -40,14 +41,20 @@
             </div>
           {% endblock %}
 
-          <div class="row wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' %} no-nav{% endif %}">
+          <div class="row row1{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' %} no-nav{% endif %}">
 
 
             {% block pre_primary %}
             {% endblock %}
 
             {% block primary %}
-              <div class="primary span9">
+              <div class="span3 col1" id="upper_menu">
+              {% if c.action != 'resource_read' %}
+                  {%snippet 'home/snippets/right_menu.html' %}
+              {%endif%}
+              </div>
+              <div class="wrapper">
+              <div class="primary span9" style="">
                
                 {% block primary_content %}
                   <article class="module">
@@ -83,10 +90,18 @@
                 {% block secondary_content %}{% endblock %}
               </aside>
             {% endblock %}
+              </div>
+                <div class="span3 col1" id="bottom_menu">
+              {% if c.action != 'resource_read' %}
+                  {%snippet 'home/snippets/right_menu.html' %}
+              {%endif%}
+              </div>
           </div>
+
         {% endblock %}
       </div>
     </div>
+
   {% endblock %}
 
  

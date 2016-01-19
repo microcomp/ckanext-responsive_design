@@ -2,7 +2,10 @@
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-<link rel="stylesheet" type="text/css" id="contrast" href="" property='stylesheet'>
+<link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" property='stylesheet'>
+<link rel="stylesheet" type="text/css" href="/andrej.css" property='stylesheet'>
+
+
 <script>
 function getContrast(){
     var actualContrast = "";
@@ -35,12 +38,7 @@ function getContrast(){
     {% endif %}
   {% endblock %}
   <div class="container">
-    <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-
+    
     <!--hgroup class="{{ g.header_class }} pull-le
 ft"!-->
       {% block header_logo %}
@@ -53,84 +51,61 @@ ft"!-->
           {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
         {% endif %}
       {% endblock %}
+<script type="text/javascript">
+function change_style(){
+  var style = document.getElementById("contrast");
+  var cookies = document.cookie;
+  var contrast = "";
+  var cc = cookies.split('; ');
+  for(var i=0; i < cc.length; i++){
+    if(cc[i].split('=')[0] == 'contrast'){
+      contrast = cc[i].split('=')[1];
+    }
+  }
+  if(contrast === "high"){ 
+    style.href = "/screen.css"; 
+    document.cookie = "contrast=normal;" 
+  }else { 
+    style.href = "/high_contrast.css";
+    document.cookie = "contrast=high";
+  }
 
-    <!--/hgroup!-->
+}
 
-    <div class="nav-collapse collapse">
+</script>
+
+    <div>
 
       {% block header_site_navigation %}
-        <nav class="section navigation">
-          <ul class="nav nav-pills">
-            {% block header_site_navigation_tabs %}
-              <li> <a href="/" title="{{_('Home')}}" ><i class='icon-home'></i> </a></li>
-              <li> <a href="/dataset" title="{{_('Datasets')}}">{{_('Datasets')}}</a></li>   
-              <li> <a href="/organization" title="{{_('Organizations')}}">{{_('Organizations')}}</a></li>   
-              
-              <li> <a href="/apps" title="{{_('Applications')}}">{{_('Applications')}}</a></li>          
-              <li><a href="{{h.geomodul_url()}}" title="{{_('Maps')}}">{{_('Maps')}}</a></li>
-              <li> <a href="{{h.xwiki()}}" title="{{_('Wiki')}}">{{_('Wiki')}}</a></li>         
-              <li>
+      <div id="helpNavigation">
+          <div class="inner clr">
+            <ul>
+                <li class="hidden-phone contrastVersion"><a href="#" onclick="change_style()" title="{{_('Change the contrast')}}"  class="contrast_icon" > {{_('Change the contrast')}}</a></li>
+                <li class="hidden-phone"><a href="{{h.url_for('home')}}" title="{{_('Home')}}" style="">{{_('Home')}}</a></li>
+                <li class="hidden-phone"><a href="{{h.url_for(controller='home', action='about')}}" title="{{_('About us')}}" >{{_('About us')}}</a></li>
+                <li class="hidden-phone"><a href="/apps" title="{{_('Help')}}" >{{_('Help')}}</a></li>
+                <li class="mobileVersion"><a href="{{h.url_for(controller='ckanext.contact_us.controller:ContactUsController', action='index')}}" title="{{_('Contact')}}" >{{_('Contact')}}</a></li>
+                 <li class="hidden-phone lang">
+                    {% set current_url = request.environ.CKAN_CURRENT_URL %}
+                {% set current_lang = request.environ.CKAN_LANG %}
                 
-              <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
-                <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
-
-                  <i class="icon-share-alt"></i>
-                  {{_('Services and requests') }}
-                 &nbsp; &nbsp; 
-                  <!--span class="caret"></span!-->
-                </a>
                 
-                <ul class="dropdown-menu menuitem_dropdown">
-                  {%set urls = h.get_urls('ckan.user_req.') %}
-                  {%set index = 0 %}
-                  {%for i in urls%}
-                  {%set index = index+1%}
-                  <li class="menuitem_dropdown">
-                    <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
-                       {%if index > 2%} &nbsp; &nbsp; &nbsp;{%endif%}<i class="icon-edit menuitem_dropdown"></i>
-                     {{i['name']}}
+                  {% for locale in h.get_available_locales() %}
+                  {% if locale  != current_lang %}
+                    <a class="lang_{{locale}}" style="" href="{{ h.url_for(controller='util', action='redirect') }}?url={{ h.url_for(current_url, locale=locale) }}" >
+                        {{ locale.display_name or locale.english_name }}
                     </a>
-                  </li>
-                  {%endfor%}
-                </ul>
-                
-              </div>
+                  {% endif %}
+                  {% endfor %}
+
+                 </li>
+            </ul>    
+          
+         </div>
+     </div>
+        
               
-              </li>
-                {%set u_roles = session['ckanext-cas-roles'] %}
-
-                {%set required = ['MOD-R-TRANS','MOD-R-PO','MOD-R-DATA','MOD-R-MODER','MOD-R-APP'] %}
-                {% set has_role_for_view = 0 %}
-                {% set x = 0 %}
-                {% for i in required if x != 1 %}
-                    {% if i in u_roles %}
-                        {%set x = x+1 %}
-                          <li>
-                          <div class="dropdown btn-group menuitem_dropdown" style="padding-top: 0.3em;">
-                            <a href="#" class="dropdown-toggle menuitem_dropdown" data-toggle="dropdown" >
-
-                              <i class="icon-share-alt"></i>
-                              {{_('Tools')}}
-                            </a>
-                            <ul class="dropdown-menu menuitem_dropdown">
-                              {%set urls = h.get_urls('ckan.tools.') %}
-                              
-                              {%for i in urls%}
-                              <li class="menuitem_dropdown">
-                                <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_dropdown">
-                                   <i class="icon-edit menuitem_dropdown"></i>
-                                 {{i['name']}}
-                                </a>
-                              </li>
-                              {%endfor%}
-                            </ul>
-                          </div>
-                          </li>
-                      {%endif%}
-                {%endfor%}
-            {% endblock %}
-          </ul>
-        </nav>
+            
       {% endblock %}
 
       {% block header_site_search %}
@@ -148,21 +123,22 @@ ft"!-->
 {% block header_account %}
 <div class="hero" style="">
   <div id="content2" class="container" >
-  <div class="row row1" style="margin-top: 2em; padding-left: auto; padding-right: auto;">
+  <div class="row row1" id="top_user_box">
     <div class="span11 col1">
-      <a href="/" class="full_size"> <img src="/logo.png" alt="logo"> </a>
+      <a href="{{h.url_for('home')}}" class="full_size"> <img id="header_logo" src="/logo.png" alt="logo"> </a>
     </div>
 
-    <div class="span3 col1 mini_boxes" >
-        <div class="account_box">
+    <div class="span3 col1 mini_boxes" style="z-index: 999; position: relative">
+        <div class="account_box" style="margin-bottom: 20px;">
         {% block header_account_container_content %}
           {% if c.userobj %}
-            <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
               <ul class="unstyled">
                 {% block header_account_logged %}
-                  super()
+                  {{super()}}
                 {% endblock %}
               </ul>
+            
+            <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
             </div>
           {% else %}
             <nav class="account not-authed">
@@ -179,28 +155,54 @@ ft"!-->
           {% endif %}
         {% endblock %}
         </div>
-         
+        {% if c.action == 'resource_read' %}
+            <style type="text/css">
+                  @media (min-width: 1200px){
+                      #top_user_box > div.span3.col1.mini_boxes > div.account_box{     
+                          margin-bottom: 190px !important;  
+                      }
+                  }
+                  @media (max-width: 1200px){
+                      #long_boxes, #big_box{
+                        display: none;
+                      }
+                      #right_boxes{
+                        height: 115px;
+                        padding-top: 10px;
+                        background-color: transparent;
+                      }
+                      #top_user_box > div.span3.col1.mini_boxes{
+                        width: 100%;
+                      }
+                      .green_menubox{
+                            margin-left: 16%;
+                      }
+                      #top_user_box > div.span11.col1{
+                        display: none;
+                      }
+                  }
+
+                  @media (min-width: 750px) and (max-width: 1000px){
+                      #top_user_box > div.span3.col1.mini_boxes{
+                        width: 100% !important;
+                      }
+                      .green_menubox {
+                          margin-left: 5% !important;
+                      }
+                  }
+                  @media (max-width: 750px){
+                     .green_menubox {
+                          margin-left: 5% !important;
+                      }
+                  }
+                  
+            </style>
+            {%snippet 'home/snippets/right_menu.html' %}  
+        {%endif%} 
   </div>
 
   </div>
-  <!--div class="row row2" >
 
-              <form class="dataset-search module-content clearfix" method="get" action="{% url_for controller='package', action='search' %}" id="search_form_index">
-                  <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{_('Search')}}'..." id="search_input_index"/>
-                  <button class="mybutton" type="submit" value="{{ _('Search') }}" id="search_button_index" >{{_('Search')}}</button>
-        
-              </form>
-
-              <div class="tags">
-                <p><b >{{ _('Popular tags') }}:</b>
-                {% set tags = h.get_facet_items_dict('tags', limit=3) %}
-                {% for tag in tags %}
-                  <a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
-                {% endfor %}
-              </p>
-              </div>
-
-  </div!-->
 </div>
 </div>
 {% endblock %}

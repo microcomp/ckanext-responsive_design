@@ -1,89 +1,27 @@
 {%ckan_extends%}
 {% block footer_content %}
-<style>
-
-.site-footer > .container {
-    padding: 25px;
-}
-
-.inner{
-width:100%;
-font-weight:400;
-
-}
-.inner a:active {
-color:#fff;
-}
-.inner a:hover {
-color:#fff;
-}
-.inner a:focus {
-color:#fff;
-}
-
-.footerLinksWrap {
-    float: left;
-    width: 50%;
-    color: #ffffff;
-    margin-bottom:64px;
-    margin-top: 35px;
-}
-.footerLinksWrap > ul {
-    margin: 0;
-    width:100%;
-    list-style:outside none none;
-
-}
-.footerLinksWrap  ul li {
-    float:left;
-    width: 49%;
-}
-.footerLinksWrap > ul > li > a {
-    background: rgba(0, 0, 0, 0) url("/arrows.png") no-repeat scroll 0 -187px;
-        padding-left: 18px;
-}        
-
-
-.legalWrap {
-    border-top: 1px solid #6a625d;
-    float: left;
-    padding-top: 20px;
-    width: 100%;
-    color:#b4b4b3;
-}
-.legalWrap > div{
-    float: left;
-    width: 50%;
-    line-height: 1.714;
-}
-.legal{
-text-align: right;
-}
-
-</style>
 <div class="inner clr">
                     <div class="footerLinksWrap">
                     <ul>
-                        <li><a href="{{ h.url_for(controller='home', action='about') }}">O portáli</a></li>
-                        <li><a href="https://www.slovensko.sk/sk/navody">Návody</a></li>
-                        <li><a href="https://www.slovensko.sk/sk/institucie">Inštitúcie</a></li>
-                        <li><a href="https://www.slovensko.sk/sk/slovnik">Slovník</a></li>
+                        <li><a href="{{ h.url_for(controller='home', action='about') }}">{{_('About this site')}}</a></li>
+                        <li><a href="https://www.slovensko.sk/sk/navody">{{_('Walkthroughs')}}</a></li>
+                        <li><a href="https://www.slovensko.sk/sk/institucie">{{_('Institutions')}}</a></li>
+                        <li><a href="https://www.slovensko.sk/sk/slovnik">{{_('Dictionary')}}</a></li>
                     </ul>
                     </div>
                     <div class="footerLinksWrap">  
                     <ul>
-                        <li><a href="https://www.slovensko.sk/sk/mapa-stranok">Mapa stránok</a></li>
-                        <li><a href="https://www.slovensko.sk/sk/zoznam-zverejnenych-sluzieb">Zoznam zverejnených služieb</a></li>
+                        <li><a href="https://www.slovensko.sk/sk/mapa-stranok">{{_('Site map')}}</a></li>
+                        <li><a href="https://www.slovensko.sk/sk/zoznam-zverejnenych-sluzieb">{{_('List of published services')}}</a></li>
                         <li><a href="{{ h.url('home') }}feeds/dataset.atom">RSS</a></li>
-                        <li><a href="https://www.slovensko.sk/sk/vyhlasenie-o-pristupnosti">Vyhlásenie o prístupnosti</a></li>
+                        <li><a href="https://www.slovensko.sk/sk/vyhlasenie-o-pristupnosti">{{_('Accessibility statement')}}</a></li>
                     </ul>
                     </div>
                     <div class="legalWrap">
-                    <div class="copyright">&copy; 2015, <a href="https://data.gov.sk" title="Portál otvorených dát">Data.gov.sk</a> <br>Informácie zverejnené na portáli majú informatívny charakter.</div>
-                    <div class="legal">Prevádzku stránky Data.gov.sk a správu jej obsahu zabezpečuje<br> <a href="http://nases.gov.sk/13605/kontakt.php">Národná agentúra pre sieťové a elektronické služby</a>.</div>
+                    <div class="copyright">&copy; 2015, <a href="https://data.gov.sk" title="Portál otvorených dát">Data.gov.sk</a> <br>{{ _('Information published at www.slovensko.sk are not legally binding.') }}</div>
+                    <div class="legal">{{_('Provider and webmaster of the portal is')}}<br> <a href="http://nases.gov.sk/13605/kontakt.php">Národná agentúra pre sieťové a elektronické služby</a>.</div>
                     </div>
-                    </div>     
-                    </div>
+                    </div>   
 {% endblock %}
 {% block footer_debug %}
     {% if g.debug %}
