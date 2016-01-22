@@ -1,0 +1,37 @@
+{% extends "page.html" %}
+{% block subtitle %}{{ _('Site map') }}{% endblock %}
+{% block breadcrumb_content %}
+  <li class="active"><a href="#">{{ _('Site map') }}</a></li>
+{% endblock %}
+
+
+{% block secondary_content %}
+
+{% endblock %}
+
+{% block primary_content %}
+</div>
+<div class="span11">
+<h1> {{_('Site map')}}</h1>
+<ul style="list-style-type: none;">
+<li><a href="{{h.url_for(controller='home', action='index')}}" alt="home">{{_('Home')}}</a></li>
+<li>
+	<ul style="list-style-type: square;">
+		<li><a href="{{h.url_for(controller='package', action='search')}}" alt="{{_('Datasets')}}">{{_('Datasets')}}</a></li>
+		<li><a href="{{h.url_for(controller='ckanext.applications.apps:AppsController', action='dashboard')}}" alt="{{_('Applications')}}">{{_('Applications')}}</a></li>
+		<li><a href="{{h.url_for(controller='organization', action='index')}}" alt="{{_('Organization')}}">{{_('Organization')}}</a></li>
+		<li><a href="" alt="{{_('Tools')}}">{{_('Tools')}}</a></li>
+		<li><a href="{{h.url_for(controller='home', action='about')}}" alt="{{_('About this site')}}">{{_('About this site')}}</a></li>
+		<li><a href="{{h.url_for('/feeds/dataset.atom')}}" alt="{{_('RSS')}}">{{_('RSS')}}</a></li>
+		<li><a href="{{h.url_for(controller='ckanext.responsive_design.responsive_design:ResponsiveDesign', action='index')}}" alt="{{_('Site map')}}">{{_('Site map')}}</a></li>
+	</ul>
+</li>
+</ul>
+</div>
+{% endblock %}
+
+
+    
+
+
+

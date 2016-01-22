@@ -95,10 +95,12 @@ msgstr "napr. životné prostredie"
 msgid "Search data"
 msgstr "Vyhľadávať dáta"
 
-#: ckanext/responsive_design/templates/home/layout1.html:25
-#: ckanext/responsive_design/templates/snippets/search_form2.html:34
+#: ckanext/responsive_design/templates/header.html:118
+#: ckanext/responsive_design/templates/home/index.html:14
+#: ckanext/responsive_design/templates/home/index.html:15
+#: ckanext/responsive_design/templates/home/snippets/search.html:12
 msgid "Search"
-msgstr "Vyhľadávať"
+msgstr "Hľadať"
 
 #: ckanext/responsive_design/templates/home/layout1.html:29
 #: ckanext/responsive_design/templates/home/index.html:124
@@ -109,7 +111,7 @@ msgstr "Obľúbené tagy"
 
 #: ckanext/responsive_design/templates/organization/index.html:7
 msgid "Search organizations..."
-msgstr "Vyhľadávať organizácie..."
+msgstr "Vyhľadať organizácie..."
 
 #: ckanext/responsive_design/templates/organization/index.html:16
 msgid "There are currently no organizations for this site"
@@ -133,7 +135,7 @@ msgstr "Obľúbené"
 
 #: ckanext/responsive_design/templates/snippets/search_form2.html:3
 msgid "Search datasets..."
-msgstr "Vyhľadávať datasety..."
+msgstr "Vyhľadať datasety..."
 
 #: ckanext/responsive_design/templates/snippets/search_form2.html:47
 msgid "Order by"
@@ -202,33 +204,115 @@ msgstr "Vyhľadať dáta"
 msgid "Services and requests"
 msgstr "Služby a požiadavky"
 
-#: ckanext/responsive_design/templates/home/snippets/stats.html:21
-#, python-format
-msgid "<b style=\"font-size: 2em;\">%(number)s</b><br /> Dataset"
-msgid_plural "<b style=\"font-size: 2em;\">%(number)s</b><br /> Datasets"
-msgstr[0] "<b style=\"font-size: 2em;\">%(number)s</b><br /> Dataset"
-msgstr[1] "<b style=\"font-size: 2em;\">%(number)s</b><br /> Datasety"
-msgstr[2] "<b style=\"font-size: 2em;\">%(number)s</b><br /> Datasetov"
+#: ckanext/responsive_design/templates/header.html:91
+msgid "About us"
+msgstr "O portáli"
 
-#: ckanext/responsive_design/templates/home/snippets/stats.html:28
-#, python-format
-msgid "<b style=\"font-size: 2em;\">%(number)s</b><br />Organization"
-msgid_plural "<b style=\"font-size: 2em;\">%(number)s</b><br />Organizations"
-msgstr[0] "<b style=\"font-size: 2em;\">%(number)s</b><br />Organizácia"
-msgstr[1] "<b style=\"font-size: 2em;\">%(number)s</b><br />Organizácie"
-msgstr[2] "<b style=\"font-size: 2em;\">%(number)s</b><br />Organizácie"
-#: ckanext/responsive_design/templates/home/snippets/stats.html:33
-#, python-format
-msgid "<b style=\"font-size: 2em;\">%(number)s</b><br />Application"
-msgid_plural "<b style=\"font-size: 2em;\">%(number)s</b><br />Applications"
-msgstr[0] "<b style=\"font-size: 2em;\">%(number)s</b><br />Applikacia"
-msgstr[1] "<b style=\"font-size: 2em;\">%(number)s</b><br />Aplikácie"
-msgstr[2] "<b style=\"font-size: 2em;\">%(number)s</b><br />Applikácií"
+#: ckanext/responsive_design/templates/header.html:93
+msgid "Help"
+msgstr "Pomoc"
 
-#: ckanext/responsive_design/templates/home/snippets/stats.html:38
+#: ckanext/responsive_design/templates/header.html:94
+msgid "Contact"
+msgstr "Kontakt"
+
+#: ckanext/responsive_design/templates/header.html:89
+msgid "Change the contrast"
+msgstr "Zmena kontrastu"
+
+#: ckanext/responsive_design/templates/home/snippets/stats.html:7
 #, python-format
-msgid "<b style=\"font-size: 2em;\">%(number)s</b><br />User"
-msgid_plural "<b style=\"font-size: 2em;\">%(number)s</b><br />Users"
-msgstr[0] "<b style=\"font-size: 2em;\">%(number)s</b><br />Používateľ"
-msgstr[1] "<b style=\"font-size: 2em;\">%(number)s</b><br />Používatelia"
-msgstr[2] "<b style=\"font-size: 2em;\">%(number)s</b><br />Používatelov"
+msgid "<b>%(number)s </b> Organization"
+msgid_plural "<b>%(number)s</b> Organizations"
+msgstr[0] "<b>%(number)s </b> Organizácia"
+msgstr[1] "<b>%(number)s </b> Organizácie"
+msgstr[2] "<b>%(number)s </b> Organizácií"
+
+#: ckanext/responsive_design/templates/footer.html:6
+msgid "About this site"
+msgstr "O portáli"
+
+#: ckanext/responsive_design/templates/footer.html:7
+msgid "Walkthroughs"
+msgstr "Návody"
+
+#: ckanext/responsive_design/templates/footer.html:8
+msgid "Institutions"
+msgstr "Inštitúcie"
+
+#: ckanext/responsive_design/templates/footer.html:9
+msgid "Dictionary"
+msgstr "Slovník"
+
+#: ckanext/responsive_design/templates/footer.html:14
+msgid "Site map"
+msgstr "Mapa stránok"
+
+#: ckanext/responsive_design/templates/footer.html:15
+msgid "List of published services"
+msgstr "Zoznam zverejnených služieb"
+
+#: ckanext/responsive_design/templates/footer.html:17
+msgid "Accessibility statement"
+msgstr "Vyhlásenie o prístupnosti"
+
+#: ckanext/responsive_design/templates/footer.html:21
+msgid "Information published at www.slovensko.sk are not legally binding."
+msgstr "Informácie zverejnené na portáli majú informatívny charakter."
+
+#: ckanext/responsive_design/templates/footer.html:22
+msgid "Provider and webmaster of the portal is"
+msgstr "Prevádzku stránky www.slovensko.sk a správu jej obsahu zabezpečuje"
+
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:20
+msgid "Services"
+msgstr "Služby"
+
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:23
+msgid "Requests"
+msgstr "Požiadavky"
+
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:28
+msgid "Useful links"
+msgstr "Užitočné linky"
+
+#: ckanext/responsive_design/templates/home/index.html:68
+msgid "News"
+msgstr "Novinky"
+
+#: ckanext/responsive_design/templates/home/snippets/stats.html:11
+#, python-format
+msgid "<b>%(number)s</b> Application"
+msgid_plural "<b>%(number)s</b> Applications"
+msgstr[0] "<b>%(number)s</b> Aplikácia"
+msgstr[1] "<b>%(number)s</b> Aplikácie"
+msgstr[2] "<b>%(number)s</b> Aplikácií"
+
+#: ckanext/responsive_design/templates/home/snippets/stats.html:8
+msgid " Organization"
+msgid_plural " Organizations"
+msgstr[0] " Organizácia"
+msgstr[1] " Organizácie"
+msgstr[2] " Organizácií"
+
+#: ckanext/responsive_design/templates/home/snippets/stats.html:13
+msgid " Application"
+msgid_plural " Applications"
+msgstr[0] " Aplikácia"
+msgstr[1] " Aplikácie"
+msgstr[2] " Aplikácií"
+
+#: ckanext/responsive_design/templates/home/snippets/stats.html:20
+msgid " Dataset"
+msgid_plural " Datasets"
+msgstr[0] " Dataset"
+msgstr[1] " Datasety"
+msgstr[2] " Datasetov"
+
+
+#: ckanext/responsive_design/templates/home/snippets/stats.html:26
+msgid " User"
+msgid_plural " Users"
+msgstr[0] " Používateľ"
+msgstr[1] " Používalia"
+msgstr[2] " Používateľov"

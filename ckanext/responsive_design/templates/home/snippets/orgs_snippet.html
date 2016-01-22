@@ -5,9 +5,14 @@
 {%for dt in data %}
 <li>
 <div>
-	<a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> <img src="{{dt['image_display_url']}}" alt="{{dt['display_name']}} logo" /></a><br />
+	{%if dt['image_display_url'] == ""  %}
+        <a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}">{{dt['display_name']}}</a>
+        {% endif %}
+         {%if dt['image_display_url'] != ""  %}
+        <a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> <img src="{{dt['image_display_url']}}" alt="{{dt['display_name']}} logo" /></a> 
+        {% endif %}
 	<!--a href="/organization/{{dt['id']}}"> {{dt['title']}}</a><br /!-->
-	<a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> {%trans count=dt['packages']%}{{count}} dataset{%pluralize%}{{count}} datasets{%endtrans%}</a>
+	<a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> {% set orgs = ungettext(' Dataset', ' Datasets', dt['packages']).format(num=dt['packages']) %}{{dt['packages']}} {{orgs}}</a>
 </div>
 </li>
 {%endfor%}

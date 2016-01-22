@@ -49,9 +49,14 @@
 
             {% block primary %}
               <div class="span3 col1" id="upper_menu">
-              {% if c.action != 'resource_read' %}
-                  {%snippet 'home/snippets/right_menu.html' %}
+              {% if c.action == 'resource_read' %}
+	      <style>
+	      #content > div.row.row1 > div.span3.col1{
+		margin-top:-439px;	
+              }
+	      </style>
               {%endif%}
+                  {%snippet 'home/snippets/right_menu.html' %}
               </div>
               <div class="wrapper">
               <div class="primary span9" style="">

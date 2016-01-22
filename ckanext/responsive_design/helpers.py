@@ -11,6 +11,13 @@ import datetime
 
 def table(name):
     return Table(name, model.meta.metadata, autoload=True)
+def public_apps():
+    context = {'model': model, 'session': model.Session,
+               'user': c.user or c.author,
+               'auth_user_obj': c.userobj,
+               'for_view': True}
+    apps = toolkit.get_action('list_apps')(context, {})
+    return len(apps["result"])
 
 DATE_FORMAT = '%Y-%m-%d'
 log = logging.getLogger(__name__)

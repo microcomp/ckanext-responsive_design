@@ -234,9 +234,9 @@ css : <link rel="stylesheet" type="text/css" href="{{ g.main_css }}" />
 </style>
  {%if c.controller == 'home' and c.action == 'index'%}
 <style type="text/css">
-@media (min-width: 1200px){
+/*@media (min-width: 1200px){*/
 #content, #content2, #content3{
-    width: 1150px;
+    max-width: 1150px;
 }
 </style>
 {%endif%}
@@ -280,20 +280,5 @@ body > header.account-masthead > div > nav > ul > li:nth-child(3) > a{
 
   <body>
 
-
-    {% block body_extras -%}
-    {#%if c.action == 'resource_datapreview' %}
-    {%else%}
-
-         <a href="/" class="small"> <img src='/logo2.png' alt='logo'/></a>
-
-          
-         {% if c.controller == 'home' %}
-         {%else%}
-            <a href="/" class="logo_min"><img src="/logo3.png" alt='logo' /></a>
-        {%endif%}
-    {%endif%#}
-      {{super()}}
-    {% endblock %}
   </body>
 </html>

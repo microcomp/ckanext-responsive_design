@@ -30,8 +30,10 @@
         padding-bottom: 0;
         position: absolute;
         z-index: 50;
-        top: 100px;
-        right: 50%;
+        top: 31px;
+	left:41px;
+	min-width:48.45%;
+	width:300px;
     }
     .small{
         display: none;
@@ -367,10 +369,10 @@ a:hover{
     color: #bd0a26;
     text-decoration: underline;
 }
-
+/*
 body > div{
     padding: 1.8em;
-}
+}*/
 body > div.homepage.layout-1{
     padding: 0em;
 }
@@ -841,7 +843,7 @@ ul.stats_snippet li{
     background-color: #f9f9f9;
 }
 #home_menu{
-    margin-bottom: -1px;
+    margin-bottom: -2px;
 
     border-bottom:  2px solid #d4d4d4;
 }
@@ -915,39 +917,26 @@ font-size:1.7em;
 #crumbs > div > div > a > span {
 padding-right:45px;
 }
-.effect3::before {
-    background: #777 none repeat scroll 0 0;
-    bottom: 15px;
-    box-shadow: 0 15px 10px #777;
-    content: "";
-    left: 10px;
-    max-width: 300px;
-    position: absolute;
-    top: 80%;
-    transform: rotate(-3deg);
-    width: 50%;
-    z-index: -1;
-}
 
 #crumbs > div > div>a.purple{
-    background: #5a438b;
+    background: #5a438b url("/org.png") no-repeat scroll right 15px center / 35px auto;
     z-index: 999;
-width:55%;
+    width:55%;
 }
 #crumbs > div > div > a.purple:before{
     border-right: 20px solid #5a438b;
 }
 
 #crumbs > div > div> a.red{
-    background: #b81824;
-width:40%;
+    background: #b81824 url("/app.png") no-repeat scroll right 15px center / 35px auto;
+   width:40%;
 }
 #crumbs > div >div> a.red:before{
     border-right: 20px solid #b81824;
 }
 
 #crumbs > div > div >a.green{
-    background: #93bf20 url("http://slovensko.sk/../../../Img/icons.png") no-repeat scroll 321px 14px;
+    background: #93bf20 url("/datasety.png") no-repeat scroll right 15px center / 35px auto;
     z-index: 999;
     width:80%;
 }
@@ -956,7 +945,7 @@ width:40%;
 }
 
 #crumbs > div > div> a.orange{
-    background: #e84710;
+    background: #e84710 url("/statistika.png") no-repeat scroll right 15px center / 35px auto ;
 width:60%;
 }
 #crumbs > div > div >a.orange:before{
@@ -1184,9 +1173,17 @@ width:60%;
     /*border: 3px solid #fff;*/
 }
 .menubox > a{
-    margin-right: auto;
-    margin-left: auto;
+    float: left;
+    width: 105px;
+    height: 91px;
+    padding-top: 25px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
     color: #fff;
+    text-align: center;
 }
 .menubox > a:hover{
     text-decoration: none;
@@ -1202,11 +1199,11 @@ width:60%;
     #content > div.row.row1 > div.span3.col1{
         float: right; 
         width: 240px;
-        margin-top: -140px;
+        margin-top: -194px;
     }
     #content{
-        width:1150px;
-        }
+        max-width:1150px;
+    }
     .wrapper{
          width: 900px;
     }
@@ -1226,17 +1223,20 @@ width:60%;
     }
     #content2 > div > div.span3.col1.mini_boxes, #left_box_padder {
         width: 240px;
-        margin-bottom: 5px;
-        float: right;
-        margin-top: -8px;
-
+    }
+    	
+    #content2 > div > div.span3.col1.mini_boxes{
+	margin-top:24px;
     }
     #left_box_padder{;
-        margin-top: -944px;
+        margin-top: -260px;
+	margin-left:10px;
+        float: left;
     }
     .span11{
-        width: 900px;
-    }
+        max-width: 900px;
+    	width:100%;
+     }
 }
 
 @media (max-width: 979px) and (min-width: 768px){
@@ -1474,8 +1474,7 @@ color:#fff;
     float: left;
     width: 50%;
     color: #ffffff;
-    margin-bottom:64px;
-    margin-top: 35px;
+    margin-bottom:20px;
 }
 .footerLinksWrap > ul {
     margin: 0;
@@ -1557,11 +1556,15 @@ text-align: right;
 
 .services_menu > a{
     color: #fff;
+    background-position: 2px -183px;
+    font-size:0.875em;   
+}
+.services_menu{
     background: url(/arrows.png) no-repeat 0 9px;
     background-position: 2px -183px;
     padding: 3px 0 3px 16px;
-    font-size:0.875em;   
 }
+
 .services_menu{
         border-bottom: solid 1px #fff;
         padding-bottom: 5px;
@@ -1569,7 +1572,6 @@ text-align: right;
         list-style-type: none;
         margin-right: 21px;
 }
-#top_user_box{margin-top: 2em;}
 
 #long_boxes > ul > li > ul > li:last-child{
     border-bottom: none;
@@ -1605,4 +1607,10 @@ text-align: right;
         float: left;
     }
     #top_user_box{margin-top: 0em;}
+}
+#right_boxes > ul > li.menubox > a > img{
+    display: block;
+    width: auto;
+    height: 40px;
+    margin: 0 auto;
 }

@@ -4,20 +4,26 @@
 <div id="crumbs" >
   <div>   
      <div> <a class="purple" href="{{ h.url_for(controller='organization', action='index') }}" title="{{_('Organizations')}}">
-          {%trans number=h.SI_number_span(stats.organization_count)  %}<b>{{number}} </b> Organization{%pluralize number %}<b>{{ number }}</b><span>Organizations</span>{%endtrans%}
+         
+          {% set orgs = ungettext(' Organization', ' Organizations', stats.organization_count).format(num=stats.organization_count) %}
+          <strong>{{ h.SI_number_span(stats.organization_count) }}</strong><span>  {{ orgs }} </span>
         </a>
      </div>
      <div>   <a class="red" href="{{ h.url_for(controller='related', action='dashboard') }}" title="{{_('Applications')}}">
-          {%trans number=h.SI_number_span(stats.related_count) %}<b>{{number}}</b> Application{%pluralize number %}<b>{{ number }}</b> <span>Applications</span>{%endtrans%}
+          {% set apps = ungettext(' Application', ' Applications', h.public_apps()).format(num=h.public_apps()) %}
+          <strong>{{ h.SI_number_span(h.public_apps()) }}</strong><span>  {{ apps }} </span> 
         </a>
     </div>
      <div> <a class="green" href="{{ h.url_for(controller='package', action='search') }}" title="{{_('Datasets')}}">
-          {%trans number=h.SI_number_span(stats.dataset_count) %}<b>{{number}}</b> Dataset{%pluralize number %}<b >{{ number }}</b><span>Datasets</span>{%endtrans%}
+
+           {% set dts = ungettext(' Dataset', ' Datasets', stats.dataset_count).format(num=stats.dataset_count) %}
+          <strong>{{ h.SI_number_span(stats.dataset_count) }}</strong><span>  {{ dts }} </span>
         </a>
     </div>        
      <div>
-        <a class="orange" href="{{ h.url_for(controller='related', action='dashboard') }}" title="{{_('Users')}}">
-          {%trans number=h.userCountHelper() %}<b>{{number}}</b> User{%pluralize number %}<b>{{ number }}</b> <span>Users</span>{%endtrans%}
+        <a class="orange" href="{{ h.url_for(controller='organization', action='index') }}" title="{{_('Users')}}">
+          {% set usr = ungettext(' User', ' Users', h.userCountHelper()).format(num=h.userCountHelper()) %}
+          <strong>{{ h.SI_number_span(h.userCountHelper()) }}</strong><span>  {{ usr }} </span>
         </a>
      </div>
 </div>

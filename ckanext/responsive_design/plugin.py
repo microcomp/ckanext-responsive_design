@@ -22,7 +22,11 @@ class ResponsiveDesign(plugins.SingletonPlugin):
         toolkit.add_template_directory(config, 'templates')
         toolkit.add_public_directory(config, 'public')
 
-
+    def before_map(self, map):
+        map.connect('sitemap', '/sitemap',
+            controller='ckanext.responsive_design.responsive_design:ResponsiveDesign',
+            action='index')
+        return map  
     def get_helpers(self):
         return {'recent_datasets': helpers.recent_datasets,
                 'uv_url' : helpers.uv_url,
@@ -32,5 +36,6 @@ class ResponsiveDesign(plugins.SingletonPlugin):
                 'get_urls':helpers.get_urls,
                 'raw_packages_by_week': helpers.raw_packages_by_week,
                 'userCountHelper': helpers.userCountHelper,
-                'biggest_orgs':helpers.biggest_orgs}
+                'biggest_orgs':helpers.biggest_orgs,
+                'public_apps':helpers.public_apps}
 

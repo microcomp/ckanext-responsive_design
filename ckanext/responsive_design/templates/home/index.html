@@ -11,6 +11,7 @@
 {% block home_secondary_content %}
             {% block home_search %}
               <form class="dataset-search module-content clearfix" method="get" action="{% url_for controller='package', action='search' %}" id="search_form_index">
+                <label for="search_input_index" style="display: none;">{{_('Search')}}</label>
                   <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off" placeholder="{{_('Search')}}..." id="search_input_index"/>
                   <button class="mybutton" type="submit" value="{{ _('Search') }}" id="search_button_index" >{{_('Search')}}</button>
         
@@ -48,7 +49,7 @@
 {% block primary_content %}
 
 
-<div class="row row2" style="margin-top: 2em;">
+<div class="row row2">
 
   <div class="span11 col1">
 
@@ -73,7 +74,7 @@ $('#home_menu a').click(function (e) {
   <div class="tab-content" id="home_tabs_content">
     <div role="tabpanel" class="tab-pane active" id="notices">
           <div class="tab_inner" style="display: block; ">
-              <img src="https://www.slovensko.sk/_img/CMS4/SmallBanners/obcan_zs.jpg" alt="blabla" style="max-width: 45%;"/>
+              <img src="/images/img.png" alt="{{_('News')}}" style="max-width: 45%;"/>
               
                 <ul  >
                   {% set datasets = h.recent_datasets(6)%}
@@ -102,7 +103,7 @@ $('#home_menu a').click(function (e) {
   </div>
   <div class="span3 col2" id="left_box_padder">
     
-<!-- Snippet snippets/organization_item.html start -->
+<!-- Snippet 'home/snippets/right_menu.html' start -->
       {% snippet 'home/snippets/right_menu.html' %}
   </div>
 

@@ -3,8 +3,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" property='stylesheet'>
-<link rel="stylesheet" type="text/css" href="/andrej.css" property='stylesheet'>
-
+<link rel="stylesheet" type="text/css" href="/screen2.css" property='stylesheet'>
+{%if c.userobj %}
+<style type="text/css">
+#content > div.row.row1 > div.span3.col1 {
+    margin-top: -135px !important;
+}
+</style>
+{%endif%}
 
 <script>
 function getContrast(){
@@ -109,13 +115,7 @@ function change_style(){
       {% endblock %}
 
       {% block header_site_search %}
-        <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
-          <div class="field">
-            <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
-            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search') }}" />
-            <button class="btn-search" type="submit"><i class="icon-search"></i></button>
-          </div>
-        </form>
+       
       {% endblock %}
 
     </div>
@@ -155,50 +155,7 @@ function change_style(){
           {% endif %}
         {% endblock %}
         </div>
-        {% if c.action == 'resource_read' %}
-            <style type="text/css">
-                  @media (min-width: 1200px){
-                      #top_user_box > div.span3.col1.mini_boxes > div.account_box{     
-                          margin-bottom: 190px !important;  
-                      }
-                  }
-                  @media (max-width: 1200px){
-                      #long_boxes, #big_box{
-                        display: none;
-                      }
-                      #right_boxes{
-                        height: 115px;
-                        padding-top: 10px;
-                        background-color: transparent;
-                      }
-                      #top_user_box > div.span3.col1.mini_boxes{
-                        width: 100%;
-                      }
-                      .green_menubox{
-                            margin-left: 16%;
-                      }
-                      #top_user_box > div.span11.col1{
-                        display: none;
-                      }
-                  }
-
-                  @media (min-width: 750px) and (max-width: 1000px){
-                      #top_user_box > div.span3.col1.mini_boxes{
-                        width: 100% !important;
-                      }
-                      .green_menubox {
-                          margin-left: 5% !important;
-                      }
-                  }
-                  @media (max-width: 750px){
-                     .green_menubox {
-                          margin-left: 5% !important;
-                      }
-                  }
-                  
-            </style>
-            {%snippet 'home/snippets/right_menu.html' %}  
-        {%endif%} 
+   
   </div>
 
   </div>

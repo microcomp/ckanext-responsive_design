@@ -1,23 +1,23 @@
         <div id="right_boxes" class="box2 box_padding" style="">
               <ul>
                   <li class="menubox green_menubox" >
-                      <a href="{{h.url_for('/dataset')}}" title="{{_('Datasets')}}" ><img src="/icons/datasety105x105.png" alt="{{_('Datasets')}}" /></a>
+                      <a href="{{h.url_for('/dataset')}}" title="{{_('Datasets')}}" ><img src="/datasety.png" alt="{{_('Datasets')}}" />{{_('Datasets')}}</a>
                   </li>
                   <li class="menubox purple_menubox"> 
-                    <a  href="{{h.url_for(controller='organization', action='index')}}" title="{{_('Organizations')}}"><img src="/icons/organizacie105x105.png" alt="{{_('Organizations')}}" /> </a>
+                    <a  href="{{h.url_for(controller='organization', action='index')}}" title="{{_('Organizations')}}"><img src="/org.png" alt="{{_('Organizations')}}" />{{_('Organizations')}}</a>
                   </li>
                   <li class="menubox red_menubox">
-                    <a  href="{{h.url_for(controller='ckanext.applications.apps:AppsController', action='dashboard')}}" title="{{_('Applications')}}"><img src="/icons/aplikacie105x105.png" alt="{{_('Applications')}}" /> </a>
+                    <a  href="{{h.url_for(controller='ckanext.applications.apps:AppsController', action='dashboard')}}" title="{{_('Applications')}}"><img src="/app.png" alt="{{_('Applications')}}" />{{_('Applications')}}</a>
                   </li>
-                    <li class="menubox blue_menubox" title="{{_('Instruments')}} ">
-                      <a  href="#"><img src="/icons/nastroje105x105.png" alt="{{_('Instruments')}} " /> </a>
+                    <li class="menubox blue_menubox" title="{{_('Tools')}} ">
+                      <a  href="#"><img src="/nastr.png" alt="{{_('Tools')}} " />{{_('Tools')}}</a>
                   </li>
               </ul>
         </div>
         <div id="long_boxes" class="box3" style="margin-bottom: 1em;">
               <ul>
                   <li class="brown_menubox" >
-                      <a href="" title="{{_('Services')}}" ><span></span>{{_('Services')}} </a>
+                      <a href="https://www.slovensko.sk/sk/najst-sluzbu" title="{{_('Services')}}" ><span></span>{{_('Services')}} </a>
                       <ul>
                           {%set urls = h.get_urls('ckan.user_req.') %}
                           {%set index = 0 %}
