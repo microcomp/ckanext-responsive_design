@@ -1,13 +1,40 @@
 {%ckan_extends%}
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72982617-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 <link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" property='stylesheet'>
 <link rel="stylesheet" type="text/css" href="/screen2.css" property='stylesheet'>
-{%if c.userobj %}
+{%if c.userobj and c.action != 'resource_read' %}
 <style type="text/css">
+@media(min-width: 768px){
+#content > div.row.row2 > div.span3.col2 {
+    margin-top: -161px !important;
+}
 #content > div.row.row1 > div.span3.col1 {
-    margin-top: -135px !important;
+margin-top: -84px !important;
+}
+}
+</style>
+{%elif c.userobj and c.action == 'resource_read'%}
+<style type="text/css">
+#content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {
+    margin-top: -330px !important;
+}
+</style>
+{%elif c.userobj==None and c.action == 'resource_read' %}
+<style type="text/css">
+#content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {
+    margin-top: -405px !important;
 }
 </style>
 {%endif%}
@@ -70,10 +97,16 @@ function change_style(){
   }
   if(contrast === "high"){ 
     style.href = "/screen.css"; 
-    document.cookie = "contrast=normal;" 
+    var d = new Date();
+    d.setTime(d.getTime() + (24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = "contrast=normal;"+ expires; 
   }else { 
     style.href = "/high_contrast.css";
-    document.cookie = "contrast=high";
+    var d = new Date();
+    d.setTime(d.getTime() + (24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = "contrast=high;"+ expires;
   }
 
 }

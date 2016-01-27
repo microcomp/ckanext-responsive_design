@@ -257,15 +257,19 @@ margin-bottom:0px;
 text-align:center;
 }
 }
-.container {
-width:100%;
+@media(min-width: 768px){
+    .container {
+        width:100%;
+    }
 }
 .rating-container{
 max-width:200px !important;
 font-size:0.875em !important;
 }
-section.module.module-resource {
-float:left;
+@media(min-width: 768px){
+    section.module.module-resource {
+        float:left;
+    }
 }
 .wrapper:before, .wrapper:after{
 display:none;;
@@ -362,3 +366,10 @@ color: #3e3e3e;
 font-weight: normal;;
 }
 
+.form-actions {
+border-top: 1px solid #5f5247;
+}
+.hero.search {
+    background-color: #f9f9f9;
+    height: 115px;
+}

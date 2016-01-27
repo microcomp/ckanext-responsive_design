@@ -262,7 +262,7 @@ msgstr "Informácie zverejnené na portáli majú informatívny charakter."
 
 #: ckanext/responsive_design/templates/footer.html:22
 msgid "Provider and webmaster of the portal is"
-msgstr "Prevádzku stránky www.slovensko.sk a správu jej obsahu zabezpečuje"
+msgstr "Prevádzku stránky data.gov.sk a správu jej obsahu zabezpečuje"
 
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:20
 msgid "Services"

@@ -243,7 +243,9 @@ a {
   width: 940px;
 }
 .span11 {
-  width: 860px;
+  /*width: 860px;*/
+  max-width: 860px;
+  width: 67%;
 }
 .span10 {
   width: 780px;
@@ -4822,7 +4824,8 @@ a.badge:focus {
     width: 724px;
   }
   .span11 {
-    width: 662px;
+   /* width: 662px;*/
+   width: 63%;
   }
   .span10 {
     width: 600px;
@@ -4846,7 +4849,12 @@ a.badge:focus {
     width: 228px;
   }
   .span3 {
-    width: 166px;
+   /* width: 166px;*/
+   width: 26%;
+  }
+  #left_box_padder{
+    width: 250px;
+    margin-top: -190px;
   }
   .span2 {
     width: 104px;
@@ -6056,13 +6064,14 @@ a.tag:hover {
 @media (min-width: 768px) {
   .nav-item.active > a:before,
   .nav-aside li.active a:before {
-    content: ' ';
+    border-left: 7px solid #8ca0a6;
+    content: "";
     position: absolute;
-    top: 0;
     right: -6px;
-    width: 6px;
-    height: 34px;
-    background-image: url("../../../base/images/nav-active.png?1");
+    top: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+
   }
 }
 .nav-item.active > a span,
@@ -8011,7 +8020,7 @@ h4 small {
 }
 @media (max-width: 768px) {
   .wrapper {
-    margin: 0 -20px;
+    /*margin: 0 -20px;*/
     border-width: 0;
     -webkit-box-shadow: 0;
     -moz-box-shadow: 0;
