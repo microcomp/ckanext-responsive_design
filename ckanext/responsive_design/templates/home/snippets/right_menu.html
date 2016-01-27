@@ -20,9 +20,7 @@
                       <a href="https://www.slovensko.sk/sk/najst-sluzbu" title="{{_('Services')}}" ><span></span>{{_('Services')}} </a>
                       <ul>
                           {%set urls = h.get_urls('ckan.user_req.') %}
-                          {%set index = 0 %}
                           {%for i in urls%}
-                          {%set index = index+1%}
                               <li class="services_menu">
                                 <a href="{{i['url']}}" title="{{i['popis']}}" class="menuitem_services">
                                  {{i['name']}}
