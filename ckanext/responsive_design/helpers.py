@@ -19,7 +19,7 @@ def public_apps():
                    'for_view': True}
         apps = toolkit.get_action('list_apps')(context, {})
         return len(apps["result"])
-    except KeyError:
+    except IndexError:
         return 0
 
 DATE_FORMAT = '%Y-%m-%d'

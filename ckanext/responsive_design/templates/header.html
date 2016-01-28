@@ -23,18 +23,51 @@
 #content > div.row.row1 > div.span3.col1 {
 margin-top: -84px !important;
 }
+
+
+
 }
 </style>
 {%elif c.userobj and c.action == 'resource_read'%}
 <style type="text/css">
-#content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {
-    margin-top: -330px !important;
+@media (min-width: 768px) and (max-width: 1200px) {
+    #content > div.row.row1 > div.wrapper > div {
+    width: 42%;
+    margin-right: 250px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    #content > div.row.row1 > section, #content > div.toolbar > ol{
+      width: 65%
+    }
+    #upper_menu{
+      margin-top: -140px !important;
+    }
+}
+@media(max-width: 768px){
+  #content > div.row.row1 > section, .module.module-resource{
+    display: none !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    #content > div.row.row1 > div.wrapper > div {
+    width: 42%;
+    margin-right: 250px;
 }
 </style>
 {%elif c.userobj==None and c.action == 'resource_read' %}
 <style type="text/css">
 #content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {
     margin-top: -405px !important;
+}
+@media(max-width: 768px){
+  #content > div.row.row1 > section, .module.module-resource{
+    display: none !important;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1200px) {
+    #content > div.row.row1 > div.wrapper > div {
+    width: 42%;
+    margin-right: 250px;
 }
 </style>
 {%endif%}

@@ -174,8 +174,9 @@ font-size: 1.125em;
 word-break: keep-all;
 }
 #statistics > div {
+    min-width: 230px;
 width:50%;
-height:100%;
+/*height:100%;*/
 }
 #statistics > div.left-side {
 float:left;
@@ -229,7 +230,7 @@ text-align:left;
 color:#bd0a26;
 } 
 
-@media (max-width:768px) {
+@media (max-width: 767px) {
 #loginPanel, #top_user_box >div.span3 >div.account_box {
 display:none;
 }
@@ -257,16 +258,18 @@ margin-bottom:0px;
 text-align:center;
 }
 }
-@media(min-width: 768px){
+@media(min-width: 767px){
     .container {
         width:100%;
+
     }
+    #content{min-height: 1200px;}
 }
 .rating-container{
 max-width:200px !important;
 font-size:0.875em !important;
 }
-@media(min-width: 768px){
+@media(min-width: 767px){
     section.module.module-resource {
         float:left;
     }

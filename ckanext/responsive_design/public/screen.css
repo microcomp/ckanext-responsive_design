@@ -1,5 +1,5 @@
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
     body > header.navbar.navbar-static-top.masthead > div.container{
         background-color: #453b34;
         color: white;
@@ -893,6 +893,8 @@ padding-right:45px;
     background: #5a438b url("/org.png") no-repeat scroll right 15px center / 35px auto;
     z-index: 999;
     width:55%;
+    border-left: 2px solid #5a438b;
+    border-bottom: 2px solid #5a438b;
 }
 #crumbs > div > div > a.purple:before{
     border-right: 20px solid #5a438b;
@@ -901,6 +903,8 @@ padding-right:45px;
 #crumbs > div > div> a.red{
     background: #b81824 url("/app.png") no-repeat scroll right 15px center / 35px auto;
    width:40%;
+   border-left: 2px solid #b81824;
+    border-bottom: 2px solid #b81824;
 }
 #crumbs > div >div> a.red:before{
     border-right: 20px solid #b81824;
@@ -910,6 +914,8 @@ padding-right:45px;
     background: #93bf20 url("/datasety.png") no-repeat scroll right 15px center / 35px auto;
     z-index: 999;
     width:80%;
+    border-left: 2px solid #93bf20;
+    border-bottom: 2px solid #93bf20;
 }
 #crumbs > div >div >a.green:before{
     border-right: 20px solid #93bf20;
@@ -917,7 +923,9 @@ padding-right:45px;
 
 #crumbs > div > div> a.orange{
     background: #e84710 url("/statistika.png") no-repeat scroll right 15px center / 35px auto ;
-width:60%;
+    width:60%;
+    border-left: 2px solid #e84710;
+    border-bottom: 2px solid #e84710;
 }
 #crumbs > div > div >a.orange:before{
     border-right: 20px solid #e84710;
@@ -926,8 +934,8 @@ width:60%;
 
     content: "";  
     position: absolute; 
-    left: -20px; top: 0;
-    border-top: 35px solid transparent;
+    left: -22px; top: 0;
+    border-top: 38px solid transparent;
     border-bottom: 35px solid transparent;
 
 }
@@ -939,7 +947,7 @@ width:60%;
 }
 
 #statistics{
-    height: 300px;
+    height: 325px;
 }
 /*zmazat*/
 .index_mini{
@@ -1214,7 +1222,7 @@ width:60%;
     #upper_menu{
         height: 215px;
         padding: 5px;
-        width: 250px;
+        width: 240px;
         float: right;
         margin-top: -180px;
     }
@@ -1236,7 +1244,7 @@ width:60%;
     }
 
     .box2{
-        padding: 0.5em;
+        padding: 10px;
     }
     #notices{
       height: 450px;
@@ -1247,6 +1255,7 @@ width:60%;
         width: auto;
         height: auto;
     }
+     .purple_menubox, .blue_menubox {margin-right: 0px !important;}
 }
 @media (max-width: 1200px) and (min-width: 979px){
 
@@ -1296,21 +1305,58 @@ width:60%;
     }
 
 }
-@media (max-width: 768px) {
+
+@media (max-width: 767px) {
+    #content > div.row.row1 > div.wrapper > div > article > div > form > fieldset > div > label > a,
+    #content > div.row.row1 > section{
+        display: none;
+    }
+    #content > div.row.row1 > div.wrapper > div > div > table > tbody > tr > td > a, .show-more, .show-less{
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    #upper_menu{
+        margin-top: 0px !important;
+    }
+    #content > div.row.row1 > div.wrapper > div > article > div > h2,
+    #content > div.row.row1 > div.wrapper > div > article > div > form > fieldset > legend,
+    .control-label, .control-group > div > a, .control-group > div > p,
+    #content > div.row.row1 > div.wrapper > div > article > div > p,
+    #content > div.row.row1 > div.wrapper > div > article > div > form > label,
+    #content > div.row.row1 > div.wrapper > div > div > h2,
+    #content > div.row.row1 > div.wrapper > div > h2
+    {
+        color: #fff;
+    }
     #home_menu > li > a{
         width: 100% !important;
     }
-    /*#upper_menu{
-        display: none;
+    #big_box > ul > li{
+        display: inline;
     }
-    #bottom_menu{
-        width: 100%;
-    }*/
+    #big_box > ul > li > a > img{
+        max-height: 30px !important;
+        height: 30px !important;
+        width: auto !important;
+    }
+    #big_box > ul > li:nth-child(2) > a > img{
+        height: 15px !important;
+    }
+    #content > div.row.row1 > div.wrapper > div > section > div.module-content > form > h2, 
+    .form-select.control-group.control-order-by > label{
+        color: #ddd;
+    }
     #notices{
       height: 500px;
     }
     #right_boxes > ul{ padding-left: 20%;}
     .box2 {height: 140px;}
+
+    #content > div.row.row1 > div.wrapper > div > section:nth-child(1) > div.module-content > ul > li{
+        background-color: #fff !important;
+        padding: 5px !important;
+    }
 }
 @media (max-width: 430px) {
 
@@ -1604,7 +1650,7 @@ text-align: right;
     border-bottom: none;
     margin-bottom: 20px;
 }
-@media (max-width: 979px) and (min-width: 768px){
+@media (max-width: 979px) and (min-width: 767px){
     #content2 > div > div.span3.col1.mini_boxes{
         width: 240px;
         float: right;
@@ -1650,4 +1696,46 @@ text-align: right;
 #header_logo{
     margin-left: -39px;
     margin-top: -2px;
+}
+
+@media(max-width: 500px){
+    #statistics {
+        height: 670px;
+    }
+
+    .right-side{
+        float: left;
+    }
+    #crumbs > div > div>a.purple {
+        background: #5a438b;
+    }
+    #crumbs > div > div> a.red {
+        background: #b81824;
+    }
+    #crumbs > div > div >a.green {
+        background: #93bf20;
+    }
+    #crumbs > div > div> a.orange {
+        background: #e84710;
+    }
+}
+@media(max-width: 767px){
+    #notices > div > img{ display: none; }
+    #notices > div > ul{ width: 100%;}
+    #notices { height: 390px; }
+}
+@media(max-width: 575px){
+    .box2 {
+        height: 220px;
+    }
+}
+@media(max-width: 287px){
+    .box2 {
+        height: 460px;
+    }
+}
+@media(max-width: 1200px){
+    .row {
+        margin-left: 0px !important;
+    }
 }

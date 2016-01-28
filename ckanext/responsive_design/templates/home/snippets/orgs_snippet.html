@@ -6,7 +6,7 @@
 <li>
 <div>
 	{%if dt['image_display_url'] == ""  %}
-        <a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}">{{dt['display_name']}}</a>
+        <a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}">{{h.truncate(dt['display_name'], 40)}}</a>
         {% endif %}
          {%if dt['image_display_url'] != ""  %}
         <a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> <img src="{{dt['image_display_url']}}" alt="{{dt['display_name']}} logo" /></a> 
