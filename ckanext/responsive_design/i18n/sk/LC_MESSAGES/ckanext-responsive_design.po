@@ -316,3 +316,7 @@ msgid_plural " Users"
 msgstr[0] " Používateľ"
 msgstr[1] " Používalia"
 msgstr[2] " Používateľov"
+
+#: ckanext/responsive_design/templates/snippets/orgs_snippet.html:1
+msgid "Most active organizations"
+msgstr "Organizácie s najväčším počtom Datasetov"

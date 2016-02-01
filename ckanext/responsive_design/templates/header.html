@@ -1,16 +1,7 @@
 {%ckan_extends%}
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-72982617-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 <link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" property='stylesheet'>
 <link rel="stylesheet" type="text/css" href="/screen2.css" property='stylesheet'>
@@ -68,6 +59,25 @@ margin-top: -84px !important;
     #content > div.row.row1 > div.wrapper > div {
     width: 42%;
     margin-right: 250px;
+}
+</style>
+{%endif%}
+
+
+{%if c.controller == 'home' and c.action == 'index' %}
+<style type="text/css">
+@media(max-width: 768px){
+    #long_boxes, #big_box{
+      display: block !important;
+    }
+}
+</style>
+{%else%}
+<style type="text/css">
+@media(max-width: 768px){
+    #long_boxes, #big_box{
+      display: none !important;
+    }
 }
 </style>
 {%endif%}
@@ -153,9 +163,9 @@ function change_style(){
           <div class="inner clr">
             <ul>
                 <li class="hidden-phone contrastVersion"><a href="#" onclick="change_style()" title="{{_('Change the contrast')}}"  class="contrast_icon" > {{_('Change the contrast')}}</a></li>
-                <li class="hidden-phone"><a href="{{h.url_for('home')}}" title="{{_('Home')}}" style="">{{_('Home')}}</a></li>
+                <li class="hidden-phone"><a href="{{h.url_for('home')}}" title="{{_('Home')}}" >{{_('Home')}}</a></li>
                 <li class="hidden-phone"><a href="{{h.url_for(controller='home', action='about')}}" title="{{_('About us')}}" >{{_('About us')}}</a></li>
-                <li class="hidden-phone"><a href="/apps" title="{{_('Help')}}" >{{_('Help')}}</a></li>
+                <li class="hidden-phone"><a href="https://www.slovensko.sk/sk/pomoc" title="{{_('Help')}}" >{{_('Help')}}</a></li>
                 <li class="mobileVersion"><a href="{{h.url_for(controller='ckanext.contact_us.controller:ContactUsController', action='index')}}" title="{{_('Contact')}}" >{{_('Contact')}}</a></li>
                  <li class="hidden-phone lang">
                     {% set current_url = request.environ.CKAN_CURRENT_URL %}

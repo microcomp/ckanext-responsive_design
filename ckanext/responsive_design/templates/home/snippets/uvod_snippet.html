@@ -1,8 +1,8 @@
 {#
 {% snippet 'name' intero=g.site_intro_text %}
 #}
-
-          {% if intro %}
+ {{ h.render_markdown(h.print_intro(lang)) }}
+          {#% if intro %}
           {{ h.render_markdown(g.site_intro_text) }}
           {% else %}
 
@@ -13,4 +13,4 @@
                 {% endtrans %}
 
               </p>
-          {%endif%}
+          {%endif%#}

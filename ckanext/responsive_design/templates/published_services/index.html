@@ -1,0 +1,49 @@
+{% extends "page.html" %}
+{% block subtitle %}{{ _('Services') }}{% endblock %}
+{% block breadcrumb_content %}
+  <li class="active"><a href="#">{{ _('Services') }}</a></li>
+{% endblock %}
+
+
+{% block secondary_content %}
+
+{% endblock %}
+
+{% block primary %}
+<div class="span3 col1" id="upper_menu">
+{%snippet 'home/snippets/right_menu.html' %}
+</div>
+<div class="wrapper">
+<div class="primary span9 no-right-menu">
+<div class="span11">
+<h1> {{_('Services')}}</h1>
+{%if c.language == 'sk' %}
+<p>Portál data.gov.sk poskytuje verejnosti služby:</p> 
+
+<ul>
+<li>Poskytnutie metadát k poskytovaným dátam alebo dátovému zdroju </li>
+<li>Poskytnutie dát v otvorených formátoch</li>
+<li>Poskytnutie údajov prostredníctvom grafovej prezentácie</li>
+<li>Poskytnutie údajov prostredníctvom geografickej prezentácie</li>
+<li>Poskytnutie údajov na základe geografického vyhľadávania</li>
+<li>Odber notifikačných správ o datasetoch</li>
+</ul>
+
+<p>Verejnosť môže využiť nasledoné podania:</p>
+<ul>
+<li>Žiadosť o sprístupnenie informácií na účely opakovaného použitia  podľa zákona o slobodnom prístupe k informáciám</li>
+<li>Žiadosť o zvýšenie kapacity na uloženie datasetov na Portáli otvorených dát</li>
+<li>Návrh na zverejnenie údajov na Portáli otvorených dát</li>
+<li>Žiadosť o registráciu aplikácie na Portáli otvorených dát</li>
+<li>Podnet na úpravu údajov zverejnených na Portáli otvorených dát</li>
+<li>Žiadosť o pridelenie zvýhodneného prístupu k údajom zverejneným na Portáli otvorených dát</li>
+</ul>
+<p>Odkazy na Služby je možné nájsť v pravom menu stránky, prípadne je možné ich vyľadať prostredníctvom Ústredného portálu verejných služieb <a href="https://www.slovensko.sk/">slovensko.sk</a> v časti
+<a target="_blank" href="https://www.slovensko.sk/sk/najst-sluzbu" title="Nájsť službu]">Nájsť službu</a></p>
+</div>
+{%else%}
+<p>We are sorry, content is not available in English.</p>
+{%endif%}
+</div>
+</div>
+{% endblock %}

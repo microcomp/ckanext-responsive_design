@@ -9,12 +9,16 @@
   <article class="module">
     <div class="module-content">
       {% block about %}
-        {% if g.site_about %}
+        {#% if g.site_about %}
           {{ h.render_markdown(g.site_about) }}
-        {% else %}
+        {% else %#}
           <h1 class="page-heading">{{ _('About') }}</h1>
-          {% snippet 'home/snippets/about_text.html' %}
-        {% endif %}
+          {% if c.language == 'sk'%}
+            {% snippet 'home/snippets/about_text_sk.html' %}
+          {% else %}
+             {% snippet 'home/snippets/about_text_en.html' %}
+          {% endif %}
+        {#% endif %#}
       {% endblock %}
     </div>
   </article>

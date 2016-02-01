@@ -283,3 +283,6 @@ msgstr ""
 msgid "No License Provided"
 msgstr ""
 
+#: ckanext/responsive_design/templates/snippets/orgs_snippet.html:1
+msgid "Most active organizations"
+msgstr ""
