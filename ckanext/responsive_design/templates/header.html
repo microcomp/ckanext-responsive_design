@@ -2,7 +2,7 @@
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-
+<link rel="stylesheet" type="text/css"  href="/screen.css" property='stylesheet'>
 <link rel="stylesheet" type="text/css" id="contrast" href="/screen.css" property='stylesheet'>
 <link rel="stylesheet" type="text/css" href="/screen2.css" property='stylesheet'>
 {%if c.userobj and c.action != 'resource_read' %}
@@ -95,7 +95,8 @@ function getContrast(){
     if(actualContrast === "high"){
       result= "/high_contrast.css"
     }else{
-      result= "/screen.css"
+      result= ""
+
     }
     var style = document.getElementById("contrast");
     style.href = result;
@@ -175,7 +176,11 @@ function change_style(){
                   {% for locale in h.get_available_locales() %}
                   {% if locale  != current_lang %}
                     <a class="lang_{{locale}}" style="" href="{{ h.url_for(controller='util', action='redirect') }}?url={{ h.url_for(current_url, locale=locale) }}" >
-                        {{ locale.display_name or locale.english_name }}
+                       {%if locale == 'en'%}
+                            English
+                       {%else%}
+                            Slovensky
+                       {%endif%}
                     </a>
                   {% endif %}
                   {% endfor %}

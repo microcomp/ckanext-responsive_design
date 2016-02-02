@@ -938,7 +938,7 @@ padding-right:45px;
 
     content: "";  
     position: absolute; 
-    left: -22px; top: 0;
+    left: -21px; top: 0;
     border-top: 38px solid transparent;
     border-bottom: 35px solid transparent;
 
@@ -2125,4 +2125,10 @@ border-top: 1px solid #5f5247;
 .hero.search {
     background-color: #f9f9f9;
     height: 115px;
+}
+@media(max-width: 768px){
+#content > div.row.row1 > div.wrapper > div > div.module-content > table, .table-bordere{
+    color: #000 !important;
+    background-color: #fff !important;
+}
 }

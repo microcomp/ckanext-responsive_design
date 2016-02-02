@@ -69,8 +69,10 @@ def get_urls(text):
                        'url':config.get(text+i+'.url'), 
                        'role':[x.strip() for x in config.get(text+i+'.privilege').split(',')], 
                        'popis':config.get(text+i+'.title').decode('utf8')})
-
-    result = [x for x in result if HR(user_roles, x['role'])]
+    sys = False
+    if c.userobj and c.userobj.sysadmin:
+        sys = True
+    result = [x for x in result if (HR(user_roles, x['role']) or sys)]
     result2 = []
     for i in result:
         if i['url'][0] == '*':

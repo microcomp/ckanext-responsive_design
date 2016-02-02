@@ -6,3 +6,14 @@ font-size:0.875em;
 .primary.span9.no-right-menu {
 float:left;
 }
+.row.row1.no-nav > .module > .module-content li {
+font-size: 0.875em;
+font-weight: 400;
+}
+
+.highlight {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 5%;
+    margin-top: 40px;
+}

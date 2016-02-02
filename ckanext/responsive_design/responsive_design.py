@@ -14,4 +14,6 @@ class ResponsiveDesign(BaseController):
         return render('sitemap/index.html')
     def published_services(self, context=None):
         return render('published_services/index.html')
+    def tools(self, context=None):
+        return render('tools/index.html')
     

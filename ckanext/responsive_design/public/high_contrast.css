@@ -2127,3 +2127,9 @@ border-top: 1px solid #241b14;
     height: 115px;
 }
 
+@media(max-width: 768px){
+#content > div.row.row1 > div.wrapper > div > div.module-content > table, .table-bordere{
+    color: #000 !important;
+    background-color: #fff !important;
+}
+}

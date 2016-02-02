@@ -26,6 +26,9 @@ class ResponsiveDesign(plugins.SingletonPlugin):
         map.connect('sitemap', '/sitemap',
             controller='ckanext.responsive_design.responsive_design:ResponsiveDesign',
             action='index')
+        map.connect('tools', '/tools',
+            controller='ckanext.responsive_design.responsive_design:ResponsiveDesign',
+            action='tools')
         map.connect('published-services', '/published-services',
             controller='ckanext.responsive_design.responsive_design:ResponsiveDesign',
             action='published_services')
