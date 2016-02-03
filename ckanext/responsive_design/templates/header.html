@@ -143,13 +143,13 @@ function change_style(){
     style.href = "/screen.css"; 
     var d = new Date();
     d.setTime(d.getTime() + (24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
+    var expires = "expires="+d.toUTCString()+"; path=/;";
     document.cookie = "contrast=normal;"+ expires; 
   }else { 
     style.href = "/high_contrast.css";
     var d = new Date();
     d.setTime(d.getTime() + (24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
+    var expires = "expires="+d.toUTCString()+"; path=/;";
     document.cookie = "contrast=high;"+ expires;
   }
 
