@@ -1311,9 +1311,10 @@ padding-right:45px;
 }
 
 @media (max-width: 767px) {
+
     #content > div.row.row1 > div.wrapper > div > article > div > form > fieldset > div > label > a,
     #content > div.row.row1 > section{
-        display: none;
+        /*display: none;*/
     }
     #content > div.row.row1 > div.wrapper > div > div > table > tbody > tr > td > a, .show-more, .show-less{
         color: #fff;
@@ -1732,6 +1733,7 @@ text-align: right;
         color: #fff;
     }
     #content > div.row.row1 > div.wrapper > div > article > div > h1{ color: #000;}
+    .contact_us{ color:#fff !important;}
 }
 @media(max-width: 575px){
     .box2 {
@@ -1755,7 +1757,6 @@ height:52px;
 
 #home_menu > li{
 margin-right:2px;
-
 }
 #home_menu >li > a {
 padding-top:12px;
@@ -2127,8 +2128,14 @@ border-top: 1px solid #5f5247;
     height: 115px;
 }
 @media(max-width: 768px){
-#content > div.row.row1 > div.wrapper > div > div.module-content > table, .table-bordere{
+#content > div.row.row1 > div.wrapper > div > div.module-content > table, .table-bordere,
+#content > div.row.row1 > div.wrapper > div > div.module-content > table > tbody > tr > td > a,
+#content > div.row.row1 > div.wrapper > div > div.module-content > table > tbody > tr > td > small > a{
     color: #000 !important;
     background-color: #fff !important;
 }
+}
+.image > a > img{
+    background-color: #fff;
+
 }
