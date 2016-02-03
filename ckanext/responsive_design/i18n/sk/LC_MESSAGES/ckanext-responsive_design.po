@@ -320,3 +320,15 @@ msgstr[2] " Používateľov"
 #: ckanext/responsive_design/templates/snippets/orgs_snippet.html:1
 msgid "Most active organizations"
 msgstr "Organizácie s najväčším počtom Datasetov"
+
+#: ckanext/responsive_design/templates/snippets/facet_list.html:26
+msgid "Show More Tags"
+msgstr "Ukázať viac Tagov"
+
+#: ckanext/responsive_design/templates/snippets/facet_list.html:28
+msgid "Show More Organizations"
+msgstr "Ukázať viac Organizácií"
+
+#: ckanext/responsive_design/templates/snippets/facet_list.html:30
+msgid "Show More Formats"
+msgstr "Ukázať viac Formátov"

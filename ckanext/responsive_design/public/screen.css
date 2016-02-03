@@ -1734,6 +1734,9 @@ text-align: right;
     }
     #content > div.row.row1 > div.wrapper > div > article > div > h1{ color: #000;}
     .contact_us{ color:#fff !important;}
+    #dataset-map{
+        display: none;
+    }
 }
 @media(max-width: 575px){
     .box2 {

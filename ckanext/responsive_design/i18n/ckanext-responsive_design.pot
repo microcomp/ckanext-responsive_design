@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-responsive_design 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-01-20 10:09+0100\n"
+"POT-Creation-Date: 2016-02-03 10:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
 
-#: ckanext/responsive_design/templates/base.html:182
+#: ckanext/responsive_design/templates/base.html:185
 msgid "Hide"
 msgstr ""
 
-#: ckanext/responsive_design/templates/base.html:202
-#: ckanext/responsive_design/templates/base.html:213
+#: ckanext/responsive_design/templates/base.html:205
+#: ckanext/responsive_design/templates/base.html:216
 msgid "Show"
 msgstr ""
 
 #: ckanext/responsive_design/templates/footer.html:6
+#: ckanext/responsive_design/templates/sitemap/index.html:24
 msgid "About this site"
 msgstr ""
 
@@ -44,6 +45,10 @@ msgid "Dictionary"
 msgstr ""
 
 #: ckanext/responsive_design/templates/footer.html:14
+#: ckanext/responsive_design/templates/sitemap/index.html:2
+#: ckanext/responsive_design/templates/sitemap/index.html:4
+#: ckanext/responsive_design/templates/sitemap/index.html:15
+#: ckanext/responsive_design/templates/sitemap/index.html:26
 msgid "Site map"
 msgstr ""
 
@@ -56,6 +61,10 @@ msgid "Accessibility statement"
 msgstr ""
 
 #: ckanext/responsive_design/templates/footer.html:21
+msgid "Last updated"
+msgstr ""
+
+#: ckanext/responsive_design/templates/footer.html:21
 msgid "Information published at www.slovensko.sk are not legally binding."
 msgstr ""
 
@@ -63,46 +72,36 @@ msgstr ""
 msgid "Provider and webmaster of the portal is"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:83
+#: ckanext/responsive_design/templates/header.html:166
 msgid "Change the contrast"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:84
+#: ckanext/responsive_design/templates/header.html:167
+#: ckanext/responsive_design/templates/sitemap/index.html:17
 msgid "Home"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:85
+#: ckanext/responsive_design/templates/header.html:168
 msgid "About us"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:86
+#: ckanext/responsive_design/templates/header.html:169
 msgid "Help"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:87
+#: ckanext/responsive_design/templates/header.html:170
 msgid "Contact"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:114
-msgid "Search Datasets"
-msgstr ""
-
-#: ckanext/responsive_design/templates/header.html:115
-#: ckanext/responsive_design/templates/home/index.html:14
-#: ckanext/responsive_design/templates/home/index.html:15
-#: ckanext/responsive_design/templates/home/snippets/search.html:12
-msgid "Search"
-msgstr ""
-
-#: ckanext/responsive_design/templates/header.html:147
+#: ckanext/responsive_design/templates/header.html:228
 msgid "Account info"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:148
+#: ckanext/responsive_design/templates/header.html:229
 msgid "Log in"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:150
+#: ckanext/responsive_design/templates/header.html:231
 msgid "Register"
 msgstr ""
 
@@ -120,59 +119,42 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/index.html:21
-#: ckanext/responsive_design/templates/home/snippets/search.html:17
+#: ckanext/responsive_design/templates/home/index.html:14
+#: ckanext/responsive_design/templates/home/index.html:15
+#: ckanext/responsive_design/templates/home/index.html:16
+#: ckanext/responsive_design/templates/home/snippets/search2.html:12
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:12
+msgid "Search"
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/index.html:22
+#: ckanext/responsive_design/templates/home/snippets/search2.html:17
 msgid "Popular tags"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/index.html:68
+#: ckanext/responsive_design/templates/home/index.html:69
+#: ckanext/responsive_design/templates/home/index.html:77
 msgid "News"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/index.html:69
+#: ckanext/responsive_design/templates/home/index.html:70
 msgid "Statistics"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/about_text.html:2
-msgid ""
-"\n"
-"<p>CKAN is the world’s leading open-source data portal platform.</p>\n"
-"\n"
-"<p>CKAN is a complete out-of-the-box software solution that makes data\n"
-"accessible and usable – by providing tools to streamline publishing, sharing,"
-"\n"
-"finding and using data (including storage of data and provision of robust "
-"data\n"
-"APIs). CKAN is aimed at data publishers (national and regional governments,\n"
-"companies and organizations) wanting to make their data open and "
-"available.</p>\n"
-"\n"
-"<p>CKAN is used by governments and user groups worldwide and powers a variety"
-"\n"
-"of official and community data portals including portals for local, national\n"
-"and international government, such as the UK’s <a "
-"href=\"http://data.gov.uk\">data.gov.uk</a> and the\n"
-"European Union’s <a href=\"http://publicdata.eu/\">publicdata.eu</a>, the "
-"Brazilian <a href=\"http://dados.gov.br/\">dados.gov.br</a>, Dutch and\n"
-"Netherland government portals, as well as city and municipal sites in the US,"
-"\n"
-"UK, Argentina, Finland and elsewhere.</p>\n"
-"\n"
-"<p>CKAN: <a href=\"http://ckan.org/\">http://ckan.org/</a><br />\n"
-"CKAN Tour: <a href=\"http://ckan.org/tour/\">http://ckan.org/tour/</a><br />\n"
-"Features overview: <a "
-"href=\"http://ckan.org/features/\">http://ckan.org/features/</a></p>\n"
+#: ckanext/responsive_design/templates/home/snippets/orgs_snippet.html:2
+msgid "Most active organizations"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/orgs_snippet.html:10
-#, python-format
-msgid "%(count)s dataset"
-msgid_plural "%(count)s datasets"
+#: ckanext/responsive_design/templates/home/snippets/orgs_snippet.html:15
+#: ckanext/responsive_design/templates/home/snippets/stats.html:19
+msgid " Dataset"
+msgid_plural " Datasets"
 msgstr[0] ""
 msgstr[1] ""
 
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:4
-#: ckanext/responsive_design/templates/home/snippets/stats.html:18
+#: ckanext/responsive_design/templates/home/snippets/stats.html:17
+#: ckanext/responsive_design/templates/sitemap/index.html:20
 msgid "Datasets"
 msgstr ""
 
@@ -183,31 +165,40 @@ msgstr ""
 
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:10
 #: ckanext/responsive_design/templates/home/snippets/stats.html:12
+#: ckanext/responsive_design/templates/sitemap/index.html:21
 msgid "Applications"
 msgstr ""
 
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:12
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:13
-msgid "Instruments"
+#: ckanext/responsive_design/templates/sitemap/index.html:23
+#: ckanext/responsive_design/templates/tools/index.html:2
+#: ckanext/responsive_design/templates/tools/index.html:4
+#: ckanext/responsive_design/templates/tools/index.html:19
+msgid "Tools"
 msgstr ""
 
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:20
+#: ckanext/responsive_design/templates/published_services/index.html:2
+#: ckanext/responsive_design/templates/published_services/index.html:4
+#: ckanext/responsive_design/templates/published_services/index.html:19
 msgid "Services"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/right_menu.html:37
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:35
 msgid "Useful links"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/right_menu.html:52
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:50
 msgid "Portal Your Europe"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/search.html:3
+#: ckanext/responsive_design/templates/home/snippets/search2.html:3
 msgid "E.g. environment"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/search.html:7
+#: ckanext/responsive_design/templates/home/snippets/search2.html:7
+#: ckanext/responsive_design/templates/home/snippets/search2.html:9
 msgid "Search data"
 msgstr ""
 
@@ -223,32 +214,18 @@ msgid_plural " Applications"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ckanext/responsive_design/templates/home/snippets/stats.html:20
-msgid " Dataset"
-msgid_plural " Datasets"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ckanext/responsive_design/templates/home/snippets/stats.html:25
+#: ckanext/responsive_design/templates/home/snippets/stats.html:24
 msgid "Users"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/stats.html:26
+#: ckanext/responsive_design/templates/home/snippets/stats.html:25
 msgid " User"
 msgid_plural " Users"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ckanext/responsive_design/templates/home/snippets/uvod_snippet.html:9
-msgid "Welcome to CKAN"
-msgstr ""
-
-#: ckanext/responsive_design/templates/home/snippets/uvod_snippet.html:11
-msgid ""
-"This is a nice introductory paragraph about CKAN or the site\n"
-"                in general. We don't have any copy to go here yet but soon we"
-" will\n"
-"                "
+#: ckanext/responsive_design/templates/organization/index.html:3
+msgid "Search organizations..."
 msgstr ""
 
 #: ckanext/responsive_design/templates/package/resource_read.html:4
@@ -271,6 +248,38 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
+#: ckanext/responsive_design/templates/sitemap/index.html:22
+msgid "Organization"
+msgstr ""
+
+#: ckanext/responsive_design/templates/sitemap/index.html:25
+msgid "RSS"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/facet_list.html:26
+msgid "Show More Tags"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/facet_list.html:28
+msgid "Show More Organizations"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/facet_list.html:30
+msgid "Show More Formats"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/facet_list.html:32
+msgid "Show More {facet_type}"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/facet_list.html:37
+msgid "Show Only Popular {facet_type}"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/facet_list.html:41
+msgid "There are no {facet_type} that match this search"
+msgstr ""
+
 #: ckanext/responsive_design/templates/snippets/license_secure.html:4
 msgid "License"
 msgstr ""
@@ -283,6 +292,46 @@ msgstr ""
 msgid "No License Provided"
 msgstr ""
 
-#: ckanext/responsive_design/templates/snippets/orgs_snippet.html:1
-msgid "Most active organizations"
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:3
+msgid "Search datasets..."
 msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:4
+msgid "Name Ascending"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:4
+msgid "Name Descending"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:16
+msgid "Submit"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:30
+msgid "Order by"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:38
+msgid "Go"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:62
+msgid "Remove"
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:73
+msgid ""
+"\n"
+"    <p class=\"extra\">Please try another search.</p>\n"
+"  "
+msgstr ""
+
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:79
+msgid ""
+"\n"
+"    <p><strong>There was an error while searching.</strong> Please try "
+"again.</p>\n"
+"  "
+msgstr ""
+
