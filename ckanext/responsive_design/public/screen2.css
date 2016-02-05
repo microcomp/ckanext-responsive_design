@@ -18,18 +18,22 @@ font-weight: 400;
     margin-top: 40px;
 }
 .media-item img.media-image {
-max-height:150px;
-max-width:90%;
+    max-height: 150px;
+    max-width: 90%;
     left: 0;
     margin: auto;
     position: absolute;
     right: 0;
     text-align: left;
     width: auto;
+    bottom: 0;
+    top: 0;
 }
 li.media-item.masonry-brick > h3.media-heading {
 
 }
-.media-item.masonry-brick > div {
+.media-item.masonry-brick > div, #content > div.row.row1 > div.wrapper > div > article > div > ul > li > div {
     height: 50%;
+    display: block;
+    position: relative;
 }

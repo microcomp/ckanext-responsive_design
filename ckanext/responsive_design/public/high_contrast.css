@@ -1877,6 +1877,22 @@ font-weight:400;
 .dataset-item {border-bottom: 2px solid #d4d4d4;}
 
 .dataset-item { position: relative; } 
+@media(max-width: 770px){
+    .dataset-item{
+        background-color: #fff !important;
+        padding: 1em;
+    }
+    .organization_about > h1, .organization_about > p, .organization_about > h3, .apps_title{
+        color: #fff !important;
+    }
+    #content > div.row.row1 > div.wrapper > div > article > div > ul{
+        background-color: #fff;
+        padding: 0.5em;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+    }
+
+}
 
 .dataset-item:hover{
 border-bottom:2px solid #bd0a26;

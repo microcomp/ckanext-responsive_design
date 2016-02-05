@@ -1,0 +1,15 @@
+{% ckan_extends %}
+
+
+{% block primary_content_inner %}
+<div class="organization_about">
+  <h1>{% block page_heading %}{{ c.group_dict.display_name }}{% endblock %}</h1>
+  {% block organization_description %}
+    {% if c.group_dict.description %}
+      {{ h.render_markdown(c.group_dict.description) }}
+    {% endif %}
+  {% endblock %}
+  {% block organization_extras %}
+  {% endblock %}
+ </div>
+{% endblock %}

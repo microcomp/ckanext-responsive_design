@@ -4,7 +4,9 @@
    <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" class="media-image">
 </div>
 {% endblock %}
-
+  {% block title %}
+   <h3 class="media-heading">{{ h.truncate(organization.display_name, 57) }}</h3>
+  {% endblock %}
 {% block description %}
 
 {% endblock %}
