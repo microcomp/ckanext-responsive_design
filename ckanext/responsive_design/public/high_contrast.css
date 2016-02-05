@@ -1724,10 +1724,36 @@ text-align: right;
         background: #e84710;
     }
 }
+@media(max-width: 321px){
+.hero.search {
+    height: 165px !important;
+}
+}
+@media(max-width: 655px){
+    #crumbs > div > div > a{
+        background-image: none !important;
+    }
+}
+@media(max-width: 506px){
+    #crumbs > div > div > a {
+        text-align: right;
+        padding: 25px 18px 25px 19px;
+        padding-right: auto;
+        position: relative;
+        margin: 0px 0px 0px 0;
+        font-size: 1.0em;
+        line-height: 20px;
+        text-decoration: none;
+        color: #fff;
+        -webkit-box-shadow: -10px 9px 20px 0px rgba(12,12,12,0.72);
+        -moz-box-shadow: -10px 9px 20px 0px rgba(12,12,12,0.72);
+        box-shadow: -10px 9px 20px 0px rgba(12,12,12,0.72);
+    }
+}
 @media(max-width: 770px){
     #notices > div > img{ display: none; }
     #notices > div > ul{ width: 100%;}
-    #notices { height: 390px; }
+    #notices { height: 480px; }
     #content > div.row.row1 > div.wrapper > div > article > div > h1, 
     #content > div.row.row1 > div.wrapper > div > article > div > form > h2{
         color: #fff;
