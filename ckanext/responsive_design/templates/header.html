@@ -2,12 +2,12 @@
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-<link rel="stylesheet" type="text/css"  href="/screen.css" property='stylesheet'>
-<link rel="stylesheet" type="text/css" id="contrast" href="/screenx.css" property='stylesheet'>
-<link rel="stylesheet" type="text/css" href="/screen2.css" property='stylesheet'>
+<link rel="stylesheet" type="text/css"  href="/screen.css?{{h.css_cache_helper()}}" property='stylesheet'>
+<link rel="stylesheet" type="text/css" id="contrast" href="/screen2.css" property='stylesheet'>
+<link rel="stylesheet" type="text/css" href="/screen2.css?{{h.css_cache_helper()}}" property='stylesheet'>
 {%if c.userobj and c.action != 'resource_read' %}
 <style type="text/css">
-@media(min-width: 768px){
+@media(min-width: 771px){
 #content > div.row.row2 > div.span3.col2 {
     margin-top: -161px !important;
 }
@@ -21,12 +21,12 @@ margin-top: -84px !important;
 </style>
 {%elif c.userobj and c.action == 'resource_read'%}
 <style type="text/css">
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 771px) and (max-width: 1200px) {
     #content > div.row.row1 > div.wrapper > div {
     width: 42%;
     margin-right: 250px;
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 771px) and (max-width: 1200px) {
     #content > div.row.row1 > section, #content > div.toolbar > ol{
       width: 65%
     }
@@ -34,12 +34,12 @@ margin-top: -84px !important;
       margin-top: -140px !important;
     }
 }
-@media(max-width: 768px){
+@media(max-width: 771px){
   #content > div.row.row1 > section, .module.module-resource{
     display: none !important;
     }
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 771px) and (max-width: 1200px) {
     #content > div.row.row1 > div.wrapper > div {
     width: 42%;
     margin-right: 250px;
@@ -50,12 +50,12 @@ margin-top: -84px !important;
 #content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {
     margin-top: -405px !important;
 }
-@media(max-width: 768px){
+@media(max-width: 771px){
   #content > div.row.row1 > section, .module.module-resource{
     display: none !important;
     }
   }
-  @media (min-width: 768px) and (max-width: 1200px) {
+  @media (min-width: 771px) and (max-width: 1200px) {
     #content > div.row.row1 > div.wrapper > div {
     width: 42%;
     margin-right: 250px;
@@ -66,7 +66,7 @@ margin-top: -84px !important;
 
 {%if c.controller == 'home' and c.action == 'index' %}
 <style type="text/css">
-@media(max-width: 768px){
+@media(max-width: 771px){
     #long_boxes, #big_box{
       display: block !important;
     }
@@ -74,7 +74,7 @@ margin-top: -84px !important;
 </style>
 {%else%}
 <style type="text/css">
-@media(max-width: 768px){
+@media(max-width: 771px){
     #long_boxes, #big_box{
       display: none !important;
     }

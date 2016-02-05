@@ -17,3 +17,19 @@ font-weight: 400;
     margin-left: 5%;
     margin-top: 40px;
 }
+.media-item img.media-image {
+max-height:150px;
+max-width:90%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    width: auto;
+}
+li.media-item.masonry-brick > h3.media-heading {
+
+}
+.media-item.masonry-brick > div {
+    height: 50%;
+}

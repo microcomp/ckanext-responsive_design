@@ -43,5 +43,6 @@ class ResponsiveDesign(plugins.SingletonPlugin):
                 'raw_packages_by_week': helpers.raw_packages_by_week,
                 'userCountHelper': helpers.userCountHelper,
                 'biggest_orgs':helpers.biggest_orgs,
-                'public_apps':helpers.public_apps}
+                'public_apps':helpers.public_apps,
+                'css_cache_helper': helpers.css_cache_helper}
 

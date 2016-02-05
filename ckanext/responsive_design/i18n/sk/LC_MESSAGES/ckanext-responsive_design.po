@@ -332,3 +332,6 @@ msgstr "Ukázať viac Organizácií"
 #: ckanext/responsive_design/templates/snippets/facet_list.html:30
 msgid "Show More Formats"
 msgstr "Ukázať viac Formátov"
+
+msgid "Notice for obliged entities"
+msgstr "Upozornenie pre povinné osoby"

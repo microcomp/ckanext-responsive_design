@@ -82,7 +82,7 @@ $('#home_menu a').click(function (e) {
                       <li> <a href="{{h.url_for(controller='package', action='read', id=i['url'] )}}" title='{{i["title"]}}'>{{i["title"]}}</a></li>
                   {%endfor%}
                 </ul>
- <div class="highlight"><a href="#announcement">Upozornenie pre povinné osoby</a></div>
+ <div class="highlight"><a href="#announcement">{{_('Notice for obliged entities')}}!</a></div>
           </div>
     </div>
 

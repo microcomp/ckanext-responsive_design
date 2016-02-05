@@ -8,6 +8,10 @@ import ckan.plugins.toolkit as toolkit
 from pylons import config, session
 cache_enabled = False
 import datetime
+def css_cache_helper():
+    date = datetime.datetime.now()
+    result = "version={}".format("1.0")
+    return result 
 
 def table(name):
     return Table(name, model.meta.metadata, autoload=True)

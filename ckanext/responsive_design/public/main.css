@@ -4756,7 +4756,7 @@ a.badge:focus {
 .visible-desktop {
   display: inherit !important;
 }
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 771px) and (max-width: 979px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -4770,7 +4770,7 @@ a.badge:focus {
     display: none !important;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 770px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -4795,7 +4795,7 @@ a.badge:focus {
     display: none !important;
   }
 }
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 771px) and (max-width: 979px) {
   .row {
     margin-left: -20px;
     *zoom: 1;
@@ -5141,7 +5141,7 @@ a.badge:focus {
     width: 28px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 770px) {
   body {
     padding-left: 20px;
     padding-right: 20px;
@@ -5590,7 +5590,7 @@ a.tag:hover {
   padding: 0 25px;
   margin: 20px 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .span9 div.module-content {
     padding-left: 10px;
   }
@@ -5858,7 +5858,7 @@ a.tag:hover {
 .media-grid:after {
   clear: both;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .media-grid {
     margin-left: -27px;
   }
@@ -6061,7 +6061,7 @@ a.tag:hover {
   color: #ffffff;
   background-color: #8ca0a6;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .nav-item.active > a:before,
   .nav-aside li.active a:before {
     border-left: 7px solid #8ca0a6;
@@ -6272,7 +6272,7 @@ textarea {
 .control-medium textarea {
   width: 320px;
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .control-medium input,
   .control-medium select,
   .control-medium textarea {
@@ -6310,7 +6310,7 @@ textarea {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .form-actions {
     text-align: right;
   }
@@ -6321,7 +6321,7 @@ textarea {
   color: #707070;
   margin: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .form-actions .action-info {
     float: left;
     width: 50%;
@@ -6331,7 +6331,7 @@ textarea {
   font-size: 0.74em;
   line-height: 1.2;
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .form-actions .btn {
     margin-top: 5px;
   }
@@ -6339,7 +6339,7 @@ textarea {
 .form-horizontal .control-label {
   width: 120px;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .form-horizontal .controls {
     margin-left: 130px;
   }
@@ -6481,7 +6481,7 @@ textarea {
   color: #187794;
   text-decoration: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   [data-module="custom-fields"] .input-prepend .add-on {
     display: block;
   }
@@ -6758,7 +6758,7 @@ textarea {
   line-height: 27px;
   z-index: -1;
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .stages li .highlight {
     text-indent: -9999px;
   }
@@ -6956,7 +6956,7 @@ textarea {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .dataset-item {
     word-wrap: break-word;
   }
@@ -7037,7 +7037,7 @@ textarea {
   top: 14px;
   right: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .resource-item .btn-group {
     display: none;
   }
@@ -7449,7 +7449,7 @@ textarea {
 .toolbar .breadcrumb a {
   color: #505050;
 }
-@media (max-width: 767px) {
+@media (max-width: 770px) {
   .toolbar .breadcrumb {
     color: #fff;
     text-shadow: none;
@@ -7529,12 +7529,12 @@ textarea {
 .nav-tabs-plain > .active > a:hover {
   background-color: #ffffff;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .span9 .page-header {
     margin-left: -17px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .page-header .nav-tabs {
     margin: 5px 10px 10px -5px;
     border: none;
@@ -7972,7 +7972,7 @@ h4 small {
 .wrapper:after {
   clear: both;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .wrapper {
     background-image: url("../../../base/images/nav.png");
     background-repeat: repeat-y;
@@ -8018,7 +8018,7 @@ h4 small {
 .hide-filters {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .wrapper {
     /*margin: 0 -20px;*/
     border-width: 0;
@@ -8314,7 +8314,7 @@ h4 small {
 .homepage.layout-2 .stats {
   margin-top: 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .homepage [role=main] {
     padding: 20px 0;
   }
@@ -8526,7 +8526,7 @@ h4 small {
     float: right;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 770px) {
   .account-masthead {
     margin-left: -20px;
     margin-right: -20px;

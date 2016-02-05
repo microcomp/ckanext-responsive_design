@@ -1,5 +1,5 @@
 
-@media (min-width: 767px) {
+@media (min-width: 770px) {
     body > header.navbar.navbar-static-top.masthead > div.container{
         background-color: #000;
         color: white;
@@ -33,12 +33,12 @@
         display: none;
     }
     }
-@media (min-width: 767px) and (max-width: 970px) {
+@media (min-width: 770px) and (max-width: 970px) {
     body > header.navbar.navbar-static-top.masthead > div.container{
         width: 97% !important;  
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 770px) {
 
 
     body > div.hero > div > div.module.module-search.module-narrow.module-shallow.box > form > button
@@ -1222,7 +1222,7 @@ padding-right:45px;
      }
 }
 
-@media (max-width: 979px) and (min-width: 767px){
+@media (max-width: 979px) and (min-width: 770px){
     #upper_menu{
         height: 215px;
         padding: 5px;
@@ -1310,7 +1310,7 @@ padding-right:45px;
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 770px) {
 
     #content > div.row.row1 > div.wrapper > div > article > div > form > fieldset > div > label > a,
     #content > div.row.row1 > section{
@@ -1655,7 +1655,7 @@ text-align: right;
     border-bottom: none;
     margin-bottom: 20px;
 }
-@media (max-width: 979px) and (min-width: 767px){
+@media (max-width: 979px) and (min-width: 770px){
     #content2 > div > div.span3.col1.mini_boxes{
         width: 240px;
         float: right;
@@ -1671,7 +1671,7 @@ text-align: right;
         background-size: 200px auto;
     }
 }
-@media (max-width: 767px){
+@media (max-width: 770px){
     #header #helpNavigation .inner {
         height: 50px;
         background-image: url(/icons_slov.png);
@@ -1724,7 +1724,7 @@ text-align: right;
         background: #e84710;
     }
 }
-@media(max-width: 767px){
+@media(max-width: 770px){
     #notices > div > img{ display: none; }
     #notices > div > ul{ width: 100%;}
     #notices { height: 390px; }
@@ -1983,7 +1983,7 @@ text-align:left;
 color:#bd0a26;
 } 
 
-@media (max-width: 767px) {
+@media (max-width: 770px) {
 #loginPanel, #top_user_box >div.span3 >div.account_box {
 display:none;
 }
@@ -2011,7 +2011,7 @@ margin-bottom:0px;
 text-align:center;
 }
 }
-@media(min-width: 767px){
+@media(min-width: 770px){
     .container {
         width:95%;
 
@@ -2021,7 +2021,7 @@ text-align:center;
 max-width:200px !important;
 font-size:0.875em !important;
 }
-@media(min-width: 767px){
+@media(min-width: 770px){
     section.module.module-resource {
         float:left;
     }

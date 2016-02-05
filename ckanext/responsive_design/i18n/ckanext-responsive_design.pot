@@ -335,3 +335,6 @@ msgid ""
 "  "
 msgstr ""
 
+msgid "Notice for obliged entities"
+msgstr ""
+

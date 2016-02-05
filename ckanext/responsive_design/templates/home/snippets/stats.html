@@ -21,7 +21,7 @@
         </a>
     </div>        
      <div>
-        <a class="orange" href="{{ h.url_for(controller='organization', action='index') }}" title="{{_('Users')}}">
+        <a class="orange" href="{{ h.url_for(controller='user', action='index') }}" title="{{_('Users')}}">
           {% set usr = ungettext(' User', ' Users', h.userCountHelper()).format(num=h.userCountHelper()) %}
           <strong>{{ h.SI_number_span(h.userCountHelper()) }}</strong><span>  {{ usr }} </span>
         </a>
