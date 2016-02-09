@@ -35,11 +35,8 @@
 </div>
   <div role="main" class="hero">
     <div id="content" class="container">
-          <noscript>
-              <div class="alert alert-error" role="alert" style="max-width: 70%;">
-                 {{_("We're sorry, but thi page doesn't work properly without JavaScript enabled.")}}
-              </div>
-          </noscript>
+       
+          <noscript><div class="alert alert-error" role="alert" style="max-width: 70%;">{{_("We're sorry, but thi page doesn't work properly without JavaScript enabled.")}}</div></noscript> 
       {{ self.flash() }}
       {{ self.primary_content() }}
     </div>
