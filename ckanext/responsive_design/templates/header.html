@@ -166,7 +166,7 @@ function change_style(){
                 <li class="hidden-phone contrastVersion"><a href="#" onclick="change_style()" title="{{_('Change the contrast')}}"  class="contrast_icon" > {{_('Change the contrast')}}</a></li>
                 <li class="hidden-phone"><a href="{{h.url_for('home')}}" title="{{_('Home')}}" >{{_('Home')}}</a></li>
                 <li class="hidden-phone"><a href="{{h.url_for(controller='home', action='about')}}" title="{{_('About us')}}" >{{_('About us')}}</a></li>
-                <li class="hidden-phone"><a href="https://www.slovensko.sk/sk/pomoc" title="{{_('Help')}}" >{{_('Help')}}</a></li>
+                <li class="hidden-phone"><a href="https://www.slovensko.sk/sk/pomoc" title="{{_('Help')}} {{_('Warning! This hyperlink will open in a new window or tab (depending on which web browser they are using and how they configured that browser).')}}" >{{_('Help')}}</a></li>
                 <li class="mobileVersion"><a href="{{h.url_for(controller='ckanext.contact_us.controller:ContactUsController', action='index')}}" title="{{_('Contact')}}" >{{_('Contact')}}</a></li>
                  <li class="hidden-phone lang">
                     {% set current_url = request.environ.CKAN_CURRENT_URL %}
@@ -206,7 +206,7 @@ function change_style(){
   <div id="content2" class="container" >
   <div class="row row1" id="top_user_box">
     <div class="span11 col1">
-      <a href="{{h.url_for('home')}}" class="full_size"> <img id="header_logo" src="/logo.png" alt="logo"> </a>
+      <a href="{{h.url_for('home')}}" class="full_size"> <img id="header_logo" src="/logo.png" alt=""> </a>
     </div>
 
     <div class="span3 col1 mini_boxes" style="z-index: 999; position: relative">

@@ -1096,7 +1096,7 @@ padding-right:45px;
 }
 .green_menubox{
     color: #fff;
-    background-color: #93c01d;
+    background-color: #507200;
     width: 105px;
     height: 105px;
 }
@@ -1120,7 +1120,7 @@ padding-right:45px;
 }
 
 .green_menubox:hover{
-    background-color: rgb(115, 150, 25);
+    background-color: #507200;
     color: #fff;
     text-decoration: none;
 }
@@ -1718,7 +1718,7 @@ text-align: right;
         background: #b81824;
     }
     #crumbs > div > div >a.green {
-        background: #93bf20;
+        background: #507200;
     }
     #crumbs > div > div> a.orange {
         background: #e84710;
@@ -2173,4 +2173,27 @@ border-top: 1px solid #241b14;
 #content > div.flash-messages > div, .alert-info {
     color: #000;
     background-color: #fff;
+}
+#content > div.row.row1 > div.wrapper > aside > div.module.module-narrow.module-shallow.context-info > section > p > a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+input::-webkit-input-placeholder {
+    color: #000;
+}
+
+input:-ms-input-placeholder {
+    color: #000;
+}
+
+input::-moz-placeholder {
+    color: #000;
+}
+.empty{
+    color: #000;
+}
+#content > div.row.row1 > div.wrapper > aside > section > div > ul > p{ color: #fff;}
+.pill{
+    background-color: #222;
 }

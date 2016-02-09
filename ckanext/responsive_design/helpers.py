@@ -8,6 +8,9 @@ import ckan.plugins.toolkit as toolkit
 from pylons import config, session
 cache_enabled = False
 import datetime
+_VALID_GRAVATAR_DEFAULTS = ['404', 'mm', 'identicon', 'monsterid',
+                            'wavatar', 'retro']
+from webhelpers.html import escape, HTML, literal, url_escape
 def css_cache_helper():
     date = datetime.datetime.now()
     result = "version={}".format("1.0")
@@ -140,18 +143,25 @@ def recent_datasets(ll=5):
         result.append({'title':title, 'text': notes, 'url':i['name'], 'resources': res })
     return result
 
-def gravatar(email_hash, size=100, default=None):
-    if default is None:
-        default = config.get('ckan.gravatar_default', 'identicon')
+def gravatar_add_alt(inp):
+    return literal('class="gravatar" alt=""'.join(inp.split('class="gravatar"')))
 
-    if not default in _VALID_GRAVATAR_DEFAULTS:
-        # treat the default as a url
-        default = urllib.quote(default, safe='')
-
-    return literal('''<img src="//gravatar.com/avatar/%s?s=%d&amp;d=%s"
-        class="gravatar" width="%s" height="%s" alt="user gravatar"/>'''
-                   % (email_hash, size, default, size, size)
-                   )
+def linked_user(user, maxlength=0, avatar=20):
+    if user in [model.PSEUDO_USER__LOGGED_IN, model.PSEUDO_USER__VISITOR]:
+        return user
+    if not isinstance(user, model.User):
+        user_name = unicode(user)
+        user = model.User.get(user_name)
+        if not user:
+            return user_name
+    if user:
+        name = user.name if model.User.VALID_NAME.match(user.name) else user.id
+        icon = gravatar(email_hash=user.email_hash, size=avatar)
+        displayname = user.display_name
+        if maxlength and len(user.display_name) > maxlength:
+            displayname = displayname[:maxlength] + '...'
+        return icon + u' ' + link_to(displayname,
+                                     url_for(controller='user', action='read', id=name))
 
 class RevisionStats(object):
     @classmethod

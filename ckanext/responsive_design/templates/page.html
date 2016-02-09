@@ -2,7 +2,7 @@
 {% block page %}
 
   {% block skip %}
-    <div class="hide"><a href="#content">{{ _('Skip to content') }}</a></div>
+    <!--div class="hide"><a href="#content">{{ _('Skip to content') }}</a></div!-->
   {% endblock %}
 
   
@@ -13,9 +13,12 @@
   
   {% block content %}
     {% block maintag %}<div role="main">{% endblock %}
+
+
       <div id="content" class="container">
 
         {% block main_content %}
+
           {% block flash %}
             <div class="flash-messages">
               {% block flash_inner %}
