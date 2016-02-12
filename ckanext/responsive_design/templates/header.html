@@ -166,7 +166,7 @@ function change_style(){
                 <li class="hidden-phone contrastVersion"><a href="#" onclick="change_style()" title="{{_('Change the contrast')}}"  class="contrast_icon" > {{_('Change the contrast')}}</a></li>
                 <li class="hidden-phone"><a href="{{h.url_for('home')}}" title="{{_('Home')}}" >{{_('Home')}}</a></li>
                 <li class="hidden-phone"><a href="{{h.url_for(controller='home', action='about')}}" title="{{_('About us')}}" >{{_('About us')}}</a></li>
-                <li class="hidden-phone"><a href="https://www.slovensko.sk/sk/pomoc" title="{{_('Help')}} {{_('Warning! This hyperlink will open in a new window or tab (depending on which web browser they are using and how they configured that browser).')}}" >{{_('Help')}}</a></li>
+                <li class="hidden-phone"><a href="https://www.slovensko.sk/sk/pomoc" title="{{_('Help')}} {{_('-in new window')}}" >{{_('Help')}}</a></li>
                 <li class="mobileVersion"><a href="{{h.url_for(controller='ckanext.contact_us.controller:ContactUsController', action='index')}}" title="{{_('Contact')}}" >{{_('Contact')}}</a></li>
                  <li class="hidden-phone lang">
                     {% set current_url = request.environ.CKAN_CURRENT_URL %}

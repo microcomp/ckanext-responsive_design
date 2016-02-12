@@ -335,3 +335,17 @@ msgstr "Ukázať viac Formátov"
 
 msgid "Notice for obliged entities"
 msgstr "Upozornenie pre povinné osoby"
+
+#: ckanext/responsive_design/templates/home/index.html:39
+msgid "We're sorry, but thi page doesn't work properly without JavaScript enabled."
+msgstr "Pre plne funkčnú stránku je potrebné povoliť Javascript."
+
+#: ckanext/responsive_design/templates/header.html:169
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:38
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:41
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:44
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:50
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:53
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:56
+msgid "-in new window"
+msgstr "-v novom okne"

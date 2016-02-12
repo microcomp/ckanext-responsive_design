@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-responsive_design 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-02-03 10:59+0100\n"
+"POT-Creation-Date: 2016-02-12 09:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,6 +89,16 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
+#: ckanext/responsive_design/templates/header.html:169
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:38
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:41
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:44
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:50
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:53
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:56
+msgid "-in new window"
+msgstr ""
+
 #: ckanext/responsive_design/templates/header.html:170
 msgid "Contact"
 msgstr ""
@@ -123,7 +133,9 @@ msgstr ""
 #: ckanext/responsive_design/templates/home/index.html:15
 #: ckanext/responsive_design/templates/home/index.html:16
 #: ckanext/responsive_design/templates/home/snippets/search2.html:12
+#: ckanext/responsive_design/templates/snippets/search_form.html:5
 #: ckanext/responsive_design/templates/snippets/search_form_2.html:12
+#: ckanext/responsive_design/templates/user/snippets/user_search2.html:6
 msgid "Search"
 msgstr ""
 
@@ -132,20 +144,28 @@ msgstr ""
 msgid "Popular tags"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/index.html:69
-#: ckanext/responsive_design/templates/home/index.html:77
+#: ckanext/responsive_design/templates/home/index.html:39
+msgid "We're sorry, but thi page doesn't work properly without JavaScript enabled."
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/index.html:71
+#: ckanext/responsive_design/templates/home/index.html:79
 msgid "News"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/index.html:70
+#: ckanext/responsive_design/templates/home/index.html:72
 msgid "Statistics"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/orgs_snippet.html:2
+#: ckanext/responsive_design/templates/home/index.html:87
+msgid "Notice for obliged entities"
+msgstr ""
+
+#: ckanext/responsive_design/templates/home/snippets/orgs_snippet.html:1
 msgid "Most active organizations"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/orgs_snippet.html:15
+#: ckanext/responsive_design/templates/home/snippets/orgs_snippet.html:14
 #: ckanext/responsive_design/templates/home/snippets/stats.html:19
 msgid " Dataset"
 msgid_plural " Datasets"
@@ -215,6 +235,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: ckanext/responsive_design/templates/home/snippets/stats.html:24
+#: ckanext/responsive_design/templates/user/snippets/user_search2.html:2
 msgid "Users"
 msgstr ""
 
@@ -226,6 +247,13 @@ msgstr[1] ""
 
 #: ckanext/responsive_design/templates/organization/index.html:3
 msgid "Search organizations..."
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/activity.html:3
+#: ckanext/responsive_design/templates/package/activity.html:6
+#: ckanext/responsive_design/templates/user/activity_stream.html:3
+#: ckanext/responsive_design/templates/user/activity_stream.html:6
+msgid "Activity Stream"
 msgstr ""
 
 #: ckanext/responsive_design/templates/package/resource_read.html:4
@@ -292,6 +320,11 @@ msgstr ""
 msgid "No License Provided"
 msgstr ""
 
+#: ckanext/responsive_design/templates/snippets/search_form.html:9
+#: ckanext/responsive_design/templates/snippets/search_form_2.html:16
+msgid "Submit"
+msgstr ""
+
 #: ckanext/responsive_design/templates/snippets/search_form_2.html:3
 msgid "Search datasets..."
 msgstr ""
@@ -302,10 +335,6 @@ msgstr ""
 
 #: ckanext/responsive_design/templates/snippets/search_form_2.html:4
 msgid "Name Descending"
-msgstr ""
-
-#: ckanext/responsive_design/templates/snippets/search_form_2.html:16
-msgid "Submit"
 msgstr ""
 
 #: ckanext/responsive_design/templates/snippets/search_form_2.html:30
@@ -335,6 +364,11 @@ msgid ""
 "  "
 msgstr ""
 
-msgid "Notice for obliged entities"
+#: ckanext/responsive_design/templates/user/snippets/user_search2.html:5
+msgid "Search Users"
+msgstr ""
+
+#: ckanext/responsive_design/templates/user/snippets/user_search2.html:11
+msgid "All Users"
 msgstr ""
 

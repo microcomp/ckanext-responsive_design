@@ -68,6 +68,13 @@
 </style>
 
 {%endif%}
+{%if c.controller == 'ckanext.responsive_design.responsive_design:ResponsiveDesign' and c.action == "search" %}
+<style type="text/css">
+#search_input_index{
+    width: 100% !important;
+}
+</style>
+{%endif%}
 {%if  c.controller == 'ckanext.applications.apps:AppsController' %}
     <link rel="stylesheet" type="text/css" href="/box.css" />
     

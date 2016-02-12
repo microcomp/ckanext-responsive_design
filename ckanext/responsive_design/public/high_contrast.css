@@ -2197,3 +2197,32 @@ input::-moz-placeholder {
 .pill{
     background-color: #222;
 }
+
+#content > div.row.row1 > div.wrapper > aside > div.module.context-info{
+    border-radius: 5px;
+}
+#content > div.row.row1 > div.wrapper > aside > div,
+#content > div.row.row1 > div.wrapper > aside > div > * > *,
+.nums > * > *, .value > code,
+#profile_links > h3{
+    background-color: #241b14;
+    color: #fff;
+}
+#profile_links > ul {
+    margin: 0px;
+}
+#profile_links{
+    padding: 1em;
+    padding-top: 1px;
+    border-radius: 5px;
+}
+
+#content > div.row.row1 > div.wrapper > aside > div.module.context-info > section > div > dl > dd > a,
+#profile_links > ul > li > a{
+    color: #fff;
+    text-decoration: underline;
+}
+#content > div.row.row1 > div.wrapper > aside > section:nth-child(1) > div > div > div.nums > dl > *{
+    background-color: #fff;
+    color: #000;
+}
