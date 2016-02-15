@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-responsive_design 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-02-12 09:05+0100\n"
+"POT-Creation-Date: 2016-02-15 09:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
 
-#: ckanext/responsive_design/templates/base.html:185
+#: ckanext/responsive_design/responsive_design.py:85
+msgid "Not authorized to see this page"
+msgstr ""
+
+#: ckanext/responsive_design/responsive_design.py:167
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:7
+#: ckanext/responsive_design/templates/home/snippets/stats.html:6
+msgid "Organizations"
+msgstr ""
+
+#: ckanext/responsive_design/responsive_design.py:168
+msgid "Groups"
+msgstr ""
+
+#: ckanext/responsive_design/responsive_design.py:169
+msgid "Tags"
+msgstr ""
+
+#: ckanext/responsive_design/responsive_design.py:170
+msgid "Formats"
+msgstr ""
+
+#: ckanext/responsive_design/responsive_design.py:171
+msgid "Licenses"
+msgstr ""
+
+#: ckanext/responsive_design/responsive_design.py:221
+msgid "Parameter \"{parameter_name}\" is not an integer"
+msgstr ""
+
+#: ckanext/responsive_design/templates/base.html:192
 msgid "Hide"
 msgstr ""
 
-#: ckanext/responsive_design/templates/base.html:205
-#: ckanext/responsive_design/templates/base.html:216
+#: ckanext/responsive_design/templates/base.html:212
+#: ckanext/responsive_design/templates/base.html:223
 msgid "Show"
 msgstr ""
 
@@ -178,11 +208,6 @@ msgstr[1] ""
 msgid "Datasets"
 msgstr ""
 
-#: ckanext/responsive_design/templates/home/snippets/right_menu.html:7
-#: ckanext/responsive_design/templates/home/snippets/stats.html:6
-msgid "Organizations"
-msgstr ""
-
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:10
 #: ckanext/responsive_design/templates/home/snippets/stats.html:12
 #: ckanext/responsive_design/templates/sitemap/index.html:21
@@ -274,6 +299,31 @@ msgstr ""
 
 #: ckanext/responsive_design/templates/package/resource_read.html:20
 msgid "Download"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/snippets/revisions_table.html:6
+msgid "Compare revisions"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/snippets/revisions_table.html:7
+msgid "Revision"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/snippets/revisions_table.html:8
+msgid "Timestamp"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/snippets/revisions_table.html:9
+msgid "Author"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/snippets/revisions_table.html:10
+msgid "Log Message"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/snippets/revisions_table.html:26
+#, python-format
+msgid "Read dataset as of %s"
 msgstr ""
 
 #: ckanext/responsive_design/templates/sitemap/index.html:22

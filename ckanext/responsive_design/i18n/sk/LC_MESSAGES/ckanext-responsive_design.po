@@ -349,3 +349,7 @@ msgstr "Pre plne funkčnú stránku je potrebné povoliť Javascript."
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:56
 msgid "-in new window"
 msgstr "-v novom okne"
+
+#: ckanext/responsive_design/templates/package/snippets/revisions_table.html:6
+msgid "Compare revisions"
+msgstr "Porovnaj revízie"
