@@ -1,0 +1,7 @@
+{% ckan_extends %}
+
+
+  {% block activity_stream %}
+    {{ h.gravatar_helper(c.group_activity_stream | safe) }}
+  {% endblock %}
+
