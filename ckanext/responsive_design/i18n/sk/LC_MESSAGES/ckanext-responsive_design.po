@@ -333,6 +333,7 @@ msgstr "Ukázať viac Organizácií"
 msgid "Show More Formats"
 msgstr "Ukázať viac Formátov"
 
+#: ckanext/responsive_design/templates/home/index.html:87
 msgid "Notice for obliged entities"
 msgstr "Upozornenie pre povinné osoby"
 
