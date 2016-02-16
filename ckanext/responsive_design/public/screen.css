@@ -2237,4 +2237,7 @@ border-top: 1px solid #5f5247;
     #content > div.row.row1 > div.wrapper > div > section > div{
         color: #fff;
     }
+    .module-content{
+        padding: 0px;
+    }
 }
