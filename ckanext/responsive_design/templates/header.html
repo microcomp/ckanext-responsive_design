@@ -47,8 +47,15 @@ margin-top: -84px !important;
 </style>
 {%elif c.userobj==None and c.action == 'resource_read' %}
 <style type="text/css">
+@media(min-width: 771px) and (max-width: 1199px){
+#content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {
+    margin-top: -1110px !important;
+}
+}
+@media(min-width: 1200px){
 #content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {
     margin-top: -405px !important;
+}
 }
 @media(max-width: 771px){
   #content > div.row.row1 > section, .module.module-resource{

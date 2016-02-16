@@ -2219,3 +2219,22 @@ border-top: 1px solid #5f5247;
 #announcement > ul > li > a, #announcement > p > a, #content > div.row.row1 > div.wrapper > div > section > div > small > a{
     text-decoration: underline;
 }
+#content > div.row.row1 > div.wrapper > aside > section > div > ul > p{
+       color: #fff;
+}
+#content > div.row.row1 > div.wrapper > aside > section > div > ul > li > a{
+    text-decoration: underline;
+}
+@media (max-width: 1200px) {
+#content > div.row.row1 > section > div.module-content.ckanext-datapreview > iframe{
+    max-width: 500px;
+}
+}
+@media (max-width: 770px) {
+    #content > div.row.row1 > div.wrapper > div > article > div > p > a, #content > div.row.row1 > div.wrapper > div > section > div > * > a{
+            color: #ccc;
+    }
+    #content > div.row.row1 > div.wrapper > div > section > div{
+        color: #fff;
+    }
+}
