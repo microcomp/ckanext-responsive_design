@@ -2252,3 +2252,6 @@ input::-moz-placeholder {
     border-top-color: #507200;
     border-bottom-color: #507200;
 }
+#content > div.row.row1 > div.wrapper > aside > section.module.module-narrow.module-shallow{
+    background-color: #241b14;
+}   
