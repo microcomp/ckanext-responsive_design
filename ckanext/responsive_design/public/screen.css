@@ -2248,6 +2248,6 @@ border-top: 1px solid #5f5247;
 #content > div.row.row1 > div.wrapper > div > section > div > form > ol > li{
     width: 33%;
 }
-#content > div.row.row1 > div.wrapper > aside > section:nth-child(1){
+#content > div.row.row1 > div.wrapper > aside > section.module.module-narrow.module-shallow{
     background-color: #5f5247;
 }   
