@@ -2241,3 +2241,13 @@ border-top: 1px solid #5f5247;
         padding: 0px;
     }
 }
+#content > div.row.row1 > div.wrapper > div > section > div > form > ol > li > span, 
+#content > div.row.row1 > div.wrapper > div > section > div > form > ol > li.complete > button{
+    font-size: 0.8em !important;
+}
+#content > div.row.row1 > div.wrapper > div > section > div > form > ol > li{
+    width: 33%;
+}
+#content > div.row.row1 > div.wrapper > aside > section:nth-child(1){
+    background-color: #5f5247;
+}   

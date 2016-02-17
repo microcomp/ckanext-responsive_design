@@ -2226,3 +2226,29 @@ input::-moz-placeholder {
     background-color: #fff;
     color: #000;
 }
+.stages li.complete .highlight {
+    color: #fff;
+    background: #507200;
+}
+.stages li.active .highlight {
+    color: #fff;
+    background: #466345;
+}
+.stages li.active:after {
+    border-color: rgba(140, 198, 138, 0);
+    border-top-color: #466345;
+    border-bottom-color: #466345;
+}
+.stages li.complete:before {
+    color: #466345;
+    background: #eef6ed;
+}
+.stages li.active:before {
+    color: #466345;
+    background: #eef6ed;
+}
+.stages li.complete:after {
+    border-color: rgba(197, 226, 196, 0);
+    border-top-color: #507200;
+    border-bottom-color: #507200;
+}
