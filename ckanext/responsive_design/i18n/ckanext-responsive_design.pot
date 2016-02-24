@@ -63,7 +63,7 @@ msgid "About this site"
 msgstr ""
 
 #: ckanext/responsive_design/templates/footer.html:7
-msgid "Walkthroughs"
+msgid "Manuals"
 msgstr ""
 
 #: ckanext/responsive_design/templates/footer.html:8
@@ -422,3 +422,8 @@ msgstr ""
 msgid "All Users"
 msgstr ""
 
+msgid "Created:"
+msgstr ""
+
+msgid "Last update:"
+msgstr ""

@@ -233,7 +233,7 @@ msgid "About this site"
 msgstr "O portáli"
 
 #: ckanext/responsive_design/templates/footer.html:7
-msgid "Walkthroughs"
+msgid "Manuals"
 msgstr "Návody"
 
 #: ckanext/responsive_design/templates/footer.html:8
@@ -354,3 +354,10 @@ msgstr "-v novom okne"
 #: ckanext/responsive_design/templates/package/snippets/revisions_table.html:6
 msgid "Compare revisions"
 msgstr "Porovnaj revízie"
+
+
+msgid "Created:"
+msgstr "Dátum vytvorenia stránky:"
+
+msgid "Last update:"
+msgstr "Dátum poslednej aktualizácie:"
