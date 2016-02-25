@@ -2255,3 +2255,6 @@ input::-moz-placeholder {
 #content > div.row.row1 > div.wrapper > aside > section.module.module-narrow.module-shallow{
     background-color: #241b14;
 }   
+#content > div.row.row1 > div.wrapper > aside > section > nav > ul{
+    background-color: #241b14 !important;
+}

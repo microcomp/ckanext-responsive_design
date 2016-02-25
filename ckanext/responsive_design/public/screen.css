@@ -2251,3 +2251,6 @@ border-top: 1px solid #5f5247;
 #content > div.row.row1 > div.wrapper > aside > section.module.module-narrow.module-shallow{
     background-color: #5f5247;
 }   
+#content > div.row.row1 > div.wrapper > aside > section > nav > ul{
+    background-color: #5f5247 !important;
+}
