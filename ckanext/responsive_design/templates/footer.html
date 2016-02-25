@@ -14,7 +14,7 @@
                         <li><a href="{{h.url_for(controller='ckanext.responsive_design.responsive_design:ResponsiveDesign', action='index')}}">{{_('Site map')}}</a></li>
                         <li><a href="{{h.url_for(controller='ckanext.responsive_design.responsive_design:ResponsiveDesign', action='published_services')}}">{{_('List of published services')}}</a></li>
                         <li><a href="{{ h.url('home') }}feeds/dataset.atom">RSS</a></li>
-                        <li><a href="https://www.slovensko.sk/sk/vyhlasenie-o-pristupnosti">{{_('Accessibility statement')}}</a></li>
+                        <li><a href="{% if c.language == 'sk' %}https://www.slovensko.sk/sk/vyhlasenie-o-pristupnosti{%else%}https://www.slovensko.sk/en/accessibility-statement{%endif%}">{{_('Accessibility statement')}}</a></li>
                     </ul>
                     </div>
                     <div class="legalWrap">
