@@ -25,7 +25,7 @@ def public_apps():
                    'auth_user_obj': c.userobj,
                    'for_view': True}
         apps = toolkit.get_action('list_apps')(context, {})
-        return len(apps["result"])
+        return len(apps)
     except IndexError:
         return 0
 
