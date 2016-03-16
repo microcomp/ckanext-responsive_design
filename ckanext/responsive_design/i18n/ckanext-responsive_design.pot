@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-responsive_design 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-02-15 09:32+0100\n"
+"POT-Creation-Date: 2016-03-16 13:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,57 +91,63 @@ msgid "Accessibility statement"
 msgstr ""
 
 #: ckanext/responsive_design/templates/footer.html:21
-msgid "Last updated"
-msgstr ""
-
-#: ckanext/responsive_design/templates/footer.html:21
 msgid "Information published at www.slovensko.sk are not legally binding."
 msgstr ""
 
 #: ckanext/responsive_design/templates/footer.html:22
+msgid "Created:"
+msgstr ""
+
+#: ckanext/responsive_design/templates/footer.html:22
+msgid "Last update:"
+msgstr ""
+
+#: ckanext/responsive_design/templates/footer.html:23
 msgid "Provider and webmaster of the portal is"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:166
+#: ckanext/responsive_design/templates/header.html:173
 msgid "Change the contrast"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:167
+#: ckanext/responsive_design/templates/header.html:174
 #: ckanext/responsive_design/templates/sitemap/index.html:17
 msgid "Home"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:168
+#: ckanext/responsive_design/templates/header.html:175
 msgid "About us"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:169
+#: ckanext/responsive_design/templates/header.html:176
 msgid "Help"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:169
+#: ckanext/responsive_design/templates/header.html:176
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:20
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:38
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:41
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:44
+#: ckanext/responsive_design/templates/home/snippets/right_menu.html:47
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:50
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:53
 #: ckanext/responsive_design/templates/home/snippets/right_menu.html:56
 msgid "-in new window"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:170
+#: ckanext/responsive_design/templates/header.html:177
 msgid "Contact"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:228
+#: ckanext/responsive_design/templates/header.html:235
 msgid "Account info"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:229
+#: ckanext/responsive_design/templates/header.html:236
 msgid "Log in"
 msgstr ""
 
-#: ckanext/responsive_design/templates/header.html:231
+#: ckanext/responsive_design/templates/header.html:238
 msgid "Register"
 msgstr ""
 
@@ -422,8 +428,3 @@ msgstr ""
 msgid "All Users"
 msgstr ""
 
-msgid "Created:"
-msgstr ""
-
-msgid "Last update:"
-msgstr ""

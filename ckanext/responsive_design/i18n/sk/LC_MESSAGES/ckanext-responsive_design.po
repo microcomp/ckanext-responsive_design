@@ -361,3 +361,7 @@ msgstr "Dátum vytvorenia stránky:"
 
 msgid "Last update:"
 msgstr "Dátum poslednej aktualizácie:"
+
+#: ckanext/responsive_design/templates/page.html:5
+msgid "Skip to content"
+msgstr "Prejsť na obsah"
