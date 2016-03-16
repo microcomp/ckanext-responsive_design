@@ -2254,3 +2254,8 @@ border-top: 1px solid #5f5247;
 #content > div.row.row1 > div.wrapper > aside > section > nav > ul{
     background-color: #5f5247 !important;
 }
+#dataset-map-attribution{
+	padding: 3px;
+	margin-left: 0px !important; 
+	background-color: #5f5247;
+}
