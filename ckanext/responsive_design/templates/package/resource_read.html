@@ -8,7 +8,7 @@
                 {% if res.url_type == 'datastore' %}
                  <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}?all=true">
                 {%else%}
-                <a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}">
+                <!--a class="btn btn-primary resource-url-analytics resource-type-{{ res.resource_type }}" href="{{ res.url }}">
                 {%endif%}
                   {% if res.resource_type in ('listing', 'service') %}
                     <i class="icon-eye-open"></i> {{ _('View') }}
@@ -19,10 +19,15 @@
                   {% else %}
                     <i class="icon-download"></i> {{ _('Download') }}
                   {% endif %}
-                </a>
+                </a-->
               </li>
             {% endif %}
             {% if 'datastore' in g.plugins %}
               <li>{% snippet 'package/snippets/data_api_button.html', resource=res, datastore_root_url=c.datastore_api %}</li>
             {% endif %}
+
+            
 {% endblock %}
+{% block resource_read_url %}
+              <label for="resource_url">{{ _('URL') }}</label> <textarea id="resource_url" style="width:70%" >{{ res.url }}</textarea>
+          {% endblock %}
