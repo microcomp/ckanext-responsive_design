@@ -365,3 +365,11 @@ msgstr "Dátum poslednej aktualizácie:"
 #: ckanext/responsive_design/templates/page.html:5
 msgid "Skip to content"
 msgstr "Prejsť na obsah"
+
+#: ckanext/responsive_design/templates/header.html:216
+msgid "Open data portal"
+msgstr "Portál otvorených dát"
+
+#: ckanext/responsive_design/templates/header.html:216
+msgid "Home page"
+msgstr "Úvodná strana"

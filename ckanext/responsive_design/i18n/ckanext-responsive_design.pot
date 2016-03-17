@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-responsive_design 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-16 13:48+0100\n"
+"POT-Creation-Date: 2016-03-17 07:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,6 +137,14 @@ msgstr ""
 
 #: ckanext/responsive_design/templates/header.html:177
 msgid "Contact"
+msgstr ""
+
+#: ckanext/responsive_design/templates/header.html:216
+msgid "Open data portal"
+msgstr ""
+
+#: ckanext/responsive_design/templates/header.html:216
+msgid "Home page"
 msgstr ""
 
 #: ckanext/responsive_design/templates/header.html:235
@@ -305,6 +313,10 @@ msgstr ""
 
 #: ckanext/responsive_design/templates/package/resource_read.html:20
 msgid "Download"
+msgstr ""
+
+#: ckanext/responsive_design/templates/package/resource_read.html:32
+msgid "URL"
 msgstr ""
 
 #: ckanext/responsive_design/templates/package/snippets/revisions_table.html:6
