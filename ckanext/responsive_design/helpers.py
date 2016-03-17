@@ -72,10 +72,16 @@ def get_urls(text):
     _list =sorted([x for x in set( x.split('.')[2] for x in [x for x in config.keys() if text in x])])
     result = []
     for i in _list:
-        result.append({'name':config.get(text+i+'.name').decode('utf8'), 
-                       'url':config.get(text+i+'.url'), 
-                       'role':[x.strip() for x in config.get(text+i+'.privilege').split(',')], 
-                       'popis':config.get(text+i+'.title').decode('utf8')})
+        try:
+            result.append({'name':config.get(text+i+'.name').decode('utf8'), 
+                           'url':config.get(text+i+'.url'), 
+                           'role':[x.strip() for x in config.get(text+i+'.privilege').split(',')], 
+                           'popis':config.get(text+i+'.title').decode('utf8'),
+                           'sk_text':config.get(text+i+'.description_sk').decode('utf8'),
+                           'en_text':config.get(text+i+'.description_en').decode('utf8')})
+        except AttributeError:
+            pass
+            
     sys = False
     if c.userobj and c.userobj.sysadmin:
         sys = True

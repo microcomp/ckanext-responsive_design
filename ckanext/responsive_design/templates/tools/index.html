@@ -20,7 +20,15 @@
 {%set urls = h.get_urls('ckan.tools.') %}
 <ul>
 {% for i in urls %}
-<li> <a href="{{i['url']}}" title="{{i['name']}}">{{i['name']}}</a> </li>
+<li> <a href="{{i['url']}}" title="{{i['popis']}}">{{i['name']}}</a> <br />
+<p>
+{% if c.lang == 'sk' %}
+{{i["sk_text"]}}
+{%else%}
+{{i["en_text"]}}
+{%endif%}
+</p>
+</li>
 {%endfor%}
 </ul>
 </div>
