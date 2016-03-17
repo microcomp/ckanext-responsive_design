@@ -90,9 +90,27 @@ def get_urls(text):
         try:
             role = [x.strip() for x in config.get(text+i+'.privilege').split(',')]
         except AttributeError:
-            role = ["ALL"]
+            role = ["MOD-R-DATA"]
+
         try:
-            result.append({'name':config.get(text+i+'.name').decode('utf8'), 
+            name = config.get(text+i+'.name').decode('utf8')
+        except AttributeError:
+            try:
+                link = config.get(text+i+'.url')
+                if link[0] =='*':
+                    a = config.get(text+i+'.url')[1:]
+                    a = a.split(',')
+                    ll = {}
+                    ll['controller'] = a[0].split('=')[1]
+                    ll['action'] = a[1].split('=')[1]
+                    link = toolkit.url_for(controller=ll['controller'], action=ll['action'])
+                name = link
+            except AttributeError:
+                name = ""
+            
+
+        try:
+            result.append({'name':name, 
                            'url':config.get(text+i+'.url'), 
                            'role':role, 
                            'popis':popis,
@@ -100,7 +118,7 @@ def get_urls(text):
                            'en_text':en_text})
         except AttributeError:
             pass
-
+    result = [x for x in result if x != None]
     sys = False
     if c.userobj and c.userobj.sysadmin:
         sys = True
