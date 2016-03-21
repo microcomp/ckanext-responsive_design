@@ -22,7 +22,7 @@
 {% for i in urls %}
 <li> <a href="{{i['url']}}" title="{{i['popis']}}">{{i['name']}}</a> <br />
 <p>
-{% if c.lang == 'sk' %}
+{% if c.language  == 'sk' %}
 {{i["sk_text"]}}
 {%else%}
 {{i["en_text"]}}
