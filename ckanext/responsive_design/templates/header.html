@@ -90,6 +90,75 @@ margin-top: -84px !important;
 {%endif%}
 
 <script>
+function createCookie(name,value,mins) {
+    if (mins) {
+        var date = new Date();
+        date.setTime(date.getTime()+(mins*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name,"",-1);
+}
+
+{% if c.userobj %}
+$(document).ready(function(){
+
+   idleTime = 0;
+   var idleInterval = setInterval(timerIncrement, 1000);
+   function timerIncrement()
+   {
+     idleTime++;
+     if ((idleTime > 1080 && idleTime < 1085) || (idleTime > 1110 && idleTime < 1115) || (idleTime > 1180 && idleTime < 1185))
+     {
+       doPreload();
+     }
+     if (idleTime > 1200)
+     {
+       eraseCookie("auth_tkt");
+       console.log("cookie deleted...")
+       //$.get("https://edem.eea.sk:18443/cas/logout", null)
+     }
+   }
+   var reset = function(){
+
+      idleTime = 0;
+      var cookie_val = readCookie("auth_tkt");
+      eraseCookie("auth_tkt");
+      createCookie("auth_tkt", cookie_val, 20);
+   };
+   $(this).mousemove(function(e){
+      reset();
+   });
+   $(this).click(function(e){
+      reset();
+   });
+
+   $(this).keydown(function(e){
+      reset();
+   });
+
+   function doPreload()
+   {
+     alert("V prípade neaktivity budete odhlasený zo systému...")
+   }
+
+})
+{%endif%}
 function getContrast(){
     var actualContrast = "";
     var cookies = document.cookie.split("; ");
