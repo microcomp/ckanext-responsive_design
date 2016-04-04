@@ -192,11 +192,6 @@ class ResponsiveDesign(BaseController):
                 'sort': sort_by,
                 'extras': search_extras
             }
-            logging.warning("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-            logging.warning("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-            logging.warning(data_dict)
-            logging.warning("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-            logging.warning("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
             query = get_action('package_search')(context, data_dict)
             c.sort_by_selected = query['sort']
 
@@ -228,9 +223,9 @@ class ResponsiveDesign(BaseController):
                              ))
             c.search_facets_limits[facet] = limit
 
-        maintain.deprecate_context_item(
-          'facets',
-          'Use `c.search_facets` instead.')
+        #maintain.deprecate_context_item(
+        #  'facets',
+        #  'Use `c.search_facets` instead.')
 
         self._setup_template_variables(context, {},
                                        package_type=package_type)

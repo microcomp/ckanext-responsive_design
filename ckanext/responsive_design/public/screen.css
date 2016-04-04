@@ -2259,3 +2259,15 @@ border-top: 1px solid #5f5247;
 	margin-left: 0px !important; 
 	background-color: #5f5247;
 }
+@media(min-width: 800px){
+    .module-content.tab-content{
+        display: none;
+    }
+    .module-content.tab-content.active{
+        display: inline;
+    }
+    .nav-item.active > a, .nav-item.active, .nav-aside li.active {{
+        background-color: #000;
+    }
+    
+}

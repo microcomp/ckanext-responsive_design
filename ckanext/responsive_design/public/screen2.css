@@ -37,3 +37,7 @@ li.media-item.masonry-brick > h3.media-heading {
     display: block;
     position: relative;
 }
+#content > div.row.row1 > div.wrapper > div > article > div.module-content > ul > li.related-item.media-item.is-expander.masonry-brick > h3{
+    max-height: 5ex;
+    overflow: hidden;
+}

@@ -1,6 +1,6 @@
 {% ckan_extends%}
 {% block subtitle %}{{ _("Welcome") }}{% endblock %}
-
+{% block site_title %}{{ _("DATA.GOV.SK") }}{% endblock %}
 {% block maintag %}{% endblock %}
 
 {% block content %}
@@ -38,6 +38,8 @@
        
           <noscript><div class="alert alert-error" role="alert" style="max-width: 70%;">{{_("We're sorry, but thi page doesn't work properly without JavaScript enabled.")}}</div></noscript> 
       {{ self.flash() }}
+
+    
       {{ self.primary_content() }}
     </div>
 
