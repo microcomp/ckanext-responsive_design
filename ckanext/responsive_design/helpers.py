@@ -36,8 +36,8 @@ def biggest_orgs():
                    'user': c.user or c.author,
                    'auth_user_obj': c.userobj,
                    'for_view': True}
-    data_dict = {'order_by':'packages', 'all_fields':True}
-    orgs = toolkit.get_action('organization_list')(context, data_dict)
+    data_dict = {}
+    orgs = toolkit.get_action('m_organization_list')(context, data_dict)
     orgs = orgs[:4]
     return orgs
 
@@ -167,23 +167,13 @@ def recent_datasets(ll=5):
     
     res = []
     result= []
-    data_dict= {'limit':ll, 'offset':0, 'page':1}
-    resp = toolkit.get_action('current_package_list_with_resources')(context, data_dict)
-    for i in resp:
-        notes = i['notes']
-        if  i['notes'] != None:
-            if len(i['notes']) > 300:
-                notes = i['notes'][:300]+'...'
-        else:
-            notes = ""
-        res= []
-        for r in i['resources']:
-            if r['format'] not in res:
-                res.append(r['format'])
-        title = i['title']
-        if len(i['title']) > 100:
+    data_dict= {'rows':ll}
+    resp = toolkit.get_action('m_package_search')(context, data_dict)
+    for i in resp["results"]:
+        title = i['display_name']
+        if len(i['display_name']) > 100:
             title= title[0:85]+"..."
-        result.append({'title':title, 'text': notes, 'url':i['name'], 'resources': res })
+        result.append({'title':title})
     return result
 
 def gravatar_add_alt(inp):

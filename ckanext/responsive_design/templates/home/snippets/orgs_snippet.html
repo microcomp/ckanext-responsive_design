@@ -4,14 +4,14 @@
 {%for dt in data %}
 <li>
 <div>
-	{%if dt['image_display_url'] == ""  %}
-        <a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}">{{h.truncate(dt['display_name'], 40)}}</a>
+	{%if dt['image_url'] == ""  %}
+        <a href="/organization/{{dt['id']}}" title="{{dt['title']}}">{{h.truncate(dt['title'], 40)}}</a>
         {% endif %}
-         {%if dt['image_display_url'] != ""  %}
-        <a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> <img src="{{dt['image_display_url']}}" alt="{{dt['display_name']}} logo" /></a> 
+         {%if dt['image_url'] != ""  %}
+        <a href="/organization/{{dt['id']}}" title="{{dt['title']}}"> <img src="{{dt['image_url']}}" alt="{{dt['title']}} logo" /></a> 
         {% endif %}
 	<!--a href="/organization/{{dt['id']}}"> {{dt['title']}}</a><br /!-->
-	<a href="/organization/{{dt['id']}}" title="{{dt['display_name']}}"> {% set orgs = ungettext(' Dataset', ' Datasets', dt['packages']).format(num=dt['packages']) %}{{dt['packages']}} {{orgs}}</a>
+	<a href="/organization/{{dt['id']}}" title="{{dt['title']}}"> {% set orgs = ungettext(' Dataset', ' Datasets', dt['package_count']).format(num=dt['package_count']) %}{{dt['package_count']}} {{orgs}}</a>
 </div>
 </li>
 {%endfor%}
