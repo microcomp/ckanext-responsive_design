@@ -2,71 +2,35 @@
 {% block header_wrapper %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-<link rel="stylesheet" type="text/css"  href="/screen.css?{{h.css_cache_helper()}}" property='stylesheet'>
-<link rel="stylesheet" type="text/css" id="contrast" href="/screen2.css" property='stylesheet'>
-<link rel="stylesheet" type="text/css" href="/screen2.css?{{h.css_cache_helper()}}" property='stylesheet'>
+<!--link rel="stylesheet" type="text/css"  href="/screen.css?{{h.css_cache_helper()}}" property='stylesheet'!-->
+<link rel="stylesheet" type="text/css" id="contrast" href="/main.css" property='stylesheet'>
+<!--link rel="stylesheet" type="text/css" href="/screen2.css?{{h.css_cache_helper()}}" property='stylesheet'!-->
 {%if c.userobj and c.action != 'resource_read' %}
 <style type="text/css">
 @media(min-width: 771px){
-#content > div.row.row2 > div.span3.col2 {
-    margin-top: -161px !important;
-}
-#content > div.row.row1 > div.span3.col1 {
-margin-top: -84px !important;
-}
-
-
-
-}
+  #content > div.row.row2 > div.span3.col2 {margin-top: -161px !important;}#content > div.row.row1 > div.span3.col1 {margin-top: -84px !important;}}
 </style>
 {%elif c.userobj and c.action == 'resource_read'%}
 <style type="text/css">
 @media (min-width: 771px) and (max-width: 1200px) {
-    #content > div.row.row1 > div.wrapper > div {
-    width: 42%;
-    margin-right: 250px;
-}
+  #content > div.row.row1 > div.wrapper > div {width: 42%;margin-right: 250px;}
 @media (min-width: 771px) and (max-width: 1200px) {
-    #content > div.row.row1 > section, #content > div.toolbar > ol{
-      width: 65%
-    }
-    #upper_menu{
-      margin-top: -140px !important;
-    }
-}
+  #content > div.row.row1 > section, #content > div.toolbar > ol{width: 65%}#upper_menu{margin-top: -140px !important;}}
 @media(max-width: 771px){
-  #content > div.row.row1 > section, .module.module-resource{
-    display: none !important;
-    }
-}
+  #content > div.row.row1 > section, .module.module-resource{display: none !important;}}
 @media (min-width: 771px) and (max-width: 1200px) {
-    #content > div.row.row1 > div.wrapper > div {
-    width: 42%;
-    margin-right: 250px;
-}
+  #content > div.row.row1 > div.wrapper > div {width: 42%;margin-right: 250px;}
 </style>
 {%elif c.userobj==None and c.action == 'resource_read' %}
 <style type="text/css">
 @media(min-width: 771px) and (max-width: 1199px){
-#content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {
-    margin-top: -1110px !important;
-}
-}
+  #content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {margin-top: -1110px !important;}}
 @media(min-width: 1200px){
-#content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {
-    margin-top: -405px !important;
-}
-}
+  #content > div.row.row2 > div.span3.col2, #content > div.row.row1 > div.span3.col1 {margin-top: -405px !important;}}
 @media(max-width: 771px){
-  #content > div.row.row1 > section, .module.module-resource{
-    display: none !important;
-    }
-  }
-  @media (min-width: 771px) and (max-width: 1200px) {
-    #content > div.row.row1 > div.wrapper > div {
-    width: 42%;
-    margin-right: 250px;
-}
+  #content > div.row.row1 > section, .module.module-resource{display: none !important;}}
+@media (min-width: 771px) and (max-width: 1200px) {
+  #content > div.row.row1 > div.wrapper > div {width: 42%;margin-right: 250px;}
 </style>
 {%endif%}
 
@@ -74,18 +38,12 @@ margin-top: -84px !important;
 {%if c.controller == 'home' and c.action == 'index' %}
 <style type="text/css">
 @media(max-width: 771px){
-    #long_boxes, #big_box{
-      display: block !important;
-    }
-}
+  #long_boxes, #big_box{display: block !important;}}
 </style>
 {%else%}
 <style type="text/css">
 @media(max-width: 771px){
-    #long_boxes, #big_box{
-      display: none !important;
-    }
-}
+  #long_boxes, #big_box{display: none !important;}}
 </style>
 {%endif%}
 
@@ -192,8 +150,7 @@ function getContrast(){
   {% endblock %}
   <div class="container">
     
-    <!--hgroup class="{{ g.header_class }} pull-le
-ft"!-->
+    <!-- hgroup class="{{ g.header_class }} pull-left" !-->
       {% block header_logo %}
         {% if g.site_logo %}
          

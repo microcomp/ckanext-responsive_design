@@ -78,7 +78,6 @@
 {%if  c.controller == 'ckanext.applications.apps:AppsController' %}
     <link rel="stylesheet" type="text/css" href="/box.css" />
     
-<!--{{c.controller}}-->
   {%elif c.controller == 'organization'%}
   {%if c.action == 'index'%}
   <link rel="stylesheet" type="text/css" href="/box.css" />
@@ -94,7 +93,6 @@
   {%endif%}
   {% elif c.controller == 'ckanext.applications.detail:DetailController' %}
     <link rel="stylesheet" type="text/css" href="/box.css" />
-  <!-- {{c.controller}} -->
   
   {% elif c.controller == 'organization' %}
     {%if c.action == 'read' %}
@@ -103,7 +101,6 @@
         <link rel="stylesheet" type="text/css" href="/box.css" />
         
       {%endif%}
-  <!-- {{c.controller}} -->
   {% elif c.controller == 'group' %}
 
   {%if c.action == 'activity' %}
@@ -111,7 +108,6 @@
     <link rel="stylesheet" type="text/css" href="/box.css" />
     
   {%endif%}
-  <!-- {{c.controller}} -->
 {%elif c.controller == 'user'%}
   {%if c.action == 'dashboard_organizations' %}
     <link rel="stylesheet" type="text/css" href="/box.css" />
@@ -130,7 +126,7 @@
 {%if  c.controller == 'ckanext.applications.apps:AppsController' %}
     <link rel="stylesheet" type="text/css" href="/box.css" />
     
-<!--{{c.controller}}-->
+
   {%elif c.controller == 'organization'%}
   {%if c.action == 'index'%}
   <link rel="stylesheet" type="text/css" href="/box.css" />
@@ -146,7 +142,7 @@
   {%endif%}
   {% elif c.controller == 'ckanext.applications.detail:DetailController' %}
     <link rel="stylesheet" type="text/css" href="/box.css" />
-  <!-- {{c.controller}} -->
+
    
   {% elif c.controller == 'organization' %}
     {%if c.action == 'read' %}
@@ -155,18 +151,13 @@
         <link rel="stylesheet" type="text/css" href="/box.css" />
          
       {%endif%}
-  <!-- {{c.controller}} -->
   {% elif c.controller == 'group'%}
 
-    {#%if c.action != 'activity' or c.action != 'read' %#}
-    
-      <!--link rel="stylesheet" type="text/css" href="/box.css" /-->
-    
-    {#%endif%#}
- 
-  <!-- {{c.controller}} -->
+
+
 {%elif c.controller == 'user'%}
   {%if c.action == 'dashboard_organizations' %}
+
     <link rel="stylesheet" type="text/css" href="/box.css" />
      
   {%elif c.action == 'dashboard_groups' %}
@@ -178,10 +169,6 @@
     <link rel="stylesheet" type="text/css" href="/box.css" />
   {%endif%}
 {%endif%}
-<!-- Latest compiled and minified CSS -->
-<!--link rel="stylesheet" href="/bootstrap/css/bootstrap.css"-->
-
-<!--link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css"-->
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
