@@ -3,30 +3,33 @@
 
 <div id="crumbs" >
   <div>   
-     <div> <a class="purple" href="{{ h.url_for(controller='organization', action='index') }}" title="{{_('Organizations')}}">
+     <div> <a class="purple " href="{{ h.url_for(controller='organization', action='index') }}" title="{{_('Organizations')}}">
          
           {% set orgs = ungettext(' Organization', ' Organizations', stats.organization_count).format(num=stats.organization_count) %}
           <strong>{{ h.SI_number_span(stats.organization_count) }}</strong><span>  {{ orgs }} </span>
+          <div class="statistics_icons_org"> </div>
         </a>
      </div>
      <div>   <a class="red" href="{{ h.url_for(controller='related', action='dashboard') }}" title="{{_('Applications')}}">
           {% set apps = ungettext(' Application', ' Applications', h.public_apps()).format(num=h.public_apps()) %}
           <strong>{{ h.SI_number_span(h.public_apps()) }}</strong><span>  {{ apps }} </span> 
+          <div class="statistics_icons_apps"> </div>
         </a>
     </div>
      <div> <a class="green" href="{{ h.url_for(controller='package', action='search') }}" title="{{_('Datasets')}}">
 
            {% set dts = ungettext(' Dataset', ' Datasets', stats.dataset_count).format(num=stats.dataset_count) %}
           <strong>{{ h.SI_number_span(stats.dataset_count) }}</strong><span>  {{ dts }} </span>
+          <div class="statistics_icons_dts"> </div>
         </a>
     </div>        
      <div>
         <a class="orange" href="{{ h.url_for(controller='user', action='index') }}" title="{{_('Users')}}">
           {% set usr = ungettext(' User', ' Users', h.userCountHelper()).format(num=h.userCountHelper()) %}
           <strong>{{ h.SI_number_span(h.userCountHelper()) }}</strong><span>  {{ usr }} </span>
+          <div class="statistics_icons_usr"> </div>
         </a>
      </div>
 </div>
 
 </div>
-

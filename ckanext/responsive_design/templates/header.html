@@ -129,7 +129,7 @@ function getContrast(){
     if(actualContrast === "high"){
       result= "/high_contrast.css"
     }else{
-      result= ""
+      result= "/main.css"
 
     }
     var style = document.getElementById("contrast");
@@ -173,7 +173,7 @@ function change_style(){
     }
   }
   if(contrast === "high"){ 
-    style.href = "/screen.css"; 
+    style.href = "/main.css"; 
     var d = new Date();
     d.setTime(d.getTime() + (24*60*60*1000));
     var expires = "expires="+d.toUTCString()+"; path=/;";
