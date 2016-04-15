@@ -83,7 +83,7 @@ $('#home_menu a').click(function (e) {
                 <ul  >
                   {% set datasets = h.recent_datasets(6)%}
                   {% for i in datasets %} 
-                      <li> <a href="{{h.url_for(controller='package', action='read', id=i['url'] )}}" title='{{i["title"]}}'>{{i["title"]}}</a></li>
+                      <li> <a href="{{h.url_for(controller='package', action='read', id=i['id'] )}}" title='{{i["title"]}}'>{{i["title"]}}</a></li>
                   {%endfor%}
                 </ul>
  <div class="highlight_2"><a href="#announcement">{{_('Notice for obliged entities')}}!</a></div>

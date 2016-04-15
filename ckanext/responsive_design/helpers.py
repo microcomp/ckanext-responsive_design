@@ -173,7 +173,7 @@ def recent_datasets(ll=5):
         title = i['display_name']
         if len(i['display_name']) > 100:
             title= title[0:85]+"..."
-        result.append({'title':title})
+        result.append({'title':title, 'id':i['id']})
     return result
 
 def gravatar_add_alt(inp):
