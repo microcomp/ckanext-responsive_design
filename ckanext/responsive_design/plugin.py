@@ -48,5 +48,9 @@ class ResponsiveDesign(plugins.SingletonPlugin):
                 'biggest_orgs':helpers.biggest_orgs,
                 'public_apps':helpers.public_apps,
                 'css_cache_helper': helpers.css_cache_helper,
-                'gravatar_helper': helpers.gravatar_add_alt}
+                'gravatar_helper': helpers.gravatar_add_alt,
+                'sum_org':helpers.sum_org,
+                'sum_usr':helpers.sum_usr,
+                'sum_dts':helpers.sum_dts,
+                'big_orgs':helpers.big_orgs}
 

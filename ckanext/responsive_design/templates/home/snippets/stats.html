@@ -1,12 +1,12 @@
 
-{% set stats = h.get_site_statistics() %}
+{#% set stats = h.get_site_statistics() %#}
 
 <div id="crumbs" >
   <div>   
      <div> <a class="purple " href="{{ h.url_for(controller='organization', action='index') }}" title="{{_('Organizations')}}">
-         
-          {% set orgs = ungettext(' Organization', ' Organizations', stats.organization_count).format(num=stats.organization_count) %}
-          <strong>{{ h.SI_number_span(stats.organization_count) }}</strong><span>  {{ orgs }} </span>
+         {%set organizations =  h.sum_org() %}
+          {% set orgs = ungettext(' Organization', ' Organizations', organizations).format(num=organizations) %}
+          <strong>{{ organizations }}</strong><span>  {{ orgs }} </span>
           <div class="statistics_icons_org"> </div>
         </a>
      </div>
@@ -17,16 +17,17 @@
         </a>
     </div>
      <div> <a class="green" href="{{ h.url_for(controller='package', action='search') }}" title="{{_('Datasets')}}">
-
-           {% set dts = ungettext(' Dataset', ' Datasets', stats.dataset_count).format(num=stats.dataset_count) %}
-          <strong>{{ h.SI_number_span(stats.dataset_count) }}</strong><span>  {{ dts }} </span>
+          {%set dataset_c = h.sum_dts() %}
+           {% set dts = ungettext(' Dataset', ' Datasets', dataset_c).format(num=dataset_c) %}
+          <strong>{{ dataset_c }}</strong><span>  {{ dts }} </span>
           <div class="statistics_icons_dts"> </div>
         </a>
     </div>        
      <div>
+      {%set usr_c = h.sum_usr() %}
         <a class="orange" href="{{ h.url_for(controller='user', action='index') }}" title="{{_('Users')}}">
-          {% set usr = ungettext(' User', ' Users', h.userCountHelper()).format(num=h.userCountHelper()) %}
-          <strong>{{ h.SI_number_span(h.userCountHelper()) }}</strong><span>  {{ usr }} </span>
+          {% set usr = ungettext(' User', ' Users', usr_c).format(num=usr_c) %}
+          <strong>{{ usr_c }}</strong><span>  {{ usr }} </span>
           <div class="statistics_icons_usr"> </div>
         </a>
      </div>

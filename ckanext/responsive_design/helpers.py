@@ -1,7 +1,7 @@
 import logging
 import ckan.lib.helpers as h
 import ckan.plugins as p
-from sqlalchemy import Table, select, func, and_
+from sqlalchemy import Table, select, func, and_, desc
 import ckan.model as model
 from ckan.common import _, c
 import ckan.plugins.toolkit as toolkit
@@ -11,10 +11,32 @@ import datetime
 _VALID_GRAVATAR_DEFAULTS = ['404', 'mm', 'identicon', 'monsterid',
                             'wavatar', 'retro']
 from webhelpers.html import escape, HTML, literal, url_escape
+def big_orgs():
+    dts =  model.Session.query(model.Package.owner_org, func.count(model.Package.owner_org)).group_by(model.Package.owner_org).all()
+    result = []
+    for i in dts:
+        org = model.Session.query(model.Group).filter(model.Group.id == i[0]).first()
+        result.append({'id':org.id, 'title':org.title, 'image_url':org.image_url, 'package_count':i[1]})
+
+    return result
+
+
 def css_cache_helper():
     date = datetime.datetime.now()
     result = "version={}".format("1.0")
     return result 
+
+def sum_org():
+    orgs =  model.Session.query(model.Group).all()
+    return len(orgs)
+def sum_dts():
+    dts = model.Session.query(model.Package).filter(model.Package.state == 'active').all()
+    return len(dts)
+
+def sum_usr():
+    usr = model.Session.query(model.User).filter(model.User.state == 'active').all()
+    return len(usr)
+
 
 def table(name):
     return Table(name, model.meta.metadata, autoload=True)
@@ -167,13 +189,19 @@ def recent_datasets(ll=5):
     
     res = []
     result= []
-    data_dict= {'rows':ll}
+    '''data_dict= {'rows':ll}
     resp = toolkit.get_action('m_package_search')(context, data_dict)
     for i in resp["results"]:
         title = i['display_name']
         if len(i['display_name']) > 100:
             title= title[0:85]+"..."
-        result.append({'title':title, 'id':i['id']})
+        result.append({'title':title, 'id':i['id']})'''
+    raw_data = model.Session.query(model.Package).order_by(desc(model.Package.metadata_modified)).limit(ll)
+    for i in raw_data:
+        title = i.title
+        if len(i.title) > 100:
+            title= title[0:85]+"..."
+        result.append({'title':title, 'id':i.id})
     return result
 
 def gravatar_add_alt(inp):
