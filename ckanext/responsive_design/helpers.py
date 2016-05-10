@@ -189,14 +189,7 @@ def recent_datasets(ll=5):
     
     res = []
     result= []
-    '''data_dict= {'rows':ll}
-    resp = toolkit.get_action('m_package_search')(context, data_dict)
-    for i in resp["results"]:
-        title = i['display_name']
-        if len(i['display_name']) > 100:
-            title= title[0:85]+"..."
-        result.append({'title':title, 'id':i['id']})'''
-    raw_data = model.Session.query(model.Package).order_by(desc(model.Package.metadata_modified)).limit(ll)
+    raw_data = model.Session.query(model.Package).filter(model.Package.state=="active").order_by(desc(model.Package.metadata_modified)).limit(ll)
     for i in raw_data:
         title = i.title
         if len(i.title) > 100:
