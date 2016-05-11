@@ -189,7 +189,7 @@ def recent_datasets(ll=5):
     
     res = []
     result= []
-    raw_data = model.Session.query(model.Package).filter(model.Package.state=="active").order_by(desc(model.Package.metadata_modified)).limit(ll)
+    raw_data = model.Session.query(model.Package).filter(model.Package.private==False).order_by(desc(model.Package.metadata_modified)).limit(ll)
     for i in raw_data:
         title = i.title
         if len(i.title) > 100:
