@@ -12,7 +12,7 @@ _VALID_GRAVATAR_DEFAULTS = ['404', 'mm', 'identicon', 'monsterid',
                             'wavatar', 'retro']
 from webhelpers.html import escape, HTML, literal, url_escape
 def big_orgs():
-    dts =  model.Session.query(model.Package.owner_org, func.count(model.Package.owner_org)).group_by(model.Package.owner_org).limit(4)
+    dts =  model.Session.query(model.Package.owner_org, func.count(model.Package.owner_org).label('total')).group_by(model.Package.owner_org).order_by('total DESC').limit(4)
     result = []
     for i in dts:
         org = model.Session.query(model.Group).filter(model.Group.id == i[0]).first()
