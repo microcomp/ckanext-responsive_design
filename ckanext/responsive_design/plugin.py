@@ -26,6 +26,12 @@ class ResponsiveDesign(plugins.SingletonPlugin):
         map.connect('sitemap', '/sitemap',
             controller='ckanext.responsive_design.responsive_design:ResponsiveDesign',
             action='index')
+        map.connect('legal', '/legal',
+            controller='ckanext.responsive_design.responsive_design:ResponsiveDesign',
+            action='legal')
+        map.connect('licence', '/licence',
+            controller='ckanext.responsive_design.responsive_design:ResponsiveDesign',
+            action='licence')
         map.connect('datasets', '/dataset',
             controller='ckanext.responsive_design.responsive_design:ResponsiveDesign',
             action='search')
@@ -35,7 +41,7 @@ class ResponsiveDesign(plugins.SingletonPlugin):
         map.connect('published-services', '/published-services',
             controller='ckanext.responsive_design.responsive_design:ResponsiveDesign',
             action='published_services')
-        return map  
+        return map
     def get_helpers(self):
         return {'recent_datasets': helpers.recent_datasets,
                 'uv_url' : helpers.uv_url,

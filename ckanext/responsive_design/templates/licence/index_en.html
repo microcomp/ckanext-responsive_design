@@ -1,0 +1,27 @@
+{% extends "page.html" %}
+{% block subtitle %}{{ _('Licence') }}{% endblock %}
+{% block breadcrumb_content %}
+  <li class="active"><a href="#">{{ _('Licence') }}</a></li>
+{% endblock %}
+
+
+{% block secondary_content %}
+
+{% endblock %}
+
+{% block primary %}
+<div class="span3 col1" id="upper_menu">
+{%snippet 'home/snippets/right_menu.html' %}
+</div>
+<div class="wrapper">
+<div class="primary span9 no-right-menu">
+<div class="span11">
+<h1> {{_('Licence')}}</h1>
+
+<ul>
+
+</ul>
+</div>
+</div>
+</div>
+{% endblock %}

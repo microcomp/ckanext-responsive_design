@@ -44,10 +44,24 @@ class ResponsiveDesign(BaseController):
             setup_template_variables(context, data_dict)
     def index(self, context=None):
         return render('sitemap/index.html')
+
     def published_services(self, context=None):
         return render('published_services/index.html')
+
     def tools(self, context=None):
         return render('tools/index.html')
+
+    def licence(self, context=None):
+        if h.lang() == 'sk':
+            return render('licence/index.html')
+        else:
+            return render('licence/index_en.html')
+    def legal(self, context=None):
+        if h.lang() == 'sk':
+            return render('legal/index.html')
+        else:
+            return render('legal/index_en.html')
+
     def _guess_package_type(self, expecting_name=False):
         """
             Guess the type of package from the URL handling the case
@@ -231,4 +245,4 @@ class ResponsiveDesign(BaseController):
                                        package_type=package_type)
 
         return render(self._search_template(package_type))
-    
+

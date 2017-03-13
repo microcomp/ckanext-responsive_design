@@ -1,0 +1,103 @@
+{% extends "page.html" %}
+{% block subtitle %}{{ _('Licence') }}{% endblock %}
+{% block breadcrumb_content %}
+  <li class="active"><a href="#">{{ _('Licence') }}</a></li>
+{% endblock %}
+
+
+{% block secondary_content %}
+
+{% endblock %}
+
+{% block primary %}
+<div class="span3 col1" id="upper_menu">
+{%snippet 'home/snippets/right_menu.html' %}
+</div>
+<div class="wrapper">
+<div class="primary span9 no-right-menu">
+<div class="span11">
+<h1> {{_('Licence')}}</h1>
+<p>
+  Po popísaní datasetu povinná osoba určí pre daný dataset konkrétnu licenčnú zmluvu (ďalej len licenciu) na základe nasledujúcej metodiky. Licenciou v autorskom práve poskytovateľ (autor diela)
+  poskytuje oprávnenie užívať dielo nadobúdateľovi – poskytovateľovi otvorených údajov, ale aj používateľom otvorených údajov. Povinnosť prideliť datasetu licenciu vyplýva zo:
+  </p>
+<ul>
+
+<li><strong><u>zákona č. 618/2003</u></strong>	 o autorskom práve a právach súvisiacich s autorským právom (autorský zákon),
+  na základe ktorého je nevyhnutné chrániť práva a oprávnené záujmy autora prostredníctvom licenčnej zmluvy,</li>
+<li><strong><u>z Výnosu č. 55/2014 Z. z.,</u></strong>podľa ktorého musia byť údaje poskytované otvoreným spôsobom umožňujúcim
+  voľné opakované použitie informácií s právnou oporou,</li>
+<li><strong><u>zo zákona č. 211/2000 </u></strong>o slobodnom prístupe k informáciám a o zmene a doplnení niektorých zákonov
+  (zákon o slobode informácií) § 5 a § 21, ktoré definujú povinné zverejňovanie informácií, ktoré nespadajú pod autorský zákon,
+  ako aj ďalších informácií spadajúcich pod opakované použitie informácií. Aj pri informáciách podľa § 5, na ktoré sa neviaže autorský
+  zákon a sú automaticky v takzvanej verejnej doméne („public domain“), musí byť v rámci datasetu tiež pridelená licencia, aby sa zabezpečilo
+  poskytovanie týchto údajov otvoreným spôsobom (v tomto prípade sa udáva licencia CC0, ktorá bude popísaná nižšie). </li>
+  </ul>
+  <p>
+    <u>Najčastejšie používaným dielom v otvorených údajoch je databáza, ktorú môže vytvoriť zamestnanec verejnej správy manuálne kopírovaním dostupných
+      informácií o istej téme zachytenej v datasete, kombinovaním dostupných datasetov, obohacovaním datasetov o ďalšie informácie alebo automaticky exportom časti informácií z databáz informačných systémov.</u>
+  </p>
+  <p>
+    <u>Pri vytvorenom datasete otvorených údajov sa udáva licencia CC0, ktorou zamestnanec verejnej správy dáva dataset na voľné opakované použitie, a ktorá je v súlade s Výnosom č. 55/2014.</u>
+  </p>
+  <p>
+    <u>Creative Commons</u> sú verejné licencie, ktoré dopĺňajú autorský zákon a umožňujú publikovať autorské diela tak, že má autor väčšie možnosti rozhodnúť o tom, ako sa s
+    jeho dielom má nakladať. Môže umožniť dielo zdieľať a ďalej s ním pracovať, upravovať ho tak, že toto použitie je konzistentné s autorským zákonom. Ide pritom o tzv. otvorené licencie,
+    ktoré sa týkajú všetkých potenciálnych užívateľov diela, o ktorých autor v momente zverejnenia diela nemusí nič vedieť. Autor uzatvára zmluvu so všetkými, ktorí jeho dielo budú chcieť využiť,
+    a dáva im tak niektoré práva k dielu, zatiaľ čo iné si vyhradzuje.
+Licencie Creative Commons vznikajú kombináciou niekoľkých základných vlastností, ktoré popisujú, aké práva si chce držiteľ autorských práv podržať a akých sa chce vzdať.
+  </p>
+
+    <h3>Pre otvorené dáta sú z nich najvhodnejšie licencie:</h3>
+<ul>
+  <li><strong>CC0</strong>, ktorá má postavenie public domain licencie - autor sa ňou vzdáva absolútne všetkých autorských práv, v prípade ak
+    by takéto konanie nebolo právnym poriadkom niektorého štátu, aplikuje sa právom maximálne možná
+    dovolená licencia,  CC-by (attribution licencia) a CC-by-sa (attribution &amp; share-alike).</li>
+  <li><strong>Licencia Attribution (skratka BY)</strong>- umožňuje ostatným rozmnožovať, rozširovať, vystavovať dielo a odvodené diela s podmienkou uvedenia autora.</li>
+  <li><strong>Licencia Share Alike (skratka SA)</strong>- umožňuje ostatným rozširovať odvodené diela len s podmienkou použitia identickej licencie pre odvodené diela.</li>
+  <li><strong>Licencia CC0</strong>- umožňuje vedcom, učiteľom, zamestnancom verejnej správy a ďalším tvorcom a vlastníkom autorských práv alebo chráneného databázového obsahu
+    vzdať sa svojich výhradných práv na používanie ich práce, a tým ich verejne zverejniť. Týmto verejným zverejnením poskytnú možnosť, aby ktokoľvek mohol voľne opakovane použiť,
+    zlepšiť a budovať na ich diele na akékoľvek účely – komerčné aj neziskové – bez obmedzení daných autorským právom.  Licenciu možno použiť, ak existujú autorské práva alebo obmedzenia aspoň v rámci jednej jurisdikcie.
+    Aplikovaním CC0 sa tak umožní slobodné opakované používanie na celom svete bez pochybností, čím sa podporí ochota verejnosti využívať datasety. </li>
+  <li><strong>Licencia GNU Free Documentation License</strong>- cieľom tejto licencie je zaistiť, aby bol návod na použitie, učebnica alebo iný funkčný a užitočný dokument „slobodný".
+    Slobodný v tom zmysle, aby ktokoľvek mohol kopírovať a ďalej šíriť daný dokument v neupravenom alebo upravenom znení, nekomerčným alebo komerčným spôsobom. Táto licencia zároveň
+    umožňuje autorom a vydavateľom získať na neobmedzený čas uznanie za svoju prácu, pričom ich zbavuje zodpovednosti za modifikácie textu vykonané inými osobami. Táto licencia je typ
+    tzv. copyleft, čo znamená, že dielo odvodené od pôvodného dokumentu sa stáva slobodným v rovnakom duchu. Táto licencia dopĺňa Všeobecnú verejnú licenciu GNU
+    (GNU General Public License), ktorá je licenciou typu copyleft a je vypracovaná pre slobodne šíriteľný softvér.</li>
+  </ul>
+  <p>
+    Otvorené licencie môžu používateľa, popri množstve vedľajších, obmedziť najmä dvoma hlavnými spôsobmi -
+    môžu uložiť <u>povinnosť pripojiť zmienku o pôvode</u> konkrétneho obsahu a databázy, alebo povinnosť akýkoľvek
+    <u>odvodený obsah zverejniť pod rovnakou licenciou</u>, pod ktorou bol zverejnený obsah pôvodný. Na základe povinností,
+    ktoré otvorené licencie ukladajú, sa členia do troch hlavných skupín. A to:
+  </p>
+  <h3>
+    Na základe povinností, ktoré otvorené licencie ukladajú, sa členia do troch hlavných skupín. A to:
+  </h3>
+  <ul>
+    <li><strong>„public domain“</strong> licencie, ktoré neukladajú žiadnu povinnosť, pretože sa nimi autor zbavuje úplne všetkých autorských práv (takéto konanie však v slovenskom právnom poriadku
+      dovolené nie je, pretože niektoré osobnostné práva vyplývajúce z autorstva nemôže ani sám autor previesť na inú osobu, ani sa ich vzdať, ide napr. o právo na určenie autorstva, právo rozhodnúť
+      o prvom zverejnení diela atď.),</li>
+    <li><strong>„attribution“ </strong>licencie, prikazujú pripojiť odkaz na pôvod obsahu a</li>
+    <li><strong>•	„attribution &amp; share-alike“ </strong>licencie, ktoré ustanovujú jednak povinnosť pripojenia odkazu, ako aj povinnosť zverejniť každý ďalší derivát pod rovnakou licenciou.</li>
+  </ul>
+  <h3>
+    Pre potreby verejného sektora stojí za úvahu vytvorenie a spravovanie otvorených vládnych licencií jednotlivými štátmi, ako to bolo v prípade licencie:
+  </h3>
+  <ul>
+    <li><strong>Open Government License (OGL)</strong> používanej v Spojenom kráľovstve (ide o attribution licenciu pokrývajúcu autorské práva, ako aj osobitné práva k databázam; je kompatibilná s CC-by licenciou), Spojených štátov, Kanady a ďalších.
+</li>
+  </ul>
+  <h3>
+    Licencie so špeciálnym zameraním na databázy vytvorili <strong>Open Data Commons</strong>. Ide opäť o spomínané tri druhy licencií:
+  </h3>
+  <ul>
+    <li><strong>PDDL (public domain), ODC-by (attribution), OdbL (attribution &amp; share-alike).</strong></li>
+  </ul>
+  <p>
+    Detailný popis k jednotlivým licenciám nájdete tiež na stránke: <a href="http://opendefinition.org/licenses/" title="http://opendefinition.org/licenses/">http://opendefinition.org/licenses/</a>
+  </p>
+</div>
+</div>
+</div>
+{% endblock %}

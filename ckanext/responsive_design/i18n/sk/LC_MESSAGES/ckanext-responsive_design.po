@@ -373,3 +373,21 @@ msgstr "Portál otvorených dát"
 #: ckanext/responsive_design/templates/header.html:216
 msgid "Home page"
 msgstr "Úvodná strana"
+
+#: ckanext/responsive_design/templates/legal/index.html:2
+#: ckanext/responsive_design/templates/legal/index.html:4
+#: ckanext/responsive_design/templates/legal/index.html:19
+#: ckanext/responsive_design/templates/legal/index_en.html:2
+#: ckanext/responsive_design/templates/legal/index_en.html:4
+msgid "Legal"
+msgstr "Legislatíva"
+
+#: ckanext/responsive_design/templates/legal/index_en.html:19
+#: ckanext/responsive_design/templates/licence/index.html:2
+#: ckanext/responsive_design/templates/licence/index.html:4
+#: ckanext/responsive_design/templates/licence/index.html:19
+#: ckanext/responsive_design/templates/licence/index_en.html:2
+#: ckanext/responsive_design/templates/licence/index_en.html:4
+#: ckanext/responsive_design/templates/licence/index_en.html:19
+msgid "Licence"
+msgstr "Licencia"
