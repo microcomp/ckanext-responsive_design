@@ -1,4 +1,4 @@
 {%ckan_extends%}
  {% block organizations_search_form %}
-    {% snippet 'snippets/search_form_2.html', type='organization', query=c.q, sorting_selected=c.sort_by_selected, count=c.page.item_count, placeholder=_('Search organizations...'), show_empty=request.params, no_bottom_border=true if c.page.items %}
+    {% snippet 'snippets/search_form_2.html', sorting=[(_('Name Ascending'), 'title asc'), (_('Name Descending'), 'title desc')], type='organization', query=c.q, sorting_selected=c.sort_by_selected, count=c.page.item_count, placeholder=_('Search organizations...'), show_empty=request.params, no_bottom_border=true if c.page.items %}
   {% endblock %}
