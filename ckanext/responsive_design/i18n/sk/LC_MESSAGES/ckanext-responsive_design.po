@@ -391,3 +391,6 @@ msgstr "Legislatíva"
 #: ckanext/responsive_design/templates/licence/index_en.html:19
 msgid "Licence"
 msgstr "Licencia"
+
+msgid "Privacy Protection"
+msgstr "Ochrana osobných údajov"

@@ -18,6 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
 
+msgid "Privacy Protection"
+msgstr ""
+
 #: ckanext/responsive_design/responsive_design.py:99
 msgid "Not authorized to see this page"
 msgstr ""
